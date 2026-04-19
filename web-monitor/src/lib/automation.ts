@@ -936,7 +936,7 @@ async function fillProfileFromDataset(
       'input[name*="homepage"]'
     ].filter(Boolean);
 
-    const bioValue = `${identity.bio}\n\nVisit my site: ${identity.websiteUrl}`;
+    const bioValue = `${identity.bio} ${identity.websiteUrl}`;
 
     for (const sel of bioSelectors) {
       if (sel && await fillField(page, sel as string, bioValue, siteName)) {
@@ -993,7 +993,7 @@ async function verifyBacklinkIsLive(profileUrl: string, expectedWebsite: string,
     const bodyText = await page.evaluate(() => document.body.innerText.toLowerCase());
     
     // More lenient matching
-    const siteDomain = expectedWebsite.replace('https://', '').replace('http://', '').replace('www.', '').split('/')[0];
+    const siteDomain = expectedWebsite.replace('https://', '').replace('http://', '').replace('www.', '').split('/')[0].toLowerCase();
     
     if (bodyText.includes(siteDomain) || bodyText.includes('megawin188')) {
        isLive = true;
@@ -1456,7 +1456,7 @@ export async function automateSite(
         // === ATTEMPT 2: Brute-force universal fill (ALWAYS try if not filled) ===
         if (!profileFilled) {
           log(siteName, `[PROFILE] Trying brute-force universal fill...`);
-          const bioWithLink = `${identity.bio}\n\nVisit my site: ${identity.websiteUrl}`;
+          const bioWithLink = `${identity.bio} ${identity.websiteUrl}`;
           
           // Massive bio selector list
           const allBioSelectors = [
@@ -1539,7 +1539,7 @@ export async function automateSite(
           const profileNav = await analyzeProfileEditPage(apiKeys.deepSeek, profileSummary);
 
           if (profileNav.success && profileNav.steps.length > 0) {
-            const bioWithLink = `${identity.bio}\n\nVisit my site: ${identity.websiteUrl}`;
+            const bioWithLink = `${identity.bio} ${identity.websiteUrl}`;
 
             for (const step of profileNav.steps) {
               const val = step.purpose === 'bio' ? bioWithLink : 

@@ -51,8 +51,12 @@
   },
   {
     "domain": "haphong.edu.vn",
-    "profile_edit_url": "https://www.haphong.edu.vn/account",
-    "fields": {},
+    "profile_edit_url": "https://www.haphong.edu.vn/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -62,14 +66,19 @@
     },
     "signup_url": "https://www.haphong.edu.vn",
     "profile_pattern": "https://www.haphong.edu.vn/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"]"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.haphong.edu.vn/profile/{username}/profile"
   },
   {
     "domain": "holycrossconvent.edu.na",
-    "profile_edit_url": "https://holycrossconvent.edu.na/account",
-    "fields": {},
+    "profile_edit_url": "https://www.holycrossconvent.edu.na/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -83,14 +92,19 @@
       "[data-testid='signUp.switchToSignUp']",
       "button:has-text('Sign up')"
     ],
-    "bioSelector": "#bio, textarea, [contenteditable='true']",
-    "websiteSelector": "input[type='url'], input[name*='website']",
-    "saveButton": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.holycrossconvent.edu.na/profile/{username}/profile"
   },
   {
     "domain": "rosewood.edu.na",
-    "profile_edit_url": "https://www.rosewood.edu.na/account",
-    "fields": {},
+    "profile_edit_url": "https://www.rosewood.edu.na/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -100,14 +114,19 @@
     },
     "signup_url": "https://www.rosewood.edu.na",
     "profile_pattern": "https://www.rosewood.edu.na/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.rosewood.edu.na/profile/{username}/profile"
   },
   {
     "domain": "woorips.vic.edu.au",
-    "profile_edit_url": "https://www.woorips.vic.edu.au/account",
-    "fields": {},
+    "profile_edit_url": "https://www.woorips.vic.edu.au/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -117,14 +136,19 @@
     },
     "signup_url": "https://www.woorips.vic.edu.au",
     "profile_pattern": "https://www.woorips.vic.edu.au/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.woorips.vic.edu.au/profile/{username}/profile"
   },
   {
     "domain": "orkhonschool.edu.mn",
-    "profile_edit_url": "https://www.orkhonschool.edu.mn/account",
-    "fields": {},
+    "profile_edit_url": "https://www.orkhonschool.edu.mn/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -134,14 +158,19 @@
     },
     "signup_url": "https://www.orkhonschool.edu.mn",
     "profile_pattern": "https://www.orkhonschool.edu.mn/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.orkhonschool.edu.mn/profile/{username}/profile"
   },
   {
     "domain": "lasallesancristobal.edu.mx",
-    "profile_edit_url": "https://www.lasallesancristobal.edu.mx/account",
-    "fields": {},
+    "profile_edit_url": "https://www.lasallesancristobal.edu.mx/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -151,14 +180,19 @@
     },
     "signup_url": "https://www.lasallesancristobal.edu.mx",
     "profile_pattern": "https://www.lasallesancristobal.edu.mx/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.lasallesancristobal.edu.mx/profile/{username}/profile"
   },
   {
     "domain": "lanubedocente.21.edu.ar",
-    "profile_edit_url": "https://www.lanubedocente.21.edu.ar/account",
-    "fields": {},
+    "profile_edit_url": "https://www.lanubedocente.21.edu.ar/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -168,14 +202,19 @@
     },
     "signup_url": "https://www.lanubedocente.21.edu.ar",
     "profile_pattern": "https://www.lanubedocente.21.edu.ar/profile/{username}/profile",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.lanubedocente.21.edu.ar/profile/{username}/profile"
   },
   {
     "domain": "tarauaca.ac.gov.br",
-    "profile_edit_url": "https://www.tarauaca.ac.gov.br/account",
-    "fields": {},
+    "profile_edit_url": "https://www.tarauaca.ac.gov.br/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -183,11 +222,12 @@
     "captcha": {
       "type": "none"
     },
-    "signup_url": "https://www.tarauaca.ac.gov.br/register",
-    "profile_pattern": "https://www.tarauaca.ac.gov.br/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "signup_url": "https://www.tarauaca.ac.gov.br",
+    "profile_pattern": "https://www.tarauaca.ac.gov.br/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.tarauaca.ac.gov.br/profile/{username}/profile"
   },
   {
     "domain": "sarkariresult.education",
@@ -225,8 +265,12 @@
   },
   {
     "domain": "centrotecnologico.edu.mx",
-    "profile_edit_url": "https://www.centrotecnologico.edu.mx/account",
-    "fields": {},
+    "profile_edit_url": "https://www.centrotecnologico.edu.mx/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -234,11 +278,12 @@
     "captcha": {
       "type": "none"
     },
-    "signup_url": "https://www.centrotecnologico.edu.mx/register",
-    "profile_pattern": "https://www.centrotecnologico.edu.mx/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "signup_url": "https://www.centrotecnologico.edu.mx",
+    "profile_pattern": "https://www.centrotecnologico.edu.mx/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.centrotecnologico.edu.mx/profile/{username}/profile"
   },
   {
     "domain": "stes.tyc.edu.tw",
@@ -327,8 +372,12 @@
   },
   {
     "domain": "pibelearning.gov.bd",
-    "profile_edit_url": "https://pibelearning.gov.bd/profile/edit/",
-    "fields": {},
+    "profile_edit_url": "https://pibelearning.gov.bd/wp-admin/profile.php",
+    "fields": {
+      "username": "input#user_login",
+      "email": "input#user_email",
+      "password": "input#pass1"
+    },
     "profile_fields": {
       "bio": "#bio",
       "website": "#website"
@@ -337,10 +386,10 @@
       "type": "none"
     },
     "signup_url": "https://pibelearning.gov.bd/wp-login.php?action=register",
-    "profile_pattern": "https://pibelearning.gov.bd/profile/{username}",
-    "bioSelector": "textarea[name*='bio'], textarea#bio, #user_description",
-    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
-    "saveButton": "input[type='submit'], button[type='submit'], .btn-primary"
+    "profile_pattern": "https://pibelearning.gov.bd/author/{username}/",
+    "bioSelector": "#description, textarea[name='description'], #your-profile textarea",
+    "websiteSelector": "input#url, input[name='url']",
+    "saveButton": "input[type='submit'][name='submit'], #submit"
   },
   {
     "domain": "blac.edu.pl",
@@ -361,77 +410,125 @@
   },
   {
     "domain": "nazaret.edu.ec",
-    "signup_url": "https://nazaret.edu.ec/register",
-    "profile_edit_url": "https://nazaret.edu.ec/account",
-    "profile_pattern": "https://nazaret.edu.ec/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.nazaret.edu.ec",
+    "profile_edit_url": "https://www.nazaret.edu.ec/profile/{username}/profile",
+    "profile_pattern": "https://www.nazaret.edu.ec/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.nazaret.edu.ec/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "ictae.edu.mx",
-    "signup_url": "https://ictae.edu.mx/register",
-    "profile_edit_url": "https://ictae.edu.mx/account",
-    "profile_pattern": "https://ictae.edu.mx/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.ictae.edu.mx",
+    "profile_edit_url": "https://www.ictae.edu.mx/profile/{username}/profile",
+    "profile_pattern": "https://www.ictae.edu.mx/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.ictae.edu.mx/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "news.lafontana.edu.co",
-    "signup_url": "https://news.lafontana.edu.co/register",
-    "profile_edit_url": "https://news.lafontana.edu.co/account",
-    "profile_pattern": "https://news.lafontana.edu.co/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.news.lafontana.edu.co",
+    "profile_edit_url": "https://www.news.lafontana.edu.co/profile/{username}/profile",
+    "profile_pattern": "https://www.news.lafontana.edu.co/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.news.lafontana.edu.co/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "divinagracia.edu.ec",
-    "signup_url": "https://divinagracia.edu.ec/register",
-    "profile_edit_url": "https://divinagracia.edu.ec/account",
-    "profile_pattern": "https://divinagracia.edu.ec/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.divinagracia.edu.ec",
+    "profile_edit_url": "https://www.divinagracia.edu.ec/profile/{username}/profile",
+    "profile_pattern": "https://www.divinagracia.edu.ec/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.divinagracia.edu.ec/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "democracy-edu.or.kr",
-    "signup_url": "https://democracy-edu.or.kr/register",
-    "profile_edit_url": "https://democracy-edu.or.kr/account",
-    "profile_pattern": "https://democracy-edu.or.kr/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.democracy-edu.or.kr",
+    "profile_edit_url": "https://www.democracy-edu.or.kr/profile/{username}/profile",
+    "profile_pattern": "https://www.democracy-edu.or.kr/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.democracy-edu.or.kr/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "discoveryschool.edu.hn",
-    "signup_url": "https://www.discoveryschool.edu.hn/student-registration/",
-    "profile_edit_url": "https://www.discoveryschool.edu.hn/dashboard/settings/",
-    "profile_pattern": "https://www.discoveryschool.edu.hn/members-area/{username}/profile",
+    "signup_url": "https://www.discoveryschool.edu.hn",
+    "profile_edit_url": "https://www.discoveryschool.edu.hn/profile/{username}/profile",
+    "profile_pattern": "https://www.discoveryschool.edu.hn/profile/{username}/profile",
     "profilepattern": "https://www.discoveryschool.edu.hn/members-area/{username}/profile",
     "signupurl": "https://www.discoveryschool.edu.hn",
-    "bioSelector": "textarea, [contenteditable='true']",
-    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "saveButton": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.discoveryschool.edu.hn/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "altamira.edu.ec",
-    "signup_url": "https://altamira.edu.ec/register",
-    "profile_edit_url": "https://altamira.edu.ec/account",
-    "profile_pattern": "https://altamira.edu.ec/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.altamira.edu.ec",
+    "profile_edit_url": "https://www.altamira.edu.ec/profile/{username}/profile",
+    "profile_pattern": "https://www.altamira.edu.ec/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.altamira.edu.ec/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "aac.edu.sg",
-    "signup_url": "https://aac.edu.sg/register",
-    "profile_edit_url": "https://aac.edu.sg/account",
-    "profile_pattern": "https://aac.edu.sg/profile/{username}",
-    "bioSelector": "textarea, [contenteditable=\"true\"]",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "signup_url": "https://www.aac.edu.sg",
+    "profile_edit_url": "https://www.aac.edu.sg/profile/{username}/profile",
+    "profile_pattern": "https://www.aac.edu.sg/profile/{username}/profile",
+    "bioSelector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
+    "websiteSelector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
+    "saveButton": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')",
+    "register_url": "https://www.aac.edu.sg/profile/{username}/profile",
+    "fields": {
+      "displayname": "[data-testid='display-name-input'], input[aria-label*='name' i]",
+      "email": "input[type='email']",
+      "password": "input[type='password']"
+    }
   },
   {
     "domain": "dlsjbc.edu.ph",
@@ -734,7 +831,14 @@
     "profile_pattern": "https://dados.unifei.edu.br/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "opendata.ternopilcity.gov.ua",
@@ -743,7 +847,14 @@
     "profile_pattern": "https://opendata.ternopilcity.gov.ua/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "csdlcntmgialai.gov.vn",
@@ -752,7 +863,14 @@
     "profile_pattern": "https://csdlcntmgialai.gov.vn/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "dados.justica.gov.pt",
@@ -761,7 +879,14 @@
     "profile_pattern": "https://dados.justica.gov.pt/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "data.lutskrada.gov.ua",
@@ -770,7 +895,14 @@
     "profile_pattern": "https://data.lutskrada.gov.ua/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "dados.ifac.edu.br",
@@ -780,7 +912,14 @@
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
     "saveButton": "button[type='submit'][name='save']",
-    "disabled": true
+    "disabled": true,
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "opendata.klaten.go.id",
@@ -789,7 +928,14 @@
     "profile_pattern": "https://opendata.klaten.go.id/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "data.dniprorada.gov.ua",
@@ -798,7 +944,14 @@
     "profile_pattern": "https://data.dniprorada.gov.ua/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "data.aurora.linkeddata.es",
@@ -816,7 +969,14 @@
     "profile_pattern": "https://datos.estadisticas.pr/user/{username}",
     "bioSelector": "#field-about, textarea[name*='about']",
     "websiteSelector": "input[name*='url'], input#url",
-    "saveButton": "button[type='submit'][name='save']"
+    "saveButton": "button[type='submit'][name='save']",
+    "fields": {
+      "username": "input#field-username",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2",
+      "displayname": "input#field-fullname"
+    }
   },
   {
     "domain": "homologa.cge.mg.gov.br",
