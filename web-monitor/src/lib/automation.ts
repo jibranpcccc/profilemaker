@@ -1623,7 +1623,7 @@ export async function automateSite(
       publicUrl = dynamicExtractedUrl;
     } else if (entry && entry.profile_pattern) {
       publicUrl = entry.profile_pattern.replace('{username}', identity.username);
-    } else if (signupUrl.includes('/user/') || signupUrl.includes('ckan') || signupUrl.includes('dados.') || signupUrl.includes('data.')) {
+    } else if (signupUrl.includes('/user/') || signupUrl.includes('user/edit') || signupUrl.includes('userregister') || signupUrl.includes('ckan') || signupUrl.includes('dados.') || signupUrl.includes('data.')) {
       // CKAN-specific URL pattern
       const domain = new URL(signupUrl).hostname;
       publicUrl = `https://${domain}/user/${identity.username}`;
@@ -1654,10 +1654,20 @@ export async function automateSite(
     const screenshotPath = path.join(SCREENSHOT_DIR, `${siteName.replace(/[^a-z0-9]/gi, '_')}_${Date.now()}.png`);
     try { await page.screenshot({ path: screenshotPath }); } catch {}
 
+    // Fix 1 & 3: Post-save URL validation gate to prevent dashboard or social media URLs
+    const badPatterns = ['/dashboard', '/settings', '/account', '/wp-admin', 
+                         '/user/edit', 'wp-login', 'youtube.com', 'themeforest', 'admin', 'login'];
+    if (badPatterns.some(p => publicUrl.includes(p)) || !publicUrl) {
+      publicUrl = '';
+    }
+
     let finalBacklinkStatus = profileFilled ? 'INSERTED' : 'SKIPPED';
+    if (!publicUrl && profileFilled) {
+      finalBacklinkStatus = 'URL_UNRESOLVED';
+    }
     
     // After profile fill
-    logDetailed(siteName, 'PROFILE_FILLED', { backlinkInserted: profileFilled });
+    logDetailed(siteName, 'PROFILE_FILLED', { backlinkInserted: profileFilled, resolvedUrl: publicUrl });
 
     // Run live verification if we think we inserted it
     if (finalBacklinkStatus === 'INSERTED') {
