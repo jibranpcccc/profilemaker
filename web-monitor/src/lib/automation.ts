@@ -1280,7 +1280,7 @@ export async function automateSite(
       await simulateHumanBehavior(page, siteName);
     }
 
-    let activeCtx: any = page;
+    activeCtx = page;
 
     const identityWithPw = { ...identity, password: identity.password };
 
