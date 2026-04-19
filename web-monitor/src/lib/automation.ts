@@ -923,12 +923,14 @@ async function fillProfileFromDataset(
     // === SUPER STRONG WEBSITE SELECTORS ===
     const websiteSelectors = [
       entry.website_selector,
+      'input[data-hook="website-url"]',
+      'input[placeholder*="website" i]',
+      'input[name="url"]',
       'input[name*="url"]',
       'input#url',
       'input[name*="website"]',
       'input[type="url"]',
-      'input[placeholder*="website"]',
-      'input[placeholder*="site"]',
+      'input[placeholder*="site" i]',
       'input[name*="link"]',
       '#field-url',
       'input[name*="homepage"]'
@@ -936,38 +938,24 @@ async function fillProfileFromDataset(
 
     const bioValue = `${identity.bio}\n\nVisit my site: ${identity.websiteUrl}`;
 
-    // Force-fill the website field aggressively first
-    const websiteSelectors = [
-      'input[data-hook="website-url"]',
-      'input[placeholder*="website" i]',
-      'input[name="url"]',
-      ...(entry.websiteSelectors || [])
-    ];
-    for (const sel of websiteSelectors) {
-      if (sel && await fillField(page, sel as string, identity.websiteUrl, siteName)) {
-        filled = true;
-        break;
-      }
-    }
-
-    // Try bio fields first
     for (const sel of bioSelectors) {
       if (sel && await fillField(page, sel as string, bioValue, siteName)) {
+        log(siteName, `[PROFILE] ✅ Bio filled via: ${sel}`);
         filled = true;
         break;
       }
     }
 
-    // Try website fields
     for (const sel of websiteSelectors) {
       if (sel && await fillField(page, sel as string, identity.websiteUrl, siteName)) {
+        log(siteName, `[PROFILE] ✅ Website filled via: ${sel}`);
         filled = true;
         break;
       }
     }
 
-    // Save the profile
     if (filled && entry.save_button) {
+      log(siteName, `[PROFILE] Clicking save button...`);
       await clickSelector(page, entry.save_button, siteName);
       await page.waitForTimeout(5000); // Longer wait after save
     }

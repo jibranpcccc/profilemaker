@@ -25,7 +25,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   GeezekBaseUrl: 'https://geezek.com/create_email.php',
   DefaultUsernamePrefix: 'user',
   ProxyAddress: '',
-  ThreadCount: 5,
+  ThreadCount: 12,
   FastMode: true,
   MaxThreads: 12,
 };
