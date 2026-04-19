@@ -1150,14 +1150,14 @@ export async function automateSite(
     try {
       // Clear all storage types via CDP (if Chromium)
       if (!useFirefox) {
-        const cdpSession = await context.newCDPSession(await context.newPage());
+        const cdpPage = await context.newPage();
+        const cdpSession = await context.newCDPSession(cdpPage);
         await cdpSession.send('Network.clearBrowserCache');
         await cdpSession.send('Storage.clearDataForOrigin', {
           origin: '*',
           storageTypes: 'all'
         }).catch(() => {});
-        const tempPage = context.pages()[0];
-        if (tempPage) await tempPage.close();
+        await cdpPage.close();
       }
     } catch {
       // CDP cache clear is best-effort
@@ -1783,9 +1783,10 @@ export async function runAutomation(opts: {
     let taskIndex = 0;
 
     const worker = async () => {
-      while (taskIndex < tasks.length && !stopRequested) {
-        const task = tasks[taskIndex++];
-        if (!task) break;
+      while (!stopRequested) {
+        const idx = taskIndex++;
+        if (idx >= tasks.length) break;
+        const task = tasks[idx];
 
         state.running++;
 

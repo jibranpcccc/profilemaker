@@ -1,0 +1,202 @@
+{"timestamp":"2026-04-19T15:26:30.803Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[START] User=anna17227 Email=anna17227@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.806Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[START] User=anna85560 Email=anna85560@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.808Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[START] User=anna92752 Email=anna92752@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.809Z","site":"academy.edutic.id","step":"INFO","message":"[START] User=anna6147 Email=anna6147@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.811Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[START] User=anna42639 Email=anna42639@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.812Z","site":"lms.gkce.edu.in","step":"INFO","message":"[START] User=anna54796 Email=anna54796@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.814Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[START] User=anna40456 Email=anna40456@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.815Z","site":"edu.learningsuite.id","step":"INFO","message":"[START] User=anna78557 Email=anna78557@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.817Z","site":"portal.stem.edu.gr","step":"INFO","message":"[START] User=anna28037 Email=anna28037@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.819Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[START] User=anna13253 Email=anna13253@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:26:30.830Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.813Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.815Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.816Z","site":"academy.edutic.id","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.818Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.819Z","site":"edu.learningsuite.id","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.821Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.822Z","site":"lms.gkce.edu.in","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.825Z","site":"portal.stem.edu.gr","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:32.827Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:26:35.732Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[NAV] https://data.lutskrada.gov.ua/user/register"}
+{"timestamp":"2026-04-19T15:26:35.734Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[NAV] https://academia.sanpablo.edu.ec/student-registration/"}
+{"timestamp":"2026-04-19T15:26:35.737Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[NAV] https://homologa.cge.mg.gov.br/user/register"}
+{"timestamp":"2026-04-19T15:26:36.271Z","site":"academy.edutic.id","step":"INFO","message":"[NAV] https://academy.edutic.id/student-registration/"}
+{"timestamp":"2026-04-19T15:26:36.274Z","site":"portal.stem.edu.gr","step":"INFO","message":"[NAV] https://portal.stem.edu.gr/student-registration/"}
+{"timestamp":"2026-04-19T15:26:36.296Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[NAV] https://opendata.ternopilcity.gov.ua/user/register"}
+{"timestamp":"2026-04-19T15:26:36.300Z","site":"lms.gkce.edu.in","step":"INFO","message":"[NAV] https://lms.gkce.edu.in/student-registration/"}
+{"timestamp":"2026-04-19T15:26:36.303Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[NAV] https://hoc.salomon.edu.vn/student-registration/"}
+{"timestamp":"2026-04-19T15:26:36.309Z","site":"edu.learningsuite.id","step":"INFO","message":"[NAV] https://edu.learningsuite.id/student-registration/"}
+{"timestamp":"2026-04-19T15:26:36.316Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[NAV] https://mooc.esil.edu.kz/student-registration/"}
+{"timestamp":"2026-04-19T15:26:52.452Z","site":"edu.learningsuite.id","step":"INFO","message":"[500-RETRY] Submit successful (no 500 error)"}
+{"timestamp":"2026-04-19T15:26:52.611Z","site":"homologa.cge.mg.gov.br","step":"CKAN_BOOST_START","fastMode":true,"waitTime":2400}
+{"timestamp":"2026-04-19T15:26:58.074Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[WARN] Could not fill field: input#field-password1"}
+{"timestamp":"2026-04-19T15:26:58.999Z","site":"edu.learningsuite.id","step":"SIGNUP_COMPLETED","url":"https://edu.learningsuite.id/student-registration-page/"}
+{"timestamp":"2026-04-19T15:26:59.094Z","site":"opendata.ternopilcity.gov.ua","step":"CKAN_BOOST_START","fastMode":true,"waitTime":2400}
+{"timestamp":"2026-04-19T15:26:59.506Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:26:59.508Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:00.578Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:00.580Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:00.815Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:00.816Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:02.465Z","site":"edu.learningsuite.id","step":"INFO","message":"[AI] Post-submit info: Page content unavailable for analysis (Verify required: false)"}
+{"timestamp":"2026-04-19T15:27:02.481Z","site":"edu.learningsuite.id","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://edu.learningsuite.id/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:27:03.563Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[WARN] Could not fill field: input#field-password1"}
+{"timestamp":"2026-04-19T15:27:04.217Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:04.325Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:04.498Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:04.500Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:05.183Z","site":"data.lutskrada.gov.ua","step":"CKAN_BOOST_START","fastMode":true,"waitTime":2400}
+{"timestamp":"2026-04-19T15:27:06.246Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:06.423Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:07.370Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:27:07.377Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:08.302Z","site":"edu.learningsuite.id","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:27:08.612Z","site":"edu.learningsuite.id","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:27:12.833Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[500-RETRY] Submit successful (no 500 error)"}
+{"timestamp":"2026-04-19T15:27:18.230Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[500-RETRY] Submit successful (no 500 error)"}
+{"timestamp":"2026-04-19T15:27:18.400Z","site":"edu.learningsuite.id","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://edu.learningsuite.id/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:27:18.401Z","site":"edu.learningsuite.id","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:27:18.407Z","site":"edu.learningsuite.id","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://edu.learningsuite.id/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":47593}
+{"timestamp":"2026-04-19T15:27:18.511Z","site":"opendata.ternopilcity.gov.ua","step":"SIGNUP_COMPLETED","url":"https://opendata.ternopilcity.gov.ua/user/register"}
+{"timestamp":"2026-04-19T15:27:20.628Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:20.629Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:20.883Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:20.884Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:21.893Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or response data. (Verify required: false)"}
+{"timestamp":"2026-04-19T15:27:21.898Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://opendata.ternopilcity.gov.ua/user/edit"}
+{"timestamp":"2026-04-19T15:27:23.551Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:23.553Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:24.527Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:24.529Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:24.583Z","site":"data.lutskrada.gov.ua","step":"SIGNUP_COMPLETED","url":"https://data.lutskrada.gov.ua/user/register"}
+{"timestamp":"2026-04-19T15:27:24.741Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:27:24.909Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:27:27.477Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or response data (Verify required: false)"}
+{"timestamp":"2026-04-19T15:27:27.484Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://data.lutskrada.gov.ua/user/edit"}
+{"timestamp":"2026-04-19T15:27:28.540Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:28.542Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:28.624Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:28.626Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:30.299Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:27:30.456Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:27:30.553Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:27:30.555Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:36.168Z","site":"opendata.ternopilcity.gov.ua","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://opendata.ternopilcity.gov.ua/user/edit"}
+{"timestamp":"2026-04-19T15:27:36.171Z","site":"opendata.ternopilcity.gov.ua","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:27:36.181Z","site":"opendata.ternopilcity.gov.ua","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://opendata.ternopilcity.gov.ua/user/edit","backlinkStatus":"SKIPPED","durationMs":65368}
+{"timestamp":"2026-04-19T15:27:40.151Z","site":"data.lutskrada.gov.ua","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://data.lutskrada.gov.ua/user/edit"}
+{"timestamp":"2026-04-19T15:27:40.153Z","site":"data.lutskrada.gov.ua","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:27:40.162Z","site":"data.lutskrada.gov.ua","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://data.lutskrada.gov.ua/user/edit","backlinkStatus":"SKIPPED","durationMs":69360}
+{"timestamp":"2026-04-19T15:27:40.687Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:40.688Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:42.142Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:42.143Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:44.608Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:44.610Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:45.083Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:45.086Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:50.095Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:50.096Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:50.193Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:50.195Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:27:56.616Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:27:56.618Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:28:00.748Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:00.751Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:03.779Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:03.781Z","site":"academy.edutic.id","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:04.707Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:04.709Z","site":"portal.stem.edu.gr","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:06.639Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:06.642Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:07.086Z","site":"lms.gkce.edu.in","step":"SIGNUP_COMPLETED","url":"https://lms.gkce.edu.in/student-registration-page/"}
+{"timestamp":"2026-04-19T15:28:08.865Z","site":"academy.edutic.id","step":"SIGNUP_COMPLETED","url":"https://academy.edutic.id/student-registration-2-2/"}
+{"timestamp":"2026-04-19T15:28:10.255Z","site":"lms.gkce.edu.in","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:10.259Z","site":"lms.gkce.edu.in","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://lms.gkce.edu.in/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:10.766Z","site":"portal.stem.edu.gr","step":"SIGNUP_COMPLETED","url":"https://portal.stem.edu.gr/404-page/"}
+{"timestamp":"2026-04-19T15:28:11.676Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:11.678Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:12.185Z","site":"academy.edutic.id","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:12.190Z","site":"academy.edutic.id","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://academy.edutic.id/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:13.277Z","site":"mooc.esil.edu.kz","step":"SIGNUP_COMPLETED","url":"https://mooc.esil.edu.kz/student-registration/"}
+{"timestamp":"2026-04-19T15:28:13.637Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:13.639Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:14.224Z","site":"lms.gkce.edu.in","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:14.282Z","site":"portal.stem.edu.gr","step":"INFO","message":"[AI] Post-submit info: Page not found (404) (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:14.289Z","site":"portal.stem.edu.gr","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://portal.stem.edu.gr/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:14.431Z","site":"lms.gkce.edu.in","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:16.372Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements. (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:16.378Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://mooc.esil.edu.kz/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:17.138Z","site":"homologa.cge.mg.gov.br","step":"SIGNUP_COMPLETED","url":"https://homologa.cge.mg.gov.br/dataset/?q="}
+{"timestamp":"2026-04-19T15:28:17.479Z","site":"academy.edutic.id","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:18.692Z","site":"academia.sanpablo.edu.ec","step":"SIGNUP_COMPLETED","url":"https://academia.sanpablo.edu.ec/student-registration/"}
+{"timestamp":"2026-04-19T15:28:19.801Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[AI] Post-submit info: Page loaded but content unclear. May need manual review. (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:19.807Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://homologa.cge.mg.gov.br/user/edit"}
+{"timestamp":"2026-04-19T15:28:20.225Z","site":"portal.stem.edu.gr","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:21.378Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:21.533Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:21.736Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:21.741Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://academia.sanpablo.edu.ec/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:22.674Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:28:22.676Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:28:22.894Z","site":"lms.gkce.edu.in","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://lms.gkce.edu.in/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:22.896Z","site":"lms.gkce.edu.in","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:22.905Z","site":"lms.gkce.edu.in","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://lms.gkce.edu.in/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":112093}
+{"timestamp":"2026-04-19T15:28:25.094Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:25.272Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:25.786Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:25.933Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:29.593Z","site":"hoc.salomon.edu.vn","step":"SIGNUP_COMPLETED","url":"https://hoc.salomon.edu.vn/student-registration/"}
+{"timestamp":"2026-04-19T15:28:31.826Z","site":"mooc.esil.edu.kz","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://mooc.esil.edu.kz/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:31.828Z","site":"mooc.esil.edu.kz","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:31.841Z","site":"mooc.esil.edu.kz","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://mooc.esil.edu.kz/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":121031}
+{"timestamp":"2026-04-19T15:28:33.533Z","site":"academia.sanpablo.edu.ec","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://academia.sanpablo.edu.ec/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:33.535Z","site":"academia.sanpablo.edu.ec","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:33.545Z","site":"academia.sanpablo.edu.ec","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://academia.sanpablo.edu.ec/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":122738}
+{"timestamp":"2026-04-19T15:28:34.243Z","site":"homologa.cge.mg.gov.br","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://homologa.cge.mg.gov.br/user/edit"}
+{"timestamp":"2026-04-19T15:28:34.245Z","site":"homologa.cge.mg.gov.br","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:34.254Z","site":"homologa.cge.mg.gov.br","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://homologa.cge.mg.gov.br/user/edit","backlinkStatus":"SKIPPED","durationMs":123448}
+{"timestamp":"2026-04-19T15:28:34.686Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements (Verify required: false)"}
+{"timestamp":"2026-04-19T15:28:34.692Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://hoc.salomon.edu.vn/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:41.057Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:28:41.214Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:46.040Z","site":"hoc.salomon.edu.vn","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://hoc.salomon.edu.vn/"}
+{"timestamp":"2026-04-19T15:28:46.047Z","site":"hoc.salomon.edu.vn","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:46.071Z","site":"hoc.salomon.edu.vn","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://hoc.salomon.edu.vn/","backlinkStatus":"SKIPPED","durationMs":135253}
+{"timestamp":"2026-04-19T15:28:47.664Z","site":"academy.edutic.id","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:50.459Z","site":"portal.stem.edu.gr","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:28:59.850Z","site":"academy.edutic.id","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://academy.edutic.id/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:28:59.851Z","site":"academy.edutic.id","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:28:59.857Z","site":"academy.edutic.id","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://academy.edutic.id/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":149048}
+{"timestamp":"2026-04-19T15:29:01.311Z","site":"portal.stem.edu.gr","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://portal.stem.edu.gr/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:29:01.312Z","site":"portal.stem.edu.gr","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:29:01.319Z","site":"portal.stem.edu.gr","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://portal.stem.edu.gr/dashboard/settings/","backlinkStatus":"SKIPPED","durationMs":150502}
+{"timestamp":"2026-04-19T15:34:13.027Z","site":"lms.gkce.edu.in","step":"INFO","message":"[START] User=anna55412 Email=anna55412@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:34:13.033Z","site":"lms.gkce.edu.in","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:34:15.401Z","site":"lms.gkce.edu.in","step":"INFO","message":"[NAV] https://lms.gkce.edu.in/student-registration/"}
+{"timestamp":"2026-04-19T15:34:34.846Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 1"}
+{"timestamp":"2026-04-19T15:34:34.849Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:34:54.920Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 2"}
+{"timestamp":"2026-04-19T15:34:54.922Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:35:14.986Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 3"}
+{"timestamp":"2026-04-19T15:35:14.988Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Waiting 10 seconds + re-enabling fields..."}
+{"timestamp":"2026-04-19T15:35:35.038Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Detected 500 error on attempt 4"}
+{"timestamp":"2026-04-19T15:35:35.039Z","site":"lms.gkce.edu.in","step":"INFO","message":"[500-RETRY] Max retries reached. Giving up."}
+{"timestamp":"2026-04-19T15:35:40.067Z","site":"lms.gkce.edu.in","step":"SIGNUP_COMPLETED","url":"https://lms.gkce.edu.in/student-registration-page/"}
+{"timestamp":"2026-04-19T15:35:43.203Z","site":"lms.gkce.edu.in","step":"INFO","message":"[AI] Post-submit info: Cannot analyze page content without HTML or visible elements (Verify required: false)"}
+{"timestamp":"2026-04-19T15:35:43.210Z","site":"lms.gkce.edu.in","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://lms.gkce.edu.in/dashboard/settings/"}
+{"timestamp":"2026-04-19T15:39:46.884Z","site":"datos.estadisticas.pr","step":"INFO","message":"[START] User=anna28624 Email=anna28624@geezek.com Browser=Chromium"}
+{"timestamp":"2026-04-19T15:39:46.892Z","site":"datos.estadisticas.pr","step":"INFO","message":"[DATASET] ✅ Found in dataset (undefined)"}
+{"timestamp":"2026-04-19T15:39:49.403Z","site":"datos.estadisticas.pr","step":"INFO","message":"[NAV] https://datos.estadisticas.pr/user/register"}
+{"timestamp":"2026-04-19T15:40:07.780Z","site":"datos.estadisticas.pr","step":"INFO","message":"[WARN] Could not fill field: input#field-password1"}
+{"timestamp":"2026-04-19T15:40:08.834Z","site":"datos.estadisticas.pr","step":"CKAN_BOOST_START","fastMode":true,"waitTime":2400}
+{"timestamp":"2026-04-19T15:40:21.732Z","site":"datos.estadisticas.pr","step":"INFO","message":"[500-RETRY] Submit successful (no 500 error)"}
+{"timestamp":"2026-04-19T15:40:27.893Z","site":"datos.estadisticas.pr","step":"SIGNUP_COMPLETED","url":"https://datos.estadisticas.pr/dataset?q="}
+{"timestamp":"2026-04-19T15:40:31.939Z","site":"datos.estadisticas.pr","step":"INFO","message":"[AI] Post-submit info: Page appears to be a dataset search page, not a registration confirmation. (Verify required: false)"}
+{"timestamp":"2026-04-19T15:40:31.943Z","site":"datos.estadisticas.pr","step":"INFO","message":"[PROFILE] Navigating to profile edit: https://datos.estadisticas.pr/user/edit"}
+{"timestamp":"2026-04-19T15:40:34.841Z","site":"datos.estadisticas.pr","step":"INFO","message":"[PROFILE] Trying brute-force universal fill..."}
+{"timestamp":"2026-04-19T15:40:34.945Z","site":"datos.estadisticas.pr","step":"INFO","message":"[PROFILE] Using AI fallback..."}
+{"timestamp":"2026-04-19T15:40:45.877Z","site":"datos.estadisticas.pr","step":"INFO","message":"[VERIFY] Extracted TRUE dynamic profile URL from DOM: https://datos.estadisticas.pr/user/edit"}
+{"timestamp":"2026-04-19T15:40:45.881Z","site":"datos.estadisticas.pr","step":"PROFILE_FILLED","backlinkInserted":false}
+{"timestamp":"2026-04-19T15:40:45.901Z","site":"datos.estadisticas.pr","step":"SUCCESS","status":"SUCCESS","profileUrl":"https://datos.estadisticas.pr/user/edit","backlinkStatus":"SKIPPED","durationMs":59018}

@@ -69,7 +69,7 @@ function parseGeezekResponse(html: string, requestedUsername: string): EmailCred
   }
 
   // Extract password (match up to next tag, to support spaces in generated passwords)
-  const pwdMatch = html.match(/Password[:\s]+([^<\r\n]+)/i);
+  const pwdMatch = html.match(/Password[:\s]+(.+?)(?:\s*Email|$|<)/i);
   if (pwdMatch) {
     password = pwdMatch[1].trim();
   }
