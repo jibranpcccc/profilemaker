@@ -3,7 +3,12 @@ import path from 'path';
 import os from 'os';
 
 // Path to the ProfileSubmissionAssistant database
-const localAppData = process.env.LOCALAPPDATA || path.join(os.homedir(), 'AppData', 'Local');
+const localAppData = process.env.LOCALAPPDATA 
+  || (process.platform === 'darwin' 
+      ? path.join(os.homedir(), 'Library', 'Application Support')
+      : process.platform === 'linux'
+      ? path.join(os.homedir(), '.config')
+      : path.join(os.homedir(), 'AppData', 'Local'));
 const DB_PATH = path.join(localAppData, 'ProfileSubmissionAssistant', 'data.db');
 
 // Use a single shared connection in read-write mode

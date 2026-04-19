@@ -86,7 +86,7 @@ async function callApi(
         max_tokens: maxTokens,
         temperature,
       }),
-      signal: AbortSignal.timeout(90000),
+      signal: AbortSignal.timeout(28000),
     });
 
     if (!res.ok) throw new Error(`DeepSeek HTTP ${res.status}`);
@@ -222,8 +222,9 @@ Required JSON structure (strictly follow this schema):
 }
 
 Rules you MUST follow:
-- Prefer resilient selectors: [name="username"], [type="email"], button:has-text("Register")
-- For bio link injection: prioritize any rich-text editor, textarea, or contenteditable div. 
+  - Prefer resilient selectors: [name="username"], [type="email"], button:has-text("Register")
+  - If the registration form is inside an iframe (e.g. Wix auth), return the selector prefixed with FRAME: to signal the engine must switch context.
+  - For bio link injection: prioritize any rich-text editor, textarea, or contenteditable div. 
 - If unsure about a selector, return null.
 Output ONLY the JSON. Start directly with { and end with }.`;
 

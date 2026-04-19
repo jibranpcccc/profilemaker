@@ -5,7 +5,9 @@ import os from 'os';
 const localAppData = process.env.LOCALAPPDATA 
   || (process.platform === 'darwin' 
       ? path.join(os.homedir(), 'Library', 'Application Support')
-      : path.join(os.homedir(), '.config'));
+      : process.platform === 'linux'
+      ? path.join(os.homedir(), '.config')
+      : path.join(os.homedir(), 'AppData', 'Local'));
 const SETTINGS_PATH = path.join(localAppData, 'ProfileSubmissionAssistant', 'settings.json');
 
 export interface AppSettings {

@@ -701,6 +701,14 @@ async function fillFromDataset(
   const fields = entry.fields || {};
   const pw = identity.password;
 
+  try {
+    const hasGoogleBtn = await page.$('[data-testid="google-signup"], button:has-text("Continue with Google"), a:has-text("Sign up with Google")');
+    if (hasGoogleBtn) {
+      log(siteName, '[AUTH] Google button detected — switching to email/password signup...');
+      await page.click('button:has-text("Sign up with email"), a:has-text("Use email"), [data-testid="email-signup"]').catch(() => {});
+    }
+  } catch (e) {}
+
   // Handle pre-fill clicks (e.g., opening modals, switching tabs)
   if (entry.pre_fill_actions && Array.isArray(entry.pre_fill_actions)) {
     for (const sel of entry.pre_fill_actions) {
