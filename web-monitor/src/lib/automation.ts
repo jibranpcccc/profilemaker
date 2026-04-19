@@ -1620,7 +1620,12 @@ export async function automateSite(
       const domain = new URL(signupUrl).hostname;
       publicUrl = `https://${domain}/user/${identity.username}`;
     } else if (isWixSite(signupUrl || profileEditUrl || '')) {
-       publicUrl = `https://${new URL(signupUrl).hostname}/profile/${identity.username}/profile`;
+       const postSaveExtractedUrl = await page.evaluate(() => {
+         return Array.from(document.querySelectorAll('a'))
+           .map((a: any) => a.href)
+           .find(h => h.includes('/profile/') && !h.includes('login') && !h.includes('edit')) || null;
+       });
+       publicUrl = postSaveExtractedUrl || `https://${new URL(signupUrl).hostname}/profile/${identity.username}/profile` || page.url();
     }
 
     // Screenshot + Save (moved after dynamic URL resolving)
