@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const datasetPath = path.join(process.cwd(), 'platform_dataset.json');
+const datasetPath = path.join(process.cwd(), 'web-monitor\platform_dataset.json');
 let data = JSON.parse(fs.readFileSync(datasetPath, 'utf8'));
 
 const wixDomains = [
