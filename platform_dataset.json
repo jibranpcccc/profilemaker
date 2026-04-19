@@ -12,27 +12,27 @@
       "button:has-text('Iniciar sesión')",
       "button:has-text('Entrar')"
     ],
-    "bio_selector": "#bio, textarea, [contenteditable='true'], [data-testid*='bio'], .bio-textarea, textarea[placeholder*='bio']",
-    "website_selector": "input[type='url'], input[name*='website'], input[placeholder*='website'], input[name*='url']",
-    "save_button": "button:has-text('Save'), button[type='submit'], .save-button, [data-testid*='save'], button.primary"
+    "bioSelector": "#bio, textarea, [contenteditable='true'], [data-testid*='bio'], .bio-textarea, textarea[placeholder*='bio']",
+    "websiteSelector": "input[type='url'], input[name*='website'], input[placeholder*='website'], input[name*='url']",
+    "saveButton": "button:has-text('Save'), button[type='submit'], .save-button, [data-testid*='save'], button.primary"
   },
   {
     "domain": "learndash_generic",
     "signup_url": "https://www.{domain}/student-registration/",
     "profile_edit_url": "https://www.{domain}/dashboard/settings/",
     "profile_pattern": "https://www.{domain}/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true'], #ld-profile-bio, textarea[name*='bio']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit'], .ld-button, .btn-primary"
+    "bioSelector": "textarea, [contenteditable='true'], #ld-profile-bio, textarea[name*='bio']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit'], .ld-button, .btn-primary"
   },
   {
     "domain": "ckan_generic",
     "signup_url": "https://{domain}/user/register",
     "profile_edit_url": "https://{domain}/user/edit",
     "profile_pattern": "https://{domain}/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
-    "website_selector": "input[name*='url'], input#url, input[name*='website']",
-    "save_button": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']"
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']"
   },
   {
     "domain": "academia_generic",
@@ -45,9 +45,9 @@
       ".signup-button",
       "button:has-text('Create account')"
     ],
-    "bio_selector": "textarea[name*='bio'], #user_bio, textarea.about, [contenteditable='true']",
-    "website_selector": "input[name*='website'], input#website, input[type='url']",
-    "save_button": "button:has-text('Save changes'), button[type='submit'], .btn-primary"
+    "bioSelector": "textarea[name*='bio'], #user_bio, textarea.about, [contenteditable='true']",
+    "websiteSelector": "input[name*='website'], input#website, input[type='url']",
+    "saveButton": "button:has-text('Save changes'), button[type='submit'], .btn-primary"
   },
   {
     "domain": "haphong.edu.vn",
@@ -62,9 +62,9 @@
     },
     "signup_url": "https://www.haphong.edu.vn",
     "profile_pattern": "https://www.haphong.edu.vn/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"]"
+    "bioSelector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"]"
   },
   {
     "domain": "holycrossconvent.edu.na",
@@ -79,13 +79,13 @@
     },
     "signup_url": "https://www.holycrossconvent.edu.na",
     "profile_pattern": "https://www.holycrossconvent.edu.na/profile/{username}/profile",
-    "bio_selector": "#bio, textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']",
     "pre_fill_actions": [
       "[data-testid='signUp.switchToSignUp']",
       "button:has-text('Sign up')"
-    ]
+    ],
+    "bioSelector": "#bio, textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "rosewood.edu.na",
@@ -100,9 +100,9 @@
     },
     "signup_url": "https://www.rosewood.edu.na",
     "profile_pattern": "https://www.rosewood.edu.na/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "woorips.vic.edu.au",
@@ -117,9 +117,9 @@
     },
     "signup_url": "https://www.woorips.vic.edu.au",
     "profile_pattern": "https://www.woorips.vic.edu.au/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "orkhonschool.edu.mn",
@@ -134,9 +134,9 @@
     },
     "signup_url": "https://www.orkhonschool.edu.mn",
     "profile_pattern": "https://www.orkhonschool.edu.mn/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "lasallesancristobal.edu.mx",
@@ -151,9 +151,9 @@
     },
     "signup_url": "https://www.lasallesancristobal.edu.mx",
     "profile_pattern": "https://www.lasallesancristobal.edu.mx/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "lanubedocente.21.edu.ar",
@@ -168,26 +168,9 @@
     },
     "signup_url": "https://www.lanubedocente.21.edu.ar",
     "profile_pattern": "https://www.lanubedocente.21.edu.ar/profile/{username}/profile",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
-  },
-  {
-    "domain": "pandora.nla.gov.au",
-    "profile_edit_url": "http://pandora.nla.gov.au/external.html?link=https://megawin188.id/",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "http://pandora.nla.gov.au/external.html?link=https://megawin188.id/",
-    "profile_pattern": "https://pandora.nla.gov.au/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "tarauaca.ac.gov.br",
@@ -202,9 +185,9 @@
     },
     "signup_url": "https://www.tarauaca.ac.gov.br/register",
     "profile_pattern": "https://www.tarauaca.ac.gov.br/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "sarkariresult.education",
@@ -219,9 +202,9 @@
     },
     "signup_url": "https://www.sarkariresult.education/register",
     "profile_pattern": "https://sarkariresult.education/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
+    "bioSelector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
   },
   {
     "domain": "ensp.edu.mx",
@@ -236,26 +219,9 @@
     },
     "signup_url": "https://ensp.edu.mx/members/megawin18888/",
     "profile_pattern": "https://ensp.edu.mx/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
-  },
-  {
-    "domain": "wiki.ling.washington.edu",
-    "profile_edit_url": "https://wiki.ling.washington.edu/bin/view/Main/Megawin188Megawin188",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "https://wiki.ling.washington.edu/bin/view/Main/Megawin188Megawin188",
-    "profile_pattern": "https://wiki.ling.washington.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
+    "bioSelector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
   },
   {
     "domain": "centrotecnologico.edu.mx",
@@ -270,9 +236,9 @@
     },
     "signup_url": "https://www.centrotecnologico.edu.mx/register",
     "profile_pattern": "https://www.centrotecnologico.edu.mx/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "stes.tyc.edu.tw",
@@ -286,10 +252,10 @@
       "type": "none"
     },
     "signup_url": "https://stes.tyc.edu.tw/register",
-    "profile_pattern": "https://stes.tyc.edu.tw/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
+    "profile_pattern": "http://www.stes.tyc.edu.tw/xoops/userinfo.php?uid={uid}",
+    "bioSelector": "textarea, [contenteditable=\"true\"], [data-testid*=\"bio\"], .bio-textarea, [name*=\"bio\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"], input[placeholder*=\"website\"], input[placeholder*=\"site\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), button[type=\"submit\"], .save-button, [data-testid*=\"save\"], button.primary"
   },
   {
     "domain": "institutocrecer.edu.co",
@@ -304,9 +270,9 @@
     },
     "signup_url": "https://institutocrecer.edu.co/register",
     "profile_pattern": "https://institutocrecer.edu.co/profile/{username}",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "aiti.edu.vn",
@@ -321,60 +287,9 @@
     },
     "signup_url": "https://aiti.edu.vn/register",
     "profile_pattern": "https://aiti.edu.vn/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
-  },
-  {
-    "domain": "learningsuite.id",
-    "profile_edit_url": "https://edu.learningsuite.id/account",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "https://edu.learningsuite.id/register",
-    "profile_pattern": "https://edu.learningsuite.id/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
-  },
-  {
-    "domain": "aula.edu.pe",
-    "profile_edit_url": "https://learndash.aula.edu.pe/dashboard/settings/",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "https://learndash.aula.edu.pe/student-registration/",
-    "profile_pattern": "https://learndash.aula.edu.pe/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
-  },
-  {
-    "domain": "edutic.id",
-    "profile_edit_url": "https://academy.edutic.id/account",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "https://academy.edutic.id/register",
-    "profile_pattern": "https://academy.edutic.id/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "lifewest.edu",
@@ -389,9 +304,9 @@
     },
     "signup_url": "https://jobs.lifewest.edu/register",
     "profile_pattern": "https://jobs.lifewest.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "bbiny.edu",
@@ -406,9 +321,9 @@
     },
     "signup_url": "https://bbiny.edu/register",
     "profile_pattern": "https://bbiny.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "pibelearning.gov.bd",
@@ -421,11 +336,11 @@
     "captcha": {
       "type": "none"
     },
-    "signup_url": "https://pibelearning.gov.bd/register",
+    "signup_url": "https://pibelearning.gov.bd/wp-login.php?action=register",
     "profile_pattern": "https://pibelearning.gov.bd/profile/{username}",
-    "bio_selector": "textarea[name*='bio'], textarea#bio, #user_description",
-    "website_selector": "input[name*='url'], input#url, input[name*='website']",
-    "save_button": "input[type='submit'], button[type='submit'], .btn-primary"
+    "bioSelector": "textarea[name*='bio'], textarea#bio, #user_description",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "input[type='submit'], button[type='submit'], .btn-primary"
   },
   {
     "domain": "blac.edu.pl",
@@ -440,636 +355,620 @@
     },
     "signup_url": "https://blac.edu.pl/register",
     "profile_pattern": "https://blac.edu.pl/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
-  },
-  {
-    "domain": "sanpablo.edu.ec",
-    "profile_edit_url": "https://academia.sanpablo.edu.ec/account",
-    "fields": {},
-    "profile_fields": {
-      "bio": "#bio",
-      "website": "#website"
-    },
-    "captcha": {
-      "type": "none"
-    },
-    "signup_url": "https://academia.sanpablo.edu.ec/register",
-    "profile_pattern": "https://academia.sanpablo.edu.ec/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\")"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\")"
   },
   {
     "domain": "nazaret.edu.ec",
     "signup_url": "https://nazaret.edu.ec/register",
     "profile_edit_url": "https://nazaret.edu.ec/account",
     "profile_pattern": "https://nazaret.edu.ec/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "ictae.edu.mx",
     "signup_url": "https://ictae.edu.mx/register",
     "profile_edit_url": "https://ictae.edu.mx/account",
     "profile_pattern": "https://ictae.edu.mx/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "news.lafontana.edu.co",
     "signup_url": "https://news.lafontana.edu.co/register",
     "profile_edit_url": "https://news.lafontana.edu.co/account",
     "profile_pattern": "https://news.lafontana.edu.co/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "divinagracia.edu.ec",
     "signup_url": "https://divinagracia.edu.ec/register",
     "profile_edit_url": "https://divinagracia.edu.ec/account",
     "profile_pattern": "https://divinagracia.edu.ec/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "democracy-edu.or.kr",
     "signup_url": "https://democracy-edu.or.kr/register",
     "profile_edit_url": "https://democracy-edu.or.kr/account",
     "profile_pattern": "https://democracy-edu.or.kr/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "discoveryschool.edu.hn",
     "signup_url": "https://www.discoveryschool.edu.hn/student-registration/",
     "profile_edit_url": "https://www.discoveryschool.edu.hn/dashboard/settings/",
     "profile_pattern": "https://www.discoveryschool.edu.hn/members-area/{username}/profile",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']",
     "profilepattern": "https://www.discoveryschool.edu.hn/members-area/{username}/profile",
-    "signupurl": "https://www.discoveryschool.edu.hn"
+    "signupurl": "https://www.discoveryschool.edu.hn",
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "altamira.edu.ec",
     "signup_url": "https://altamira.edu.ec/register",
     "profile_edit_url": "https://altamira.edu.ec/account",
     "profile_pattern": "https://altamira.edu.ec/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "aac.edu.sg",
     "signup_url": "https://aac.edu.sg/register",
     "profile_edit_url": "https://aac.edu.sg/account",
     "profile_pattern": "https://aac.edu.sg/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "dlsjbc.edu.ph",
     "signup_url": "https://dlsjbc.edu.ph/register",
     "profile_edit_url": "https://dlsjbc.edu.ph/account",
     "profile_pattern": "https://dlsjbc.edu.ph/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "csg.umich.edu",
     "signup_url": "https://csg.umich.edu/register",
     "profile_edit_url": "https://csg.umich.edu/account",
     "profile_pattern": "https://csg.umich.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "pepper-edu.com",
     "signup_url": "https://pepper-edu.com/register",
     "profile_edit_url": "https://pepper-edu.com/account",
     "profile_pattern": "https://pepper-edu.com/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "britishschool.edu.mn",
     "signup_url": "https://britishschool.edu.mn/register",
     "profile_edit_url": "https://britishschool.edu.mn/account",
     "profile_pattern": "https://britishschool.edu.mn/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "ih.hs.yzu.edu.tw",
     "signup_url": "https://ih.hs.yzu.edu.tw/student-registration/",
     "profile_edit_url": "https://ih.hs.yzu.edu.tw/dashboard/settings/",
     "profile_pattern": "https://ih.hs.yzu.edu.tw/members-area/{username}/profile",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "cbc.edu",
     "signup_url": "https://cbc.edu/register",
     "profile_edit_url": "https://cbc.edu/account",
     "profile_pattern": "https://cbc.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "capandgown.stanford.edu",
     "signup_url": "https://capandgown.stanford.edu/register",
     "profile_edit_url": "https://capandgown.stanford.edu/account",
     "profile_pattern": "https://capandgown.stanford.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "wendover-pc.gov.uk",
     "signup_url": "https://www.wendover-pc.gov.uk/student-registration/",
     "profile_edit_url": "https://www.wendover-pc.gov.uk/dashboard/settings/",
     "profile_pattern": "https://www.wendover-pc.gov.uk/members-area/{username}/profile",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "ceacuautla.edu.mx",
     "signup_url": "https://ceacuautla.edu.mx/register",
     "profile_edit_url": "https://ceacuautla.edu.mx/account",
     "profile_pattern": "https://ceacuautla.edu.mx/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "chili.edu.pl",
     "signup_url": "https://chili.edu.pl/register",
     "profile_edit_url": "https://chili.edu.pl/account",
     "profile_pattern": "https://chili.edu.pl/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "cimurc.ba.gov.br",
     "signup_url": "https://cimurc.ba.gov.br/register",
     "profile_edit_url": "https://cimurc.ba.gov.br/account",
     "profile_pattern": "https://cimurc.ba.gov.br/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "colorpositive.org",
     "signup_url": "https://colorpositive.org/register",
     "profile_edit_url": "https://colorpositive.org/account",
     "profile_pattern": "https://colorpositive.org/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "activethinkers.edu.ph",
     "signup_url": "https://activethinkers.edu.ph/register",
     "profile_edit_url": "https://activethinkers.edu.ph/account",
     "profile_pattern": "https://activethinkers.edu.ph/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "workingtontowncouncil.gov.uk",
     "signup_url": "https://workingtontowncouncil.gov.uk/register",
     "profile_edit_url": "https://workingtontowncouncil.gov.uk/account",
     "profile_pattern": "https://workingtontowncouncil.gov.uk/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "liceomontessoripalmira.edu.co",
     "signup_url": "https://liceomontessoripalmira.edu.co/register",
     "profile_edit_url": "https://liceomontessoripalmira.edu.co/account",
     "profile_pattern": "https://liceomontessoripalmira.edu.co/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "creswicknorthps.vic.edu.au",
     "signup_url": "https://creswicknorthps.vic.edu.au/register",
     "profile_edit_url": "https://creswicknorthps.vic.edu.au/account",
     "profile_pattern": "https://creswicknorthps.vic.edu.au/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "cruzrojaslp.edu.mx",
     "signup_url": "https://cruzrojaslp.edu.mx/register",
     "profile_edit_url": "https://cruzrojaslp.edu.mx/account",
     "profile_pattern": "https://cruzrojaslp.edu.mx/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "bethrivkah.edu",
     "signup_url": "https://bethrivkah.edu/register",
     "profile_edit_url": "https://bethrivkah.edu/account",
     "profile_pattern": "https://bethrivkah.edu/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "chrt.co.uk",
     "signup_url": "https://chrt.co.uk/register",
     "profile_edit_url": "https://chrt.co.uk/account",
     "profile_pattern": "https://chrt.co.uk/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "ati.edu.my",
     "signup_url": "https://ati.edu.my/register",
     "profile_edit_url": "https://ati.edu.my/account",
     "profile_pattern": "https://ati.edu.my/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "edu-tribes.com",
     "signup_url": "https://www.edu-tribes.com/student-registration/",
     "profile_edit_url": "https://www.edu-tribes.com/dashboard/settings/",
     "profile_pattern": "https://www.edu-tribes.com/members-area/{username}/profile",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "healthlinkdental.org",
     "signup_url": "https://healthlinkdental.org/register",
     "profile_edit_url": "https://healthlinkdental.org/account",
     "profile_pattern": "https://healthlinkdental.org/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "cu.edu.lr",
     "signup_url": "https://cu.edu.lr/register",
     "profile_edit_url": "https://cu.edu.lr/account",
     "profile_pattern": "https://cu.edu.lr/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "eduamenity.com",
     "signup_url": "https://eduamenity.com/register",
     "profile_edit_url": "https://eduamenity.com/account",
     "profile_pattern": "https://eduamenity.com/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "sjspringvale.catholic.edu.au",
     "signup_url": "https://sjspringvale.catholic.edu.au/register",
     "profile_edit_url": "https://sjspringvale.catholic.edu.au/account",
     "profile_pattern": "https://sjspringvale.catholic.edu.au/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "veteranscup.org",
     "signup_url": "https://veteranscup.org/register",
     "profile_edit_url": "https://veteranscup.org/account",
     "profile_pattern": "https://veteranscup.org/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "qualitysheetmetalincorporated.org",
     "signup_url": "https://qualitysheetmetalincorporated.org/register",
     "profile_edit_url": "https://qualitysheetmetalincorporated.org/account",
     "profile_pattern": "https://qualitysheetmetalincorporated.org/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "hea.edu.au",
     "signup_url": "https://hea.edu.au/register",
     "profile_edit_url": "https://hea.edu.au/account",
     "profile_pattern": "https://hea.edu.au/profile/{username}",
-    "bio_selector": "textarea, [contenteditable=\"true\"]",
-    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
-    "save_button": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
+    "bioSelector": "textarea, [contenteditable=\"true\"]",
+    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
+    "saveButton": "button:has-text(\"Save\"), button:has-text(\"Update\"), .save-button"
   },
   {
     "domain": "pad.itiv.kit.edu",
     "signup_url": "https://pad.itiv.kit.edu/",
     "profile_edit_url": "https://pad.itiv.kit.edu/user/settings",
     "profile_pattern": "https://pad.itiv.kit.edu/user/{username}",
-    "bio_selector": "textarea[name*='about'], textarea#about, .about-textarea, textarea[placeholder*='bio']",
-    "website_selector": "input[name*='url'], input#url, input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit'], .btn-primary",
     "pre_fill_actions": [
       "button:has-text('Sign up')",
       "a:has-text('Register')",
       "[data-testid*='signup']"
-    ]
+    ],
+    "bioSelector": "textarea[name*='about'], textarea#about, .about-textarea, textarea[placeholder*='bio']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit'], .btn-primary"
   },
   {
     "domain": "edu.lu.lv",
     "signup_url": "https://edu.lu.lv/",
     "profile_edit_url": "https://edu.lu.lv/user/edit",
     "profile_pattern": "https://edu.lu.lv/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about'], .user-about",
-    "website_selector": "input[name*='url'], input#url, input[name*='website']",
-    "save_button": "button:has-text('Save'), input[type='submit']",
     "pre_fill_actions": [
       "button:has-text('Sign up')",
       "a:has-text('Register')",
       ".login a"
-    ]
+    ],
+    "bioSelector": "#field-about, textarea[name*='about'], .user-about",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button:has-text('Save'), input[type='submit']"
   },
   {
     "domain": "independent.academia.edu",
     "signup_url": "https://independent.academia.edu/",
     "profile_edit_url": "https://independent.academia.edu/settings",
     "profile_pattern": "https://independent.academia.edu/{username}",
-    "bio_selector": "textarea[name*='bio'], #user_bio, textarea.about",
-    "website_selector": "input[name*='website'], input#website, input[type='url']",
-    "save_button": "button:has-text('Save changes'), button[type='submit']",
     "pre_fill_actions": [
       "button:has-text('Join for free')",
       "a:has-text('Sign up')",
       ".signup-button"
-    ]
+    ],
+    "bioSelector": "textarea[name*='bio'], #user_bio, textarea.about",
+    "websiteSelector": "input[name*='website'], input#website, input[type='url']",
+    "saveButton": "button:has-text('Save changes'), button[type='submit']"
   },
   {
     "domain": "dados.unifei.edu.br",
     "signup_url": "https://dados.unifei.edu.br/user/register",
     "profile_edit_url": "https://dados.unifei.edu.br/user/edit",
     "profile_pattern": "https://dados.unifei.edu.br/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "opendata.ternopilcity.gov.ua",
     "signup_url": "https://opendata.ternopilcity.gov.ua/user/register",
     "profile_edit_url": "https://opendata.ternopilcity.gov.ua/user/edit",
     "profile_pattern": "https://opendata.ternopilcity.gov.ua/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "csdlcntmgialai.gov.vn",
     "signup_url": "http://csdlcntmgialai.gov.vn/user/register",
     "profile_edit_url": "https://csdlcntmgialai.gov.vn/user/edit",
     "profile_pattern": "https://csdlcntmgialai.gov.vn/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "dados.justica.gov.pt",
     "signup_url": "https://dados.justica.gov.pt/user/register",
     "profile_edit_url": "https://dados.justica.gov.pt/user/edit",
     "profile_pattern": "https://dados.justica.gov.pt/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "data.lutskrada.gov.ua",
     "signup_url": "https://data.lutskrada.gov.ua/user/register",
     "profile_edit_url": "https://data.lutskrada.gov.ua/user/edit",
     "profile_pattern": "https://data.lutskrada.gov.ua/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "dados.ifac.edu.br",
     "signup_url": "https://dados.ifac.edu.br/user/register",
     "profile_edit_url": "https://dados.ifac.edu.br/user/edit",
     "profile_pattern": "https://dados.ifac.edu.br/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']",
+    "disabled": true
   },
   {
     "domain": "opendata.klaten.go.id",
     "signup_url": "https://opendata.klaten.go.id/user/register",
     "profile_edit_url": "https://opendata.klaten.go.id/user/edit",
     "profile_pattern": "https://opendata.klaten.go.id/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "data.dniprorada.gov.ua",
     "signup_url": "https://data.dniprorada.gov.ua/user/register",
     "profile_edit_url": "https://data.dniprorada.gov.ua/user/edit",
     "profile_pattern": "https://data.dniprorada.gov.ua/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "data.aurora.linkeddata.es",
     "signup_url": "https://data.aurora.linkeddata.es/user/register",
     "profile_edit_url": "https://data.aurora.linkeddata.es/user/edit",
     "profile_pattern": "https://data.aurora.linkeddata.es/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "datos.estadisticas.pr",
     "signup_url": "https://datos.estadisticas.pr/user/register",
     "profile_edit_url": "https://datos.estadisticas.pr/user/edit",
     "profile_pattern": "https://datos.estadisticas.pr/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "homologa.cge.mg.gov.br",
     "signup_url": "https://homologa.cge.mg.gov.br/user/register",
     "profile_edit_url": "https://homologa.cge.mg.gov.br/user/edit",
     "profile_pattern": "https://homologa.cge.mg.gov.br/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "rciims.mona.uwi.edu",
     "signup_url": "https://rciims.mona.uwi.edu/user/register",
     "profile_edit_url": "https://rciims.mona.uwi.edu/user/edit",
     "profile_pattern": "https://rciims.mona.uwi.edu/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "data-catalogue.operandum-project.eu",
     "signup_url": "https://data-catalogue.operandum-project.eu/user/register",
     "profile_edit_url": "https://data-catalogue.operandum-project.eu/user/edit",
     "profile_pattern": "https://data-catalogue.operandum-project.eu/user/{username}",
-    "bio_selector": "#field-about, textarea[name*='about']",
-    "website_selector": "input[name*='url'], input#url",
-    "save_button": "button[type='submit'][name='save']"
+    "bioSelector": "#field-about, textarea[name*='about']",
+    "websiteSelector": "input[name*='url'], input#url",
+    "saveButton": "button[type='submit'][name='save']"
   },
   {
     "domain": "learndash.aula.edu.pe",
-    "signup_url": "https://learndash.aula.edu.pe/student-registration/",
+    "signup_url": "https://learndash.aula.edu.pe/register/",
     "profile_edit_url": "https://learndash.aula.edu.pe/dashboard/settings/",
     "profile_pattern": "https://learndash.aula.edu.pe/miembros/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "lms.gkce.edu.in",
     "signup_url": "https://lms.gkce.edu.in/student-registration/",
     "profile_edit_url": "https://lms.gkce.edu.in/dashboard/settings/",
     "profile_pattern": "https://lms.gkce.edu.in/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true'], #ld-profile-bio",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit'], .ld-button"
+    "bioSelector": "textarea, [contenteditable='true'], #ld-profile-bio",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit'], .ld-button"
   },
   {
     "domain": "academia.sanpablo.edu.ec",
     "signup_url": "https://academia.sanpablo.edu.ec/student-registration/",
     "profile_edit_url": "https://academia.sanpablo.edu.ec/dashboard/settings/",
     "profile_pattern": "https://academia.sanpablo.edu.ec/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "mooc.esil.edu.kz",
     "signup_url": "https://mooc.esil.edu.kz/student-registration/",
     "profile_edit_url": "https://mooc.esil.edu.kz/dashboard/settings/",
     "profile_pattern": "https://mooc.esil.edu.kz/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "esapa.edu.ar",
     "signup_url": "https://esapa.edu.ar/student-registration/",
     "profile_edit_url": "https://esapa.edu.ar/dashboard/settings/",
     "profile_pattern": "https://esapa.edu.ar/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "ncon.edu.sa",
     "signup_url": "https://ncon.edu.sa/student-registration/",
     "profile_edit_url": "https://ncon.edu.sa/dashboard/settings/",
     "profile_pattern": "https://ncon.edu.sa/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "portal.stem.edu.gr",
     "signup_url": "https://portal.stem.edu.gr/student-registration/",
     "profile_edit_url": "https://portal.stem.edu.gr/dashboard/settings/",
     "profile_pattern": "https://portal.stem.edu.gr/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "edu.openu.in",
     "signup_url": "https://edu.openu.in/student-registration/",
     "profile_edit_url": "https://edu.openu.in/dashboard/settings/",
     "profile_pattern": "https://edu.openu.in/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "edu.learningsuite.id",
     "signup_url": "https://edu.learningsuite.id/student-registration/",
     "profile_edit_url": "https://edu.learningsuite.id/dashboard/settings/",
     "profile_pattern": "https://edu.learningsuite.id/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "hoc.salomon.edu.vn",
     "signup_url": "https://hoc.salomon.edu.vn/student-registration/",
     "profile_edit_url": "https://hoc.salomon.edu.vn/dashboard/settings/",
     "profile_pattern": "https://hoc.salomon.edu.vn/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "iviet.edu.vn",
     "signup_url": "https://iviet.edu.vn/student-registration/",
     "profile_edit_url": "https://iviet.edu.vn/dashboard/settings/",
     "profile_pattern": "https://iviet.edu.vn/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "ontrip.80gigs.com",
     "signup_url": "https://ontrip.80gigs.com/student-registration/",
     "profile_edit_url": "https://ontrip.80gigs.com/dashboard/settings/",
     "profile_pattern": "https://ontrip.80gigs.com/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "umkmcerdaspajak.id",
     "signup_url": "https://umkmcerdaspajak.id/student-registration/",
     "profile_edit_url": "https://umkmcerdaspajak.id/dashboard/settings/",
     "profile_pattern": "https://umkmcerdaspajak.id/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   },
   {
     "domain": "academy.edutic.id",
     "signup_url": "https://academy.edutic.id/student-registration/",
     "profile_edit_url": "https://academy.edutic.id/dashboard/settings/",
     "profile_pattern": "https://academy.edutic.id/profile/{username}/",
-    "bio_selector": "textarea, [contenteditable='true']",
-    "website_selector": "input[type='url'], input[name*='url'], input[name*='website']",
-    "save_button": "button:has-text('Save'), button[type='submit']"
+    "bioSelector": "textarea, [contenteditable='true']",
+    "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
+    "saveButton": "button:has-text('Save'), button[type='submit']"
   }
 ]

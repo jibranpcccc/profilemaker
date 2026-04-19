@@ -58,7 +58,6 @@ export interface AiPostSubmitResult {
 let activeAiCalls = 0;
 async function aiThrottle() {
   while (activeAiCalls >= 3) await new Promise(r => setTimeout(r, 300));
-  activeAiCalls++;
 }
 
 async function callApi(
@@ -69,6 +68,7 @@ async function callApi(
   maxTokens: number = 800
 ): Promise<AiResult> {
   await aiThrottle();
+  activeAiCalls++;
   try {
     const res = await fetch(API_URL, {
       method: 'POST',

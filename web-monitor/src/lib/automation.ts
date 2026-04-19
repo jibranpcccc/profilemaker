@@ -1584,11 +1584,18 @@ export async function automateSite(
     let dynamicExtractedUrl = null;
 
     try {
-      // Find any internal link on the page containing the username plus common profile path indicators
-      // This allows us to naturally discover the internal profile ID if the CMS generates one
+      // For Wix and other dynamic SPAs, the real profile URL is often embedded in the head (canonical or og:url)
+      // or available in the DOM navigation links.
       dynamicExtractedUrl = await page.evaluate((uname) => {
+        const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+        if (canonical && canonical.includes('/profile/')) return canonical;
+
+        const ogUrl = document.querySelector('meta[property="og:url"]')?.getAttribute('content');
+        if (ogUrl && ogUrl.includes('/profile/')) return ogUrl;
+
         const anchors = Array.from(document.querySelectorAll('a'));
-        // Wix uses /profile/{memberId}/profile — NOT username
+        
+        // Wix uses /profile/{memberId}/profile NOT username
         const wixProfile = anchors
           .map(a => a.href)
           .filter(h => h.includes('/profile/') && !h.includes('login') && !h.includes('/edit') && !h.includes('/account'));
@@ -1599,11 +1606,12 @@ export async function automateSite(
           .filter(h => h.toLowerCase().includes(uname.toLowerCase()) && 
                       (h.includes('/members/') || h.includes('/profile/') || h.includes('/author/') || h.includes('/user/')));
         
-        // Return the shortest match to avoid deep sub-pages (like /members/user.123/about)
         if (matches.length > 0) {
            return matches.sort((a, b) => a.length - b.length)[0];
         }
-        return null;
+        
+        // Fallback to the final resolved URL after all redirects
+        return window.location.href;
       }, identity.username);
     } catch {}
 
