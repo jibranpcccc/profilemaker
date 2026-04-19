@@ -1079,7 +1079,7 @@ export async function automateSite(
     const entry = findDatasetEntry(siteTask.SignupUrl || '');
     const useDataset = !!entry;
     const signupUrl = useDataset ? (entry.signup_url || entry.signupurl || entry.registerurl) : siteTask.SignupUrl;
-    const profileEditUrl = useDataset ? (entry.profile_edit_url || entry.profileediturl)?.replace('{username}', identity.username) : siteTask.ProfileEditUrl;
+    const profileEditUrl = useDataset ? (entry.profile_edit_url || entry.profileediturl || entry.profile_pattern)?.replace('{username}', identity.username) : siteTask.ProfileEditUrl;
     const emailVerification = useDataset ? (entry.email_verification === 'TRUE' || entry.emailverification === 'TRUE' || entry.emailverification === true) : false;
     const captchaConfig = useDataset ? entry.captcha : null;
 
@@ -1596,14 +1596,22 @@ export async function automateSite(
           .filter(h => h.includes('/profile/') && !h.includes('login') && !h.includes('/edit') && !h.includes('/account'));
         if (wixProfile.length > 0) return wixProfile[0];
 
-        const matches = anchors
+        // First try: link contains username in URL
+        const byUsername = anchors
           .map(a => a.href)
           .filter(h => h.toLowerCase().includes(uname.toLowerCase()) && 
                       (h.includes('/members/') || h.includes('/profile/') || h.includes('/author/') || h.includes('/user/')));
         
-        if (matches.length > 0) {
-           return matches.sort((a, b) => a.length - b.length)[0];
+        if (byUsername.length > 0) {
+           return byUsername.sort((a, b) => a.length - b.length)[0];
         }
+
+        // Second try: "View Profile" / "My Profile" link text (covers member-ID URLs)
+        const byText = Array.from(document.querySelectorAll('a')).find(a => {
+          const t = (a.innerText || a.textContent || '').toLowerCase().trim();
+          return (t.includes('view profile') || t.includes('my profile') || t === 'profile') && a.href.includes('/profile');
+        });
+        if (byText) return byText.href;
         
         // Fallback to the final resolved URL after all redirects
         return window.location.href;
@@ -1626,6 +1634,20 @@ export async function automateSite(
            .find(h => h.includes('/profile/') && !h.includes('login') && !h.includes('edit')) || null;
        });
        publicUrl = postSaveExtractedUrl || `https://${new URL(signupUrl).hostname}/profile/${identity.username}/profile` || page.url();
+    }
+
+    // After save, navigate to public profile to capture the real URL
+    await page.waitForTimeout(3000);
+    const savedUrl = page.url();
+    // Ultimate fallback if publicUrl is STILL returning the active dashboard URL context
+    if (publicUrl === savedUrl || !publicUrl) {
+        const viewProfileLink = await page.evaluate(() => {
+          const anchors = Array.from(document.querySelectorAll('a'));
+          return anchors
+            .map(a => (a as HTMLAnchorElement).href)
+            .find(h => h.includes('/profile/') || h.includes('/members/') || h.includes('/author/') || h.includes('/user/')) ?? null;
+        });
+        if (viewProfileLink) publicUrl = viewProfileLink;
     }
 
     // Screenshot + Save (moved after dynamic URL resolving)
