@@ -1075,9 +1075,9 @@ export async function automateSite(
 
     const entry = findDatasetEntry(siteTask.SignupUrl || '');
     const useDataset = !!entry;
-    const signupUrl = useDataset ? entry.signup_url : siteTask.SignupUrl;
-    const profileEditUrl = useDataset ? (entry.profile_edit_url?.replace('{username}', identity.username)) : siteTask.ProfileEditUrl;
-    const emailVerification = useDataset ? (entry.email_verification === 'TRUE') : false;
+    const signupUrl = useDataset ? (entry.signup_url || entry.signupurl || entry.registerurl) : siteTask.SignupUrl;
+    const profileEditUrl = useDataset ? (entry.profile_edit_url || entry.profileediturl)?.replace('{username}', identity.username) : siteTask.ProfileEditUrl;
+    const emailVerification = useDataset ? (entry.email_verification === 'TRUE' || entry.emailverification === 'TRUE' || entry.emailverification === true) : false;
     const captchaConfig = useDataset ? entry.captcha : null;
 
     log(siteName, `[DATASET] ${useDataset ? '✅ Found in dataset (' + entry.platform + ')' : '⚠️ Not in dataset — using AI fallback'}`);
@@ -1171,7 +1171,6 @@ export async function automateSite(
     if (isWix) {
       log(siteName, `[WIX] Detected — enabling human-like behavior + robust signup prep`);
       await applyWixHumanBehavior(page, siteName);
-      await handleRobustWixSignup(page, siteName, identity);
     }
 
     // Navigate to signup
@@ -1185,6 +1184,7 @@ export async function automateSite(
       const wixUrl = siteTask.DomainUrl || `https://${siteTask.SiteName}`;
       await page.goto(wixUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
       await applyWixHumanBehavior(page, siteName);
+      await handleRobustWixSignup(page, siteName, identity);
       
       const loginSelectors = ['#login-button', '[data-testid*="login"]', '[data-testid*="signUp"]', '[id*="login"]', '[id*="userProfile"]', '.login-button', 'button:has-text("Log In")', 'button:has-text("Sign Up")', 'button:has-text("Iniciar sesión")', 'button:has-text("Entrar")', 'button:has-text("로그인")'];
       
@@ -1246,36 +1246,7 @@ export async function automateSite(
                   }
               } catch {}
 
-              const authMethod = await detectWixAuthMethods(activeCtx);
-              log(siteName, `WIX → Auth methods available: ${authMethod}`);
-
-              if ((authMethod === 'google' || authMethod === 'both') && googleSessionExists()) {
-                log(siteName, 'WIX → Using Google OAuth signup');
-                const result = await wixGoogleSignup(siteTask.SiteName, siteName);
-                if (!result.success) throw new Error('Wix Google OAuth failed');
-                
-                log(siteName, `WIX-GOOGLE → Real profile: ${result.profileUrl}`);
-                log(siteName, `WIX-GOOGLE → Member ID: ${result.memberId}`);
-                log(siteName, `WIX-GOOGLE → Email: ${result.memberEmail}`);
-
-                const statusStr = result.memberEmail ? 'LIVE_CONFIRMED' : 'UNKNOWN';
-                await queryDb(
-                  `UPDATE SiteTasks SET Status=?, ProfileUrl=?, Notes=?, CurrentStep=? WHERE Id=?`,
-                  ['Completed', result.profileUrl, `SUCCESS | Via Google Auth | Backlink: ${statusStr}`, 'Done', siteTask.Id]
-                ).catch(() => {});
-
-                try {
-                  await queryDb('INSERT OR IGNORE INTO Proofs (SiteTaskId, FinalProfileUrl, ScreenshotPath, WebsiteUrlAdded, DescriptionUsed, Notes, CapturedAt) VALUES (?,?,?,?,?,?,?)', [
-                    siteTask.Id, result.profileUrl, '', 1, identity.bio, `Backlink: ${statusStr} (Wix OAuth)`, new Date().toISOString()
-                  ]);
-                } catch {}
-
-                const duration = Date.now() - startTime;
-                logSuccess(siteName, result.profileUrl || '', statusStr, duration);
-                return { success: true, profileUrl: result.profileUrl || '', backlinkStatus: statusStr };
-              } else {
-                log(siteName, 'WIX → Using email/password signup');
-              }
+              log(siteName, 'WIX → Using email/password signup natively');
           } else {
               log(siteName, `[WARN] Failed to capture Wix Auth Iframe. Utilizing main context.`);
           }
@@ -1288,7 +1259,9 @@ export async function automateSite(
       await simulateHumanBehavior(page, siteName);
     }
 
-    activeCtx = page;
+    if (!isWix || activeCtx === page) {
+      activeCtx = page;
+    }
 
     const identityWithPw = { ...identity, password: identity.password };
 
@@ -1470,8 +1443,8 @@ export async function automateSite(
         }
 
         // === ATTEMPT 1: Dataset-driven fill (if dataset has profile fields) ===
-        if (useDataset && entry.profile_fields) {
-          profileFilled = await fillProfileFromDataset(page, entry, identityWithPw, siteName);
+        if (useDataset && (entry.profile_fields || entry.profilefields)) {
+          profileFilled = await fillProfileFromDataset(activeCtx, { ...entry, profile_fields: entry.profile_fields || entry.profilefields }, identityWithPw, siteName);
           if (profileFilled) log(siteName, `[PROFILE] ✅ Dataset fill succeeded`);
         }
 
@@ -1596,10 +1569,6 @@ export async function automateSite(
       }
     }
 
-    // Screenshot + Save
-    const screenshotPath = path.join(SCREENSHOT_DIR, `${siteName.replace(/[^a-z0-9]/gi, '_')}_${Date.now()}.png`);
-    try { await page.screenshot({ path: screenshotPath }); } catch {}
-
     // ---- STEP 8: Extract TRUE Public Profile URL ----
     // Do not rely solely on profile_pattern as many sites append dynamic internal IDs (e.g., XenForo /members/name.12345/)
     let publicUrl = page.url();
@@ -1649,6 +1618,10 @@ export async function automateSite(
     } else if (isWixSite(signupUrl || profileEditUrl || '')) {
        publicUrl = `https://${new URL(signupUrl).hostname}/profile/${identity.username}/profile`;
     }
+
+    // Screenshot + Save (moved after dynamic URL resolving)
+    const screenshotPath = path.join(SCREENSHOT_DIR, `${siteName.replace(/[^a-z0-9]/gi, '_')}_${Date.now()}.png`);
+    try { await page.screenshot({ path: screenshotPath }); } catch {}
 
     let finalBacklinkStatus = profileFilled ? 'INSERTED' : 'SKIPPED';
     

@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     // Fire automation in background
     runAutomation({
       campaignId,
-      threadCount: 10,
+      threadCount: settings.MaxThreads || 30, // Dramatically increased from 10
       executionMode: 'all',
       apiKeys: {
         twoCaptcha: settings.TwoCaptchaApiKey,
