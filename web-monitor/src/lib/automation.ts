@@ -49,6 +49,9 @@ const RESIDENTIAL_PROXIES: string[] = [];
 let currentProxyIndex = 0;
 
 function getNextProxy(): string | null {
+  const settings = loadSettings();
+  if (settings.ProxyAddress) return settings.ProxyAddress; // Uses global user settings dynamically
+
   if (RESIDENTIAL_PROXIES.length === 0) return null;
   const proxyStr = RESIDENTIAL_PROXIES[currentProxyIndex % RESIDENTIAL_PROXIES.length];
   currentProxyIndex++;
@@ -1444,7 +1447,8 @@ export async function automateSite(
 
         // === ATTEMPT 1: Dataset-driven fill (if dataset has profile fields) ===
         if (useDataset && (entry.profile_fields || entry.profilefields)) {
-          profileFilled = await fillProfileFromDataset(activeCtx, { ...entry, profile_fields: entry.profile_fields || entry.profilefields }, identityWithPw, siteName);
+          // ALWAYS use 'page' here, not activeCtx, because we are navigating in the main window
+          profileFilled = await fillProfileFromDataset(page, { ...entry, profile_fields: entry.profile_fields || entry.profilefields }, identityWithPw, siteName);
           if (profileFilled) log(siteName, `[PROFILE] ✅ Dataset fill succeeded`);
         }
 
