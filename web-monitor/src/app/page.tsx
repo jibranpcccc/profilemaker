@@ -28,6 +28,7 @@ export default function HomePage() {
   const [workerState, setWorkerState] = useState<WorkerState | null>(null);
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [showLiveOnly, setShowLiveOnly] = useState(false);
+  const [showPasswords, setShowPasswords] = useState(false);
   const pollRef = useRef<NodeJS.Timeout | null>(null);
   const batchRef = useRef(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -35,10 +36,12 @@ export default function HomePage() {
   // Load state
   useEffect(() => {
     setIsMounted(true);
-    try { 
-       const loadedQueue = JSON.parse(localStorage.getItem('profileQueue') || '[]'); 
-       setQueue(loadedQueue);
-    } catch {}
+    if (typeof window !== 'undefined') {
+      try { 
+         const loadedQueue = JSON.parse(localStorage.getItem('profileQueue') || '[]'); 
+         setQueue(loadedQueue);
+      } catch {}
+    }
   }, []);
 
   // Persist queue
@@ -82,12 +85,25 @@ export default function HomePage() {
 
   function addToQueue() {
     if (!firstName || !lastName || !bio) return;
-    const url = inputMode === 'simple' ? singleUrl : urlInput.split('\n')[0]?.split('|')[0]?.trim() || '';
-    const keywords = inputMode === 'simple' ? singleKeywords : urlInput.split('\n')[0]?.split('|')[1]?.trim() || '';
-    setQueue(q => [...q, {
-      id: Date.now().toString(), firstName, lastName, email, password, bio, url, keywords,
-      status: 'queued', selected: true
-    }]);
+    if (inputMode === 'simple') {
+      const url = singleUrl.trim();
+      const keywords = singleKeywords.trim();
+      if (!url) return;
+      setQueue(q => [...q, {
+        id: Date.now().toString(), firstName, lastName, email, password, bio, url, keywords,
+        status: 'queued', selected: true
+      }]);
+    } else {
+      const lines = urlInput.split('\n').filter(l => l.trim());
+      const newItems = lines.map((line, idx) => {
+        const [url, keywords] = line.split('|').map(s => s.trim());
+        return {
+          id: `${Date.now()}-${idx}`, firstName, lastName, email, password, bio,
+          url, keywords: keywords || '', status: 'queued' as const, selected: true
+        };
+      }).filter(x => x.url);
+      setQueue(q => [...q, ...newItems]);
+    }
     setFirstName(''); setLastName(''); setEmail(''); setPassword(''); setBio('');
   }
 
@@ -109,8 +125,10 @@ export default function HomePage() {
       // Wait for completion
       while (true) {
         await new Promise(r => setTimeout(r, 5000));
-        const st = await fetch('/api/run').then(r => r.json());
-        if (st.status !== 'running') break;
+        try {
+          const st = await fetch('/api/run').then(r => r.json());
+          if (st.status !== 'running') break;
+        } catch { break; } // escape on error
         if (batchRef.current === false) break; // stopped
       }
       setQueue(q => q.map(x => x.id === identity.id ? { ...x, status: 'done' } : x));
@@ -171,12 +189,12 @@ export default function HomePage() {
 
 
       {/* Header */}
-      <div style={{ marginBottom:'1rem', display:'flex', justifyContent:'space-between', alignItems:'flex-end' }}>
+      <div className="flex justify-between items-end mb-4">
         <div>
           <h1 style={{ fontSize:'1.4rem', fontWeight:700, background:'linear-gradient(135deg,#fff,#a78bfa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', margin:0 }}>Profile Maker</h1>
           <p style={{ color:'#64748b', fontSize:'0.75rem', marginTop:'0.1rem' }}>Generate identities → Add to queue → Run all at once</p>
         </div>
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div className="flex gap-4 items-center">
           <button onClick={() => window.location.href = '/dashboard'} style={{ padding:'0.4rem 0.8rem', fontSize:'0.75rem', fontWeight:600, border:'1px solid rgba(139,92,246,0.5)', borderRadius:'8px', cursor:'pointer', color:'#fff', background:'rgba(139,92,246,0.15)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
             📊 Dashboard
           </button>
@@ -196,7 +214,7 @@ export default function HomePage() {
           </div>
         ) : (
           <div style={{ marginBottom:'0.6rem' }}>
-            <label style={lbl}>URLs & Keywords <span style={{ color:'#64748b', fontWeight:400, textTransform:'none' }}>— one per line: url | keywords</span></label>
+            <label style={lbl}>URLs & Keywords <span className="text-slate-500 font-normal normal-case">— one per line: url | keywords</span></label>
             <textarea value={urlInput} onChange={e=>setUrlInput(e.target.value)} rows={3} placeholder={`https://site1.com | SEO\nhttps://site2.com | marketing`} style={{ ...inp, fontFamily:'monospace', fontSize:'0.78rem', lineHeight:'1.5', resize:'vertical' }} />
           </div>
         )}
@@ -243,23 +261,39 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div style={{ maxHeight:'200px', overflowY:'auto' }}>
+          <div className="max-h-52 overflow-y-auto">
             {queue.map(q => (
               <div key={q.id} style={{ display:'flex', alignItems:'center', gap:'0.5rem', padding:'0.35rem 0.4rem', borderBottom:'1px solid rgba(255,255,255,0.04)', fontSize:'0.76rem' }}
                 onMouseEnter={e=>e.currentTarget.style.background='rgba(255,255,255,0.03)'} onMouseLeave={e=>e.currentTarget.style.background='transparent'}>
                 <button onClick={()=>toggleSelect(q.id)} style={{ background:'none', border:'none', cursor:'pointer', padding:0, color:q.selected?'#8b5cf6':'#475569' }}>
                   {q.selected ? <CheckSquare className="w-4 h-4"/> : <SquareIcon className="w-4 h-4"/>}
                 </button>
-                <span style={{ fontWeight:600, width:'120px' }}>{q.firstName} {q.lastName}</span>
+                <span className="font-semibold w-28 truncate">{q.firstName} {q.lastName}</span>
                 <span style={{ color:'#64748b', flex:1, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', fontSize:'0.72rem' }}>{q.url} — {q.keywords}</span>
                 <span style={{
                   padding:'0.15rem 0.4rem', borderRadius:'4px', fontSize:'0.65rem', fontWeight:600,
                   background: q.status==='done'?'rgba(34,197,94,0.15)' : q.status==='running'?'rgba(139,92,246,0.15)' : q.status==='failed'?'rgba(239,68,68,0.15)' : 'rgba(255,255,255,0.05)',
                   color: q.status==='done'?'#22c55e' : q.status==='running'?'#a78bfa' : q.status==='failed'?'#ef4444' : '#64748b',
                 }}>{q.status === 'running' ? '⏳ Running...' : q.status === 'done' ? '✅ Done' : q.status === 'failed' ? '❌ Failed' : '⏸ Queued'}</span>
-                <button onClick={()=>removeFromQueue(q.id)} style={{ background:'none', border:'none', cursor:'pointer', color:'#475569', padding:'2px' }}><Trash2 className="w-3.5 h-3.5"/></button>
+                <button onClick={()=>removeFromQueue(q.id)} className="bg-transparent border-none cursor-pointer text-slate-600 p-0.5 hover:text-red-400 transition-colors"><Trash2 className="w-3.5 h-3.5"/></button>
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* QUEUE PROGRESS */}
+      {batchRunning && queue.length > 0 && (
+        <div className="glass-card" style={{ borderRadius:'10px', padding:'0.7rem', marginBottom:'0.8rem' }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'0.4rem' }}>
+            <div style={{ display:'flex', alignItems:'center', gap:'0.3rem' }}>
+              <Loader2 className="w-3.5 h-3.5 text-violet-400" style={{animation:'spin 1s linear infinite'}}/>
+              <span style={{ fontWeight:600, fontSize:'0.8rem' }}>Batch Running...</span>
+            </div>
+            <span style={{ color:'#94a3b8', fontSize:'0.7rem' }}>{queue.filter(x => x.status === 'done' || x.status === 'failed').length}/{queue.length}</span>
+          </div>
+          <div style={{ width:'100%', height:'5px', background:'rgba(255,255,255,0.08)', borderRadius:'3px', overflow:'hidden' }}>
+            <div style={{ height:'100%', width:`${Math.round((queue.filter(x => x.status === 'done' || x.status === 'failed').length / queue.length) * 100)}%`, background:'linear-gradient(90deg,#22c55e,#8b5cf6)', borderRadius:'3px', transition:'width 0.5s' }}/>
           </div>
         </div>
       )}
@@ -278,9 +312,9 @@ export default function HomePage() {
             <div style={{ height:'100%', width:`${progress}%`, background:'linear-gradient(90deg,#22c55e,#8b5cf6)', borderRadius:'3px', transition:'width 0.5s' }}/>
           </div>
           <div style={{ display:'flex', gap:'1rem', marginTop:'0.3rem', fontSize:'0.7rem' }}>
-            <span style={{color:'#22c55e'}}>✅ {workerState.completed}</span>
-            <span style={{color:'#ef4444'}}>❌ {workerState.failed}</span>
-            {isRunning && <span style={{color:'#f59e0b'}}>⏳ {workerState.running}</span>}
+            <span className="text-green-500">✅ {workerState.completed}</span>
+            <span className="text-red-500">❌ {workerState.failed}</span>
+            {isRunning && <span className="text-amber-500">⏳ {workerState.running}</span>}
           </div>
         </div>
       )}
@@ -291,6 +325,11 @@ export default function HomePage() {
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'0.5rem' }}>
             <h2 style={{ fontSize:'0.9rem', fontWeight:700, margin:0 }}>{activeSelectedCampaignIds.length > 0 ? `Selected Run Profiles (${displayedProfiles.length})` : `All Profiles (${displayedProfiles.length})`}</h2>
             <div style={{ display:'flex', gap:'0.3rem' }}>
+              <button 
+                onClick={() => setShowPasswords(!showPasswords)} 
+                style={{ padding:'0.3rem 0.6rem', background:showPasswords?'rgba(139,92,246,0.15)':'rgba(255,255,255,0.05)', color:showPasswords?'#a78bfa':'#94a3b8', border:`1px solid ${showPasswords?'rgba(139,92,246,0.3)':'rgba(255,255,255,0.1)'}`, borderRadius:'6px', cursor:'pointer', fontSize:'0.68rem', fontWeight:600, display:'flex', alignItems:'center', gap:'0.2rem' }}>
+                {showPasswords ? 'Hide Passwords' : 'Show Passwords'}
+              </button>
               <button 
                 onClick={() => setShowLiveOnly(!showLiveOnly)} 
                 style={{ padding:'0.3rem 0.6rem', background:showLiveOnly?'rgba(34,197,94,0.15)':'rgba(255,255,255,0.05)', color:showLiveOnly?'#22c55e':'#94a3b8', border:`1px solid ${showLiveOnly?'rgba(34,197,94,0.3)':'rgba(255,255,255,0.1)'}`, borderRadius:'6px', cursor:'pointer', fontSize:'0.68rem', fontWeight:600, display:'flex', alignItems:'center', gap:'0.2rem' }}>
@@ -304,7 +343,7 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-          <div style={{ maxHeight:'350px', overflowY:'auto' }}>
+          <div className="max-h-80 overflow-y-auto">
             <table style={{ width:'100%', borderCollapse:'collapse', fontSize:'0.72rem' }}>
               <thead>
                 <tr style={{ borderBottom:'1px solid rgba(255,255,255,0.08)', position:'sticky', top:0, background:'rgba(15,15,25,0.95)', backdropFilter:'blur(8px)' }}>
@@ -324,11 +363,11 @@ export default function HomePage() {
                       </a>
                     </td>
                     <td style={{ padding:'0.4rem 0.45rem', color:'#94a3b8', fontFamily:'monospace', fontSize:'0.7rem' }}>{p.Username||'—'}</td>
-                    <td style={{ padding:'0.4rem 0.45rem', color:'#94a3b8', fontFamily:'monospace', fontSize:'0.7rem' }}>{p.Password||'—'}</td>
+                    <td style={{ padding:'0.4rem 0.45rem', color:'#94a3b8', fontFamily:'monospace', fontSize:'0.7rem' }}>{showPasswords ? (p.Password||'—') : '••••••••'}</td>
                     <td style={{ padding:'0.4rem 0.45rem', fontSize:'0.65rem', fontWeight:600, color:(p.BacklinkStatus||'').includes('HIDDEN')?'#ef4444':'#22c55e' }}>
                       {(p.BacklinkStatus||'').includes('HIDDEN') ? 'Private' : 'Live'}
                     </td>
-                    <td style={{ padding:'0.4rem 0.45rem', textAlign:'center' }}>{p.WebsiteUrlAdded ? <span style={{color:'#22c55e'}}>✅</span> : <span style={{color:'#475569'}}>—</span>}</td>
+                    <td style={{ padding:'0.4rem 0.45rem', textAlign:'center' }}>{p.WebsiteUrlAdded ? <span className="text-green-500">✅</span> : <span className="text-slate-500">—</span>}</td>
                   </tr>
                 ))}
               </tbody>
@@ -338,6 +377,12 @@ export default function HomePage() {
       )}
 
       <style jsx>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
+      
+      {profiles.length > 0 && displayedProfiles.length === 0 && (
+        <p className="text-slate-500 text-center p-8">
+          No live profiles yet. Disable "100% Live Only" filter or wait for results.
+        </p>
+      )}
     </div>
   );
 }
