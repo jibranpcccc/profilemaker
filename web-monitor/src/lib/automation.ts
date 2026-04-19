@@ -946,6 +946,20 @@ async function fillProfileFromDataset(
       }
     }
 
+    // For Wix sites ??? click 'Add Link' button before attempting to fill website URL
+    if (entry.platform === 'Wix') {
+      try {
+        log(siteName, `[WIX] Clicking 'Add Link' before attempting to fill website URL...`);
+        const addLinkBtn = await page.$('[data-testid="add-link-button"], button:has-text("Add link"), button:has-text("Add Link"), button:has-text("Add website")');
+        if (addLinkBtn) {
+          await addLinkBtn.click();
+          await page.waitForTimeout(1500); // wait for modal to open
+        }
+      } catch (e: any) {
+        log(siteName, `[WIX] Add Link UI error: ${e.message}`);
+      }
+    }
+
     for (const sel of websiteSelectors) {
       if (sel && await fillField(page, sel as string, identity.websiteUrl, siteName)) {
         log(siteName, `[PROFILE] ✅ Website filled via: ${sel}`);

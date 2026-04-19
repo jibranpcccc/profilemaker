@@ -184,7 +184,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.ensp.edu.mx",
-    "profile_pattern": "https://www.ensp.edu.mx/profile/{username}/profile",
+    "profile_pattern": "https://ensp.edu.mx/members/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -220,7 +220,7 @@
     "captcha": {
       "type": "none"
     },
-    "profile_pattern": "http://www.stes.tyc.edu.tw/xoops/userinfo.php?uid={uid}",
+    "profile_pattern": "http://www.stes.tyc.edu.tw/xoops/userinfo.php?uid={username}",
     "platform": "Wix",
     "signup_url": "https://www.stes.tyc.edu.tw",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
@@ -241,7 +241,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.institutocrecer.edu.co",
-    "profile_pattern": "https://www.institutocrecer.edu.co/profile/{username}/profile",
+    "profile_pattern": "https://institutocrecer.edu.co/profile/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -260,7 +260,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.aiti.edu.vn",
-    "profile_pattern": "https://www.aiti.edu.vn/profile/{username}/profile",
+    "profile_pattern": "https://aiti.edu.vn/members/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -279,7 +279,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.lifewest.edu",
-    "profile_pattern": "https://www.lifewest.edu/profile/{username}/profile",
+    "profile_pattern": "https://jobs.lifewest.edu/employer/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -298,7 +298,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.bbiny.edu",
-    "profile_pattern": "https://www.bbiny.edu/profile/{username}/profile",
+    "profile_pattern": "https://bbiny.edu/profile/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -335,7 +335,7 @@
     },
     "platform": "Wix",
     "signup_url": "https://www.blac.edu.pl",
-    "profile_pattern": "https://www.blac.edu.pl/profile/{username}/profile",
+    "profile_pattern": "http://blac.edu.pl/profile/{username}/",
     "bio_selector": "[data-testid='bio-input'], textarea[name='bio'], [aria-label*='bio' i], [placeholder*='bio' i]",
     "website_selector": "[data-testid='customLink-url'], input[placeholder*='URL' i], input[placeholder*='website' i]",
     "save_button": "[data-testid='save-button'], button:has-text('Save'), button:has-text('Update')"
@@ -1186,8 +1186,6 @@
     "signup_url": "https://dados.ifac.edu.br/user/register",
     "profile_edit_url": "https://dados.ifac.edu.br/user/edit",
     "profile_pattern": "https://dados.ifac.edu.br/user/{username}",
-    "bioSelector": "#field-about",
-    "websiteSelector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]",
     "saveButton": "button[type=\"submit\"][name=\"save\"]",
     "disabled": true,
     "fields": {
@@ -1196,7 +1194,9 @@
       "password": "input#field-password1",
       "passwordconfirm": "input#field-password2",
       "displayname": "input#field-fullname"
-    }
+    },
+    "bio_selector": "#field-about",
+    "website_selector": "input[type=\"url\"], input[name*=\"url\"], input[name*=\"website\"]"
   },
   {
     "domain": "opendata.klaten.go.id",
