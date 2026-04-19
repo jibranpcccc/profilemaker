@@ -1,0 +1,23 @@
+import os, sqlite3
+log_path = os.path.join(os.environ['LOCALAPPDATA'],'ProfileSubmissionAssistant','Logs','ProfileMaker_DebugLog.txt')
+with open(log_path,'r',encoding='utf-8',errors='ignore') as f:
+    lines = f.readlines()
+print("=== LAST 40 LOG LINES ===")
+for l in lines[-40:]: print(l.rstrip())
+print()
+db = sqlite3.connect(os.path.join(os.environ['LOCALAPPDATA'],'ProfileSubmissionAssistant','data.db'))
+c = db.cursor()
+print("=== STATUS SUMMARY ===")
+c.execute('SELECT Status, COUNT(*) FROM SiteTasks GROUP BY Status')
+for r in c.fetchall(): print(r)
+print()
+print("=== RUNNING/PENDING TASKS ===")
+c.execute("SELECT t.Id, s.SiteName, t.Status, t.CurrentStep FROM SiteTasks t JOIN Sites s ON s.Id=t.SiteId WHERE t.Status IN ('Running','Pending')")
+for r in c.fetchall(): print(r)
+print()
+print("=== TEST SITES (2+3) ===")
+c.execute("SELECT t.Id, s.SiteName, t.Status, t.CurrentStep, t.Notes FROM SiteTasks t JOIN Sites s ON s.Id=t.SiteId WHERE s.Id IN (2,3)")
+for r in c.fetchall():
+    print(r[:4])
+    if r[4]: print("  Notes:", r[4][:200])
+db.close()

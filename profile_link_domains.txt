@@ -1,0 +1,3 @@
+# Profile Link Domains — ProfileSubmissionAssistant
+# Format: domain | signup_url | platform_type
+#

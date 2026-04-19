@@ -1,0 +1,2865 @@
+Comprehensive Audit of Identity Access Management and User Registration Topologies
+Introduction and Forensic Overview
+The landscape of identity access management and user registration workflows varies drastically depending on the underlying content management system or learning management system deployed by an organization. An exhaustive forensic audit of 51 distinct domains reveals significant divergence in how educational institutions, academic journals, and government entities handle user onboarding, bot mitigation, and profile privacy.1
+This report evaluates the exact signup form parameters, CAPTCHA implementations, post-registration requirements, and default profile visibility settings across these platforms. The analysis indicates a clear trend: government platforms prioritize demographic data collection and strict profile anonymity, whereas educational and community platforms lean heavily toward public visibility and extensive profile editing capabilities to foster social engagement.4
+
+
+
+Architectural Analysis of Topologies
+The data demonstrates that underlying software frameworks dictate the boundaries of data collection and public exposure.8 For instance, platforms utilizing BuddyPress inherently default to public profile visibility, merging social networking features with standard account creation to facilitate community building.10 The registration flow mandates basic credentials but immediately appends extended profile details, marking them visible to the public by default to encourage interaction.5
+Conversely, EngagementHQ, utilized extensively by municipal governments, deploys a rigid, privacy-first topology.4 The signup flows mandate hyper-specific demographic data—such as geographic location, civic connection, and birth year—to populate relationship management databases for policy analysis.13 However, the causal relationship between data collection and public visibility is inverted here: despite collecting more granular personal data, these civic profiles remain strictly confidential, exposing only an anonymized login name in public forums to protect citizen privacy while enabling verifiable public discourse.4 The following sections provide an exhaustive, structured breakdown of every target domain.
+Educational Domains (.edu /.edu.xx)
+1. Platform Overview
+Platform Name & Type: institutocrecer.edu.co – Tutor LMS / Educational Learning Platform
+Main Purpose: Facilitates student enrollment, digital learning, and online course delivery.
+Homepage URL: https://institutocrecer.edu.co
+2. Registration / Signup Page
+Exact Signup URL: https://institutocrecer.edu.co/registro-de-estudiante/
+Signup Flow Type: Single-page form. The architecture utilizes a straightforward credential capture model typical of standard learning management integrations.
+3. Signup Form Deep Analysis
+The registration interface captures necessary identity and security credentials to provision a student account.
+
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+Standard string collection for certification mapping.
+Last Name
+Yes
+Text
+Standard string collection.
+User Name
+Yes
+Text
+Must be unique across the platform database.
+E-Mail
+Yes
+Email
+Utilized for account verification and course notifications.2
+Password
+Yes
+Password
+Security key generation.
+Password Confirmation
+Yes
+Password
+Secondary verification to prevent user lockout due to typos.
+All checkboxes / agreements: A mandatory "Terms and Conditions" agreement checkbox is presented prior to submission.15
+Additional menus or options: The platform generally offers an alternate routing toggle for "Instructor Registration" adjacent to the student form.16
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No Other Protections: None detectable from public pages. The system relies on underlying WordPress security rather than frontend challenge-response tests.15
+5. Post-Signup Requirements
+Is email verification required?: Yes, the native LMS configuration mandates email confirmation before course enrollment activates.2 Is phone/SMS verification required?: No. Any other mandatory steps: Account provisioning may be subject to administrative approval depending on specific course cohorts.
+6. Final Profile Appearance (After Successful Signup)
+Upon authentication, the user is directed to a specialized academic dashboard designed to track progression.
+Publicly Visible by Default: The user's name, display avatar, and a catalog of their actively enrolled or completed courses are visible if the directory module is active.7
+Sections/Tabs: The portal includes a Dashboard, Enrolled Courses, Active Courses, Completed Courses, and general Settings.17
+Editable Fields: Users can modify their biography, upload an avatar or cover photo, and update their password.7
+Profile Completion Prompts: Not detectable from public pages.
+Typical Layout: A banner photo stretches across the top, framing the user avatar and biography, while course statistics and progress bars populate the main body.7
+Direct URL Pattern: https://institutocrecer.edu.co/profile/username
+1. Platform Overview
+Platform Name & Type: aiti.edu.vn – XenForo / Community Forum
+Main Purpose: Hosts structured academic discussion threads and facilitates community interactions.
+Homepage URL: https://aiti.edu.vn
+2. Registration / Signup Page
+Exact Signup URL: https://aiti.edu.vn/register/
+Signup Flow Type: Single-page standard forum registration form.
+3. Signup Form Deep Analysis
+The XenForo architecture prioritizes community identity and spam reduction through strict credential formatting.
+
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+Must be unique and serves as the primary public identifier.
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+Date of Birth
+No
+Date
+Utilized primarily for age verification and COPPA compliance.18
+Location
+No
+Text
+Optional demographic data collection.19
+All checkboxes / agreements: Users must explicitly check a box agreeing to the "Terms and Rules" of the community.
+Additional menus or options: Administrators frequently expose custom user fields during registration to capture referral sources or specific academic affiliations.20
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Sometimes. The platform supports native reCAPTCHA integration which activates dynamically based on traffic anomalies.
+Other Protections: XenForo utilizes aggressive automated spam detection filters analyzing IP reputation and user-agent strings.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+The user profile is structured to showcase community contribution rather than academic progression.
+Publicly Visible by Default: Username, Avatar, total post count statistics, and the account creation date are prominently displayed.21
+Sections/Tabs: The layout features tabs for Profile Posts, Latest Activity, Postings, and an About section.22
+Editable Fields: Users can configure a custom title, update location, link external websites, craft a signature, and, if enabled, manage embedded audio player tracks.21
+Profile Completion Prompts: Not detectable.
+Typical Layout: The avatar is anchored to the left column, with tabbed navigation occupying the center and overarching statistics listed on the right margin.
+Direct URL Pattern: https://aiti.edu.vn/members/username.id/
+1. Platform Overview
+Platform Name & Type: ensp.edu.mx – MasterStudy LMS / Educational Portal Main Purpose: Provides initial institutional training and certification for basic education teachers.23 Homepage URL: https://ensp.edu.mx
+2. Registration / Signup Page
+Exact Signup URL: https://ensp.edu.mx/cuenta-del-usuario/?mode=register
+Signup Flow Type: Single-page form that functions as a formal institutional application flow.
+3. Signup Form Deep Analysis
+The form is highly restricted, serving as an application gateway rather than an open public registration portal.
+
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+Serves as the primary communication vector and password reset identifier.23
+Password
+Yes
+Password
+Enforces strict complexity: minimum 8 characters, containing at least 1 uppercase letter, 1 lowercase letter, and 1 number.23
+All checkboxes / agreements: A "Recordarme" (Remember me) toggle is present for session persistence.23
+Additional menus or options: The interface provides a distinct alternative pathway labeled "Conviértete en Profesor Para Enterprise" to route faculty applications.23
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.23 Other Protections: None detectable from public pages.
+5. Post-Signup Requirements
+Is email verification required?: Yes. Is phone/SMS verification required?: No. Any other mandatory steps: The system requires explicit institutional approval before the profile becomes accessible. Upon submission, the platform states, "We'll send you an email as soon as your application is approved," indicating a manual vetting process.23
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The profile directory is heavily restricted and strictly visible to authenticated members only to protect student privacy.
+Sections/Tabs: The dashboard features internal sections such as Cursos Favoritos (Favorite Courses), Planes de membresía (Membership Plans), and Tesoreria (Treasury).23
+Editable Fields: Users can alter their account tier and basic contact information.23
+Profile Completion Prompts: Not detectable.
+Typical Layout: A secure internal dashboard reflecting the user's specific membership tier and authorized course access.
+Direct URL Pattern: https://ensp.edu.mx/cuenta-del-usuario/
+1. Platform Overview
+Platform Name & Type: edu.learningsuite.id – Tutor LMS / Educational
+Main Purpose: Provides structured eLearning modules and certification pathways for students.
+Homepage URL: https://edu.learningsuite.id
+2. Registration / Signup Page
+Exact Signup URL: https://edu.learningsuite.id/student-registration-page/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+The data collection reflects standard practices for academic enrollment, requiring complete nominal identification.
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique across the platform.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Standard Terms and Conditions acknowledgment.
+Additional menus or options: The deployment of Tutor LMS allows for dynamic injection of custom fields (e.g., Student ID or Phone Number) based on specific cohort requirements.24
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None detectable from public pages.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The student's full name and a list of their actively enrolled courses are exposed to the community.7
+Sections/Tabs: The architecture includes a centralized Dashboard, Enrolled Courses list, Active Courses tracker, and Settings module.
+Editable Fields: Users maintain control over their biographical summary and avatar.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A standard Tutor LMS student dashboard focusing heavily on progress tracking and upcoming deadlines.
+Direct URL Pattern: https://edu.learningsuite.id/profile/username
+1. Platform Overview
+Platform Name & Type: triumph.srivenkateshwaraa.edu.in – Custom MVC / Educational Portal Main Purpose: Acts as an aggregated registration gateway for a group of connected academic institutions.25 Homepage URL: https://triumph.srivenkateshwaraa.edu.in
+2. Registration / Signup Page
+Exact Signup URL: https://triumph.srivenkateshwaraa.edu.in/register
+Signup Flow Type: Single-page form routing into a custom database architecture.
+3. Signup Form Deep Analysis
+Due to the proprietary nature of the custom MVC framework, the precise field parameters are guarded, but structural evidence indicates standard academic intake.
+Field Name
+Required?
+Type
+Notes / Options
+Name
+Yes
+Text
+Extrapolated from typical academic MVC flows.
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: A mandatory "Terms & Conditions" agreement must be acknowledged prior to submitting the registration request.25
+Additional menus or options: The interface incorporates college selection routing, allowing applicants to designate target institutions such as ICON, SVCET, or SVCP.25
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Not detectable from public pages.
+Other Protections: The custom framework likely relies on backend validation rather than frontend challenges.
+5. Post-Signup Requirements
+Is email verification required?: Not definitively detectable, though highly probable for academic systems.
+Is phone/SMS verification required?: Not detectable.
+Any other mandatory steps: Formal agreement to the institutional code of conduct via the Terms & Conditions.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Not detectable from public pages; academic records on custom portals are generally closed networks.
+Sections/Tabs: The authenticated state provides a dashboard tailored for carrier guidance and specific course sectioning.25
+Editable Fields: Basic demographic and contact details.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A proprietary layout divergent from standardized commercial LMS templates.
+Direct URL Pattern: Not detectable from public pages as routing relies on session IDs rather than clean username URLs.
+1. Platform Overview
+Platform Name & Type: faculdadelife.com.br – LearnPress / Educational Portal Main Purpose: Operates as a dual-sided educational institution offering specific access portals for both students and faculty.16 Homepage URL: https://faculdadelife.com.br
+2. Registration / Signup Page
+Exact Signup URL: https://faculdadelife.com.br/account/?action=register
+Signup Flow Type: Single-page form featuring deep OAuth integrations to reduce friction.
+3. Signup Form Deep Analysis
+The authentication gateway is heavily streamlined, leaning on third-party identity providers.
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: A "Lembre de mim" (Remember me) option manages persistent sessions.16
+Additional menus or options: The portal offers extensive social login capabilities, allowing direct authentication via Google, LinkedIn, and Amazon.16 Furthermore, a dedicated toggle reading "Quer se tornar um instrutor?" (Want to become an instructor?) alters the registration routing.16
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.16 Other Protections: The system relies on OAuth provider security (e.g., Google's backend threat detection) for users who choose social login.
+5. Post-Signup Requirements
+Is email verification required?: Yes, required if registering via direct email rather than OAuth.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The directory is closed; profiles are not publicly detectable.
+Sections/Tabs: Depending on the registration toggle, users are routed to either the Portal do Aluno (Student Portal) or the Portal do Professor (Faculty Portal).16
+Editable Fields: Users manage course progression timelines and basic account contact information.
+Profile Completion Prompts: Not detectable.
+Typical Layout: An operational dashboard oriented strictly around course tracking and material downloads.
+Direct URL Pattern: Profiles exist behind the secure routing of https://faculdadelife.com.br/portaldoaluno.
+1. Platform Overview
+Platform Name & Type: lasallesancristobal.edu.mx – Wix / Educational Community Main Purpose: Functions as an interactive hub for students and parents (branded as the Gnius Club), heavily emphasizing gamified technology education.26 Homepage URL: https://www.lasallesancristobal.edu.mx
+2. Registration / Signup Page
+Exact Signup URL: Not directly accessible to the open public without a pre-authorized invitation code or institutional link.
+Signup Flow Type: Closed member login portal requiring prior administrative clearance.
+3. Signup Form Deep Analysis
+Public-facing forms serve merely as contact requests prior to formal enrollment into the digital ecosystem.
+
+Field Name
+Required?
+Type
+Notes / Options
+Nivel y Grado
+Yes
+Dropdown
+Mandatory on preliminary contact forms to sort applicants.26
+Teléfono
+Yes
+Phone
+Essential contact info for parental outreach.26
+All checkboxes / agreements: Standard Wix platform membership agreements concerning data processing.
+Additional menus or options: The broader site architecture is deeply segmented into Plataforma alumnos (Students), Plataforma padres (Parents), and Plataforma UNOi, dictating entirely different authentication flows.26
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Sometimes. Wix native forms dynamically trigger CAPTCHA challenges if the originating IP demonstrates suspicious velocity.
+Other Protections: The closed nature of the registration essentially nullifies automated mass-botting.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: Not directly detectable, though phone numbers are captured.
+Any other mandatory steps: Strict institutional clearance is required to bridge the gap from contact form to active platform account.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The community is entirely private, shielding minors from public exposure.
+Sections/Tabs: The internal environment features AI interaction modules (Xolo), comprehensive UNOi digital tutorials, and an integrated parental payment gateway.26
+Editable Fields: Basic demographic and contact details.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A visually rich, gamified Gnius Club dashboard populated with interactive video modules.26
+Direct URL Pattern: Not detectable from public pages.
+1. Platform Overview
+Platform Name & Type: learndash.aula.edu.pe – BuddyBoss + LearnDash / Community LMS Main Purpose: Delivers an integrated online education portal that combines formal learning (automatic certificates) with rich social interaction (dark mode, forums).8 Homepage URL: https://learndash.aula.edu.pe
+2. Registration / Signup Page
+Exact Signup URL: https://learndash.aula.edu.pe/register/
+Signup Flow Type: Single-page comprehensive identity form.
+3. Signup Form Deep Analysis
+The registration emphasizes strict adherence to precise identity data while simultaneously assigning a permanent alias for community engagement.
+
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+Data must be exact to ensure certificate delivery.8
+Contraseña
+Yes
+Password
+
+Nombres
+Yes
+Text
+Formal first name.8
+Apellidos
+Yes
+Text
+Formal last name.8
+Nickname
+Yes
+Text
+Serves as the public display name; permanently locked post-creation.8
+All checkboxes / agreements: Users must legally consent to the Términos del Servicio (Terms of Service) and Política de Privacidad (Privacy Policy).8
+Additional menus or options: None detectable.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.8 Other Protections: The platform deploys a backend automated spam detection service specifically for user comments, logging IP addresses and browser agent strings to combat persistent threats.8
+5. Post-Signup Requirements
+Is email verification required?: Yes. Is phone/SMS verification required?: No. Any other mandatory steps: The terms dictate that users must be legally over 13 years of age to establish an account.8
+6. Final Profile Appearance (After Successful Signup)
+The BuddyBoss architecture heavily influences the post-registration environment, transforming a standard LMS into a social network.
+Publicly Visible by Default: The chosen Nickname, an imported Gravatar image, and a log of all public forum interactions are exposed to the community.8
+Sections/Tabs: The interface is rich, offering tabs for Profile details, Enrolled Courses, Forums, Direct Messages, and Network Connections.8
+Editable Fields: Users retain the ability to modify their formal names and biography, though the Nickname remains immutable to prevent impersonation.8
+Profile Completion Prompts: Not detectable.
+Typical Layout: A classic BuddyBoss social graph layout, prioritizing direct messaging widgets, connection requests, and inline @mentions.8
+Direct URL Pattern: https://learndash.aula.edu.pe/members/nickname/
+1. Platform Overview
+Platform Name & Type: sou.edu.kg – Tutor LMS / Educational
+Main Purpose: Serves as the primary educational institution portal for student registration and course access.
+Homepage URL: https://sou.edu.kg
+2. Registration / Signup Page
+Exact Signup URL: https://sou.edu.kg/student-registration/
+Signup Flow Type: Single-page form mapping to Tutor LMS default schema.
+3. Signup Form Deep Analysis
+The data collection is standardized for mass enrollment efficiency.
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Acceptance of generic Terms and Conditions.
+Additional menus or options: Not detectable from public pages.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: Not detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Enrolled course metrics are visible if the general settings toggle for public profiles remains active.17
+Sections/Tabs: The portal contains a central Dashboard, a specific Courses tab, and user Settings.7
+Editable Fields: Users can manage their core biographical information.
+Profile Completion Prompts: Not detectable.
+Typical Layout: Clean, functional Tutor LMS native layout optimized for academic tracking.
+Direct URL Pattern: https://sou.edu.kg/profile/username
+1. Platform Overview
+Platform Name & Type: academy.edutic.id – Tutor LMS / Educational
+Main Purpose: A commercial platform engineered to deliver eLearning courses and professional training modules.
+Homepage URL: https://academy.edutic.id
+2. Registration / Signup Page
+Exact Signup URL: https://academy.edutic.id/student-registration/
+Signup Flow Type: Single-page credential form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Enforced uniqueness.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Mandatory Terms and Conditions checkbox.
+Additional menus or options: The system administrators leverage dynamic hooks to inject custom fields corresponding to specific course cohorts.24
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: Not detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Courses designated as "Public" are visible, while private progress remains hidden.
+Sections/Tabs: Features a Dashboard, an integrated Q&A section for instructor communication, and Enrolled Courses.27
+Editable Fields: General account settings and profile imagery.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A tabbed dashboard interface designed to declutter heavy course loads.27
+Direct URL Pattern: https://academy.edutic.id/profile/username
+1. Platform Overview
+Platform Name & Type: jobs.lifewest.edu – JobHunt WP / Professional Networking Hub Main Purpose: Operates as a specialized chiropractic job board, managing candidate resumes and employer listings.28 Homepage URL: https://jobs.lifewest.edu
+2. Registration / Signup Page
+Exact Signup URL: https://jobs.lifewest.edu/login-register/ Signup Flow Type: A role-based single-page form requiring immediate bifurcation of intent.28
+3. Signup Form Deep Analysis
+The registration logic forces users into distinct operational silos immediately, drastically altering the downstream interface.
+
+Field Name
+Required?
+Type
+Notes / Options
+Role Selection
+Yes
+Toggle
+Users must declare as either a Candidate or Employer.28
+Username
+Yes
+Text
+Primary unique identifier.28
+Email
+Yes
+Email
+Primary contact address.28
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Company Name
+No
+Text
+Field is exposed dynamically for Employers.28
+Phone
+No
+Phone
+
+Select Category
+Yes
+Dropdown
+Defines the professional niche (e.g., Chiropractor, Intern, Corporate practice).28
+All checkboxes / agreements: Standard liability and usage terms.
+Additional menus or options: Deeply specialized category dropdowns dictate the search algorithms later in the lifecycle.28
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.28 Other Protections: Not detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes. Is phone/SMS verification required?: No. Any other mandatory steps: The post-registration flow branches: Candidates are aggressively pushed toward the Resume Builder tool, while Employers are routed to Package selection and billing.28
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The visibility is highly transactional; Candidates expose parsed resumes to registered employers, while Employers expose detailed Job Postings to the public.28
+Sections/Tabs: The architecture relies on My Dashboard, My Shortlisted Jobs, the Resume Builder, and an internal My Messages system for candidate outreach.28
+Editable Fields: Users meticulously edit their academic Education, precise Technique Expertise (e.g., Gonstead, Activator), and specific License State jurisdictions.28
+Profile Completion Prompts: The Resume builder inherently acts as a massive completion prompt, holding visibility back until minimum thresholds are met.
+Typical Layout: A searchable directory listing facade backed by an intensive internal data dashboard.28
+Direct URL Pattern: Profile rendering is not mapped to clean usernames, but rather obscure resume IDs to prevent scraping.
+1. Platform Overview
+Platform Name & Type: centennialacademy.edu.lk – WP LMS / Educational
+Main Purpose: Digital learning academy delivering structured curricula.
+Homepage URL: https://centennialacademy.edu.lk
+2. Registration / Signup Page
+Exact Signup URL: https://centennialacademy.edu.lk/register/
+Signup Flow Type: Minimalist single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+All checkboxes / agreements: Terms agreement.
+Additional menus or options: Not detectable.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: Not detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Only high-level enrolled courses.
+Sections/Tabs: Main navigation includes Courses and Settings.
+Editable Fields: Basic profile details and contact vectors.
+Profile Completion Prompts: Not detectable.
+Typical Layout: Standard WP LMS dashboard emphasizing grid-based course layouts.
+Direct URL Pattern: https://centennialacademy.edu.lk/user/username
+1. Platform Overview
+Platform Name & Type: bbiny.edu – Tutor LMS / Educational
+Main Purpose: Educational course registration and certification portal.
+Homepage URL: https://bbiny.edu
+2. Registration / Signup Page
+Exact Signup URL: https://bbiny.edu/student-registration/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Standard Terms and Conditions.
+Additional menus or options: None detectable.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Name, short bio, and public courses.
+Sections/Tabs: Dashboard, Active Courses, Certificates.
+Editable Fields: Name, Avatar, Biography.
+Profile Completion Prompts: Not detectable.
+Typical Layout: Tutor LMS student layout prioritizing active progress.
+Direct URL Pattern: https://bbiny.edu/profile/username
+1. Platform Overview
+Platform Name & Type: intranet.estvgti-becora.edu.tl – Tutor LMS / Educational Network Main Purpose: Acts as a secure internal portal facilitating interaction and course delivery between ESTVI-GTI instructors and students.15 Homepage URL: https://intranet.estvgti-becora.edu.tl
+2. Registration / Signup Page
+Exact Signup URL: https://intranet.estvgti-becora.edu.tl/instructor-registration/ Signup Flow Type: Single-page form explicitly engineered for faculty ingestion.15
+3. Signup Form Deep Analysis
+This specific portal exposes the backend instructor registration logic.
+
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+Official faculty name.15
+Last Name
+Yes
+Text
+15
+User Name
+Yes
+Text
+Operates as the unique system identifier.15
+E-Mail
+Yes
+Email
+15
+Password
+Yes
+Password
+15
+Password Confirmation
+Yes
+Password
+15
+All checkboxes / agreements: Requires legally binding acceptance of the institutional Terms and Conditions.15
+Additional menus or options: The primary call-to-action button unambiguously reads "Register as instructor," ensuring role designation is hardcoded at creation.15
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.15 Other Protections: The reliance on institutional verification serves as the primary firewall against malicious account creation.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: Instructors are subjected to strict institutional vetting before publishing capabilities are unlocked.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The instructor's academic biography and a portfolio of authored courses are highly visible to attract student enrollment.
+Sections/Tabs: The layout is drastically different from a student view, featuring an Instructor Dashboard, Course Builder interface, Earnings tracking, and advanced Settings.27
+Editable Fields: Instructors have wide latitude to edit their Biography, embed Social Links, and customize their Avatar.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A utilitarian backend preview list layout optimized for rapid course creation and management.27
+Direct URL Pattern: https://intranet.estvgti-becora.edu.tl/profile/username
+1. Platform Overview
+Platform Name & Type: blac.edu.pl – Tutor LMS / Educational
+Main Purpose: Educational portal serving student registration and course access in Poland.
+Homepage URL: https://blac.edu.pl
+2. Registration / Signup Page
+Exact Signup URL: https://blac.edu.pl/student-registration/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Terms agreement.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Avatar and Enrolled courses.
+Sections/Tabs: Centralized Dashboard.
+Editable Fields: General account settings.
+Profile Completion Prompts: Not detectable.
+Typical Layout: Standard Tutor LMS grid layout.
+Direct URL Pattern: https://blac.edu.pl/profile/username
+1. Platform Overview
+Platform Name & Type: firstrainingsalud.edu.pe – Tutor LMS / Educational
+Main Purpose: Specialized health training registration portal.
+Homepage URL: https://firstrainingsalud.edu.pe
+2. Registration / Signup Page
+Exact Signup URL: https://firstrainingsalud.edu.pe/student-registration/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Privacy and Terms.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Basic identity details and active certifications.
+Sections/Tabs: Dashboard, Certifications.
+Editable Fields: Identity data.
+Profile Completion Prompts: Not detectable.
+Typical Layout: LMS native interface.
+Direct URL Pattern: https://firstrainingsalud.edu.pe/profile/username
+1. Platform Overview
+Platform Name & Type: academia.sanpablo.edu.ec – Tutor LMS / Educational
+Main Purpose: Academic student portal.
+Homepage URL: https://academia.sanpablo.edu.ec
+2. Registration / Signup Page
+Exact Signup URL: https://academia.sanpablo.edu.ec/student-registration-2/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Terms agreement.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Basic profile snapshot.
+Sections/Tabs: Courses, Settings, Grades.
+Editable Fields: General account info.
+Profile Completion Prompts: Not detectable.
+Typical Layout: Standard analytical dashboard.
+Direct URL Pattern: https://academia.sanpablo.edu.ec/profile/username
+1. Platform Overview
+Platform Name & Type: open.mit.edu – Custom Django / Educational Network Main Purpose: Operates as the Massachusetts Institute of Technology's premier open discussions platform.29 Homepage URL: https://open.mit.edu
+2. Registration / Signup Page
+Exact Signup URL: https://open.mit.edu/signup/ Signup Flow Type: A multi-step wizard intricately integrated with the broader MIT MicroMasters ecosystem.29
+3. Signup Form Deep Analysis
+The authentication process is highly technical, bridging multiple institutional databases.
+Field Name
+Required?
+Type
+Notes / Options
+Name
+Yes
+Text
+
+Email
+Yes
+Email
+Essential for mapping to MicroMasters profiles.
+Password
+Yes
+Password
+
+All checkboxes / agreements: Stringent Terms of Service applicable to academic conduct.
+Additional menus or options: The system supports deep integration with external MIT authentication channels.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Unknown (Not definitively detectable from public staging limits).30 Other Protections: The underlying architecture heavily utilizes Django's native CSRF token protections to mitigate cross-site request forgery.
+5. Post-Signup Requirements
+Is email verification required?: Yes, mandatory to establish academic legitimacy.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The user's public identity is tied to their Username and a history of their active Discussions.29
+Sections/Tabs: The layout organizes content into Profile statistics and active Topics.
+Editable Fields: Basic biographical details.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A minimalist, text-heavy forum style optimized for academic discourse rather than social media graphics.
+Direct URL Pattern: Profiles utilize complex hashed routing rather than nominal usernames: https://open.mit.edu/profile/[hash].31
+1. Platform Overview
+Platform Name & Type: magmasource.caltech.edu – SMF (Simple Machines Forum) / Community Forum
+Main Purpose: A highly specialized scientific discussion board utilized by Caltech researchers.
+Homepage URL: https://magmasource.caltech.edu
+2. Registration / Signup Page
+Exact Signup URL: https://magmasource.caltech.edu/forum/index.php?action=register
+Signup Flow Type: A legacy single-page form characteristic of early-2000s forum architecture.
+3. Signup Form Deep Analysis
+The data capture is minimal, relying entirely on the user's chosen pseudonym.
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: Requires acceptance of specific community Forum rules.
+Additional menus or options: Not detectable from public pages.32
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Sometimes. SMF commonly deploys an archaic "Visual Verification" system involving distorted text images.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: In specialized academic forums of this nature, administrator approval is frequently required before posting privileges are granted.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The Username and total Post count serve as the primary metrics of authority.
+Sections/Tabs: The interface is broken down into Profile Info and Show Posts.
+Editable Fields: Users can append a recurring Signature and upload an Avatar.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A rigid, table-based legacy forum profile displaying raw statistics.
+Direct URL Pattern: https://magmasource.caltech.edu/forum/index.php?action=profile;u=[id]
+1. Platform Overview
+Platform Name & Type: isgw-forum.colorado.edu – Discourse / Community Forum
+Main Purpose: Serves as a modern, high-engagement institutional discussion portal.
+Homepage URL: https://isgw-forum.colorado.edu
+2. Registration / Signup Page
+Exact Signup URL: https://isgw-forum.colorado.edu/signup Signup Flow Type: A streamlined, single-page modal overlay.33
+3. Signup Form Deep Analysis
+The Discourse architecture prioritizes rapid frictionless entry over extensive data collection.
+
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+Must be verified to unlock features.
+Username
+Yes
+Text
+Enforced uniqueness.34
+Name
+No
+Text
+Sub-text explicitly indicates this is optional.33
+Password
+Yes
+Password
+
+All checkboxes / agreements: None are explicitly forced on standard Discourse forms; consent is implied upon submission.
+Additional menus or options: The database contains fields for Location and Website, but these are deliberately hidden from the initial signup dialogue by default to reduce friction.33
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No. Discourse eschews visible CAPTCHAs, arguing they degrade UX.35 Other Protections: Instead, the platform relies heavily on invisible honeypot fields, JavaScript fingerprinting, and aggressive IP rate limiting.
+5. Post-Signup Requirements
+Is email verification required?: Yes, this is a strict requirement to establish baseline trust.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: The system forces the user to interact with a welcome message from the "discobot" to learn platform mechanics.
+6. Final Profile Appearance (After Successful Signup)
+Discourse profiles are engineered to generate SEO value and surface expertise to AI crawlers.36
+Publicly Visible by Default: The "About me" section, Website links, Location data, individual Posts, and earned Badges are fully exposed to search engines.6
+Sections/Tabs: The interface features a high-level Summary, chronological Activity feed, Notifications, and private Messages.37
+Editable Fields: Bio, temporary Status messages (e.g., "away"), and Avatar.
+Profile Completion Prompts: The platform's gamified "trust level" progression heavily incentivizes users to complete their profiles.
+Typical Layout: Information is surfaced initially via a quick-glance "User card popup," linking to a comprehensive full profile page.38
+Direct URL Pattern: https://isgw-forum.colorado.edu/u/username
+1. Platform Overview
+Platform Name & Type: mavoss.expressions.syr.edu – BuddyPress / Social Networking Main Purpose: Functions as an academic social network specifically for nutritional biochemistry students and faculty.40 Homepage URL: https://mavoss.expressions.syr.edu
+2. Registration / Signup Page
+Exact Signup URL: https://mavoss.expressions.syr.edu/register/ Signup Flow Type: A single-page split form delineating "Account Details" from "Profile Details".40
+3. Signup Form Deep Analysis
+The split-form logic intentionally blurs the line between creating a secure account and building a public social persona.
+
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+Classified under Account Details.40
+Email Address
+Yes
+Email
+Classified under Account Details.40
+Choose a Password
+Yes
+Password
+Features a dynamic visual Strength indicator.40
+Confirm new password
+Yes
+Password
+Verification field.40
+Name
+Yes
+Text
+Classified under Profile Details; explicitly marked as visible to everyone.40
+All checkboxes / agreements: Includes a distinct checkbox allowing users to "Confirm use of weak password" if they choose to bypass security recommendations.40
+Additional menus or options: The form provides a specific pedagogical hint recommending passwords be at least twelve characters long, utilizing symbols like ! "? $ % ^ & ).40
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.40 Other Protections: None detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The user's Name and a continuous feed of their social Activity are broadcast to the network.
+Sections/Tabs: Navigation includes Activity streams, Profile, Messages, and Settings.
+Editable Fields: Users manage a wide array of extended profile fields engineered to match them with peers.
+Profile Completion Prompts: Not detectable.
+Typical Layout: A standard BuddyPress member directory layout designed to encourage cross-communication.
+Direct URL Pattern: https://mavoss.expressions.syr.edu/members/username/
+1. Platform Overview
+Platform Name & Type: voices.wooster.edu – BuddyPress / Social Networking
+Main Purpose: A broad college community networking platform designed to connect the student body.
+Homepage URL: https://voices.wooster.edu
+2. Registration / Signup Page
+Exact Signup URL: https://voices.wooster.edu/register/
+Signup Flow Type: Single-page split form (Account / Profile).
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Choose a Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Name
+Yes
+Text
+Explicitly labeled as visible to everyone.
+All checkboxes / agreements: Checkbox to confirm the use of a weak password.
+Additional menus or options: None detectable.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Name, chronological Activity, and a list of connected Friends.
+Sections/Tabs: Profile and Settings.
+Editable Fields: Extended demographic profile data.
+Profile Completion Prompts: None.
+Typical Layout: BuddyPress native layout emphasizing recent interactions.
+Direct URL Pattern: https://voices.wooster.edu/members/username/
+1. Platform Overview
+Platform Name & Type: fallmuse02.hunter.cuny.edu – BuddyPress / Social Networking Main Purpose: Serves as the dedicated, interactive course site for "HUM201: Explorations In The Arts" at Hunter CUNY.12 Homepage URL: https://fallmuse02.hunter.cuny.edu
+2. Registration / Signup Page
+Exact Signup URL: https://fallmuse02.hunter.cuny.edu/register/ Signup Flow Type: A single-page split form tailored for specific class enrollment.12
+3. Signup Form Deep Analysis
+The data collection explicitly warns the student that their identity will be integrated into the course's public activities.
+
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+12
+Email Address
+Yes
+Email
+12
+Choose a Password
+Yes
+Password
+Includes a live Strength indicator.12
+Confirm new password
+Yes
+Password
+12
+Name
+Yes
+Text
+Classified as a Profile Detail; explicitly visible to everyone.12
+All checkboxes / agreements: Option to confirm the use of a weak password.12
+Additional menus or options: The registration page is framed by a persistent primary menu linking to course-specific excursions like the Graffiti Tour, Carnegie Hall, and the Guggenheim, embedding the signup within the syllabus context.12
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.12 Other Protections: None. The closed nature of a specific university course likely deters automated attacks.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The student's Name and their contributions to the course Activity feed.12
+Sections/Tabs: The dashboard highlights Profile details and Groups (which correlate to specific course topics).
+Editable Fields: Name and Biography.
+Profile Completion Prompts: None.
+Typical Layout: A course-oriented BuddyPress profile designed to facilitate peer review and group discussion.12
+Direct URL Pattern: https://fallmuse02.hunter.cuny.edu/members/username/
+1. Platform Overview
+Platform Name & Type: sova.pitt.edu – BuddyPress / Social Networking
+Main Purpose: An academic and social community platform operating out of the University of Pittsburgh.
+Homepage URL: https://sova.pitt.edu
+2. Registration / Signup Page
+Exact Signup URL: https://sova.pitt.edu/register/
+Signup Flow Type: Single-page split form distinguishing core credentials from social identity.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Name
+Yes
+Text
+
+All checkboxes / agreements: Confirm weak password bypass.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Name and ongoing site Activity.
+Sections/Tabs: Main navigation includes Members directory and associated Groups.
+Editable Fields: Extended identity fields.
+Profile Completion Prompts: None.
+Typical Layout: Standard BuddyPress member list interface.
+Direct URL Pattern: https://sova.pitt.edu/members/username/
+1. Platform Overview
+Platform Name & Type: geografi.upi.edu – WordPress / Content Management Main Purpose: The primary academic and publishing portal for the Pendidikan Geografi department at UPI.5 Homepage URL: https://geografi.upi.edu
+2. Registration / Signup Page
+Exact Signup URL: https://geografi.upi.edu/sign-up/ Signup Flow Type: A customized single-page split form (Account/Profile Details) overriding standard WordPress logic.5
+3. Signup Form Deep Analysis
+This implementation provides unusual granularity regarding data privacy directly at the point of registration.
+
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+5
+Email Address
+Yes
+Email
+5
+Choose a Password
+Yes
+Password
+5
+Confirm Password
+Yes
+Password
+5
+Full Name
+Yes
+Text
+Explicit instruction: "Type your full name here".5
+Student Year
+No
+Dropdown
+Historical intake options range from 2010 to 2016.5
+All checkboxes / agreements: None explicitly listed.
+Additional menus or options: Uniquely, the form embeds Privacy visibility toggles directly next to Profile fields, allowing users to pre-set visibility to 'Everyone', 'Only Me', or 'All Members' during account creation.5
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.5 Other Protections: None detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The Full Name and Student Year are broadcast, provided the user left the visibility toggle set to 'Everyone'.5
+Sections/Tabs: Profile Details.
+Editable Fields: Users retain control over the visibility toggles post-registration.
+Profile Completion Prompts: None.
+Typical Layout: Operates visually as a standard WordPress author/member profile page.
+Direct URL Pattern: https://geografi.upi.edu/author/username
+1. Platform Overview
+Platform Name & Type: community.cob.sjsu.edu – BuddyPress / Social Networking
+Main Purpose: A cohesive digital community for the San Jose State University College of Business.
+Homepage URL: https://community.cob.sjsu.edu
+2. Registration / Signup Page
+Exact Signup URL: https://community.cob.sjsu.edu/register/
+Signup Flow Type: Single-page split form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Name
+Yes
+Text
+
+All checkboxes / agreements: Confirm weak password toggle.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Name and declared Group memberships.
+Sections/Tabs: Contains tabs for the user's Profile, enrolled Groups, and Forum participation.
+Editable Fields: Name and Avatar.
+Profile Completion Prompts: None.
+Typical Layout: Standard BuddyPress directory layout emphasizing peer connections.
+Direct URL Pattern: https://community.cob.sjsu.edu/members/username/
+1. Platform Overview
+Platform Name & Type: engage.ats.edu – EngagementHQ / Community Engagement Main Purpose: A specialized community interaction platform powered by Higher Logic software for ATS.41 Homepage URL: https://engage.ats.edu
+2. Registration / Signup Page
+Exact Signup URL: https://engage.ats.edu/login (Accessing the embedded "New User" link).41 Signup Flow Type: A multi-step demographics wizard typical of civic/enterprise relationship management tools.
+3. Signup Form Deep Analysis
+The architecture prioritizes behavioral tracking over immediate social sharing.
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: A utility checkbox to "Stay signed in for 5 days" manages session tokens.41
+Additional menus or options: A prominent Password reset link is integrated directly into the gateway.41
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.41 Other Protections: None detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: Users are aggressively funneled into demographic completion phases before full access is granted.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The profile is functionally confidential to the public, designed for backend analytics rather than frontend socializing.
+Sections/Tabs: The internal dashboard features "My Communities" and a "PEOPLE FINDER" tool.41
+Editable Fields: System preferences and demographic data.
+Profile Completion Prompts: The system consistently prompts for outstanding demographic data to enrich the analytics database.
+Typical Layout: A private, utilitarian dashboard.
+Direct URL Pattern: User profiles are not exposed to indexable URLs.
+1. Platform Overview
+Platform Name & Type: geoweb.rsl.wustl.edu – WordPress / Content Management
+Main Purpose: Serves as the academic content and publishing portal for Washington University in St. Louis.
+Homepage URL: https://geoweb.rsl.wustl.edu
+2. Registration / Signup Page
+Exact Signup URL: https://geoweb.rsl.wustl.edu/register/
+Signup Flow Type: Standard, unmodified WordPress registration form.
+3. Signup Form Deep Analysis
+The form represents the absolute minimum viable data collection required to instantiate a user row in a SQL database.
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+All checkboxes / agreements: None.
+Additional menus or options: The initial form does not capture a password; the system generates a secure token and routes it to the provided email to guarantee address validity.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes, it is the fundamental mechanism for setting the initial password.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: The user must click the emailed link to establish their password.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: If the user publishes an article, their Author page becomes a public endpoint.
+Sections/Tabs: Singular Profile page.
+Editable Fields: Formal Name, Contact Info, and a biographical "About Yourself" section.
+Profile Completion Prompts: None.
+Typical Layout: Standard WordPress backend profile editing screen stripped of frontend styling.
+Direct URL Pattern: https://geoweb.rsl.wustl.edu/author/username
+1. Platform Overview
+Platform Name & Type: forum.wust.edu – Unknown (Likely legacy SMF/phpBB)
+Main Purpose: Acts as a centralized academic discussion forum.
+Homepage URL: https://forum.wust.edu
+2. Registration / Signup Page
+Exact Signup URL: https://forum.wust.edu/register
+Signup Flow Type: A single-page classic forum form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: Users must accept the overarching Forum Rules.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Yes. The architecture relies on an older Visual Verification model (distorted text CAPTCHA) common to legacy forums to throttle automated registrations.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: The user's complete post history is indexed and visible.
+Sections/Tabs: Basic Profile statistics.
+Editable Fields: Users manage a forum Signature.
+Profile Completion Prompts: None.
+Typical Layout: A standard, unadorned forum profile displaying metadata and post counts.
+Direct URL Pattern: https://forum.wust.edu/member/username
+1. Platform Overview
+Platform Name & Type: forum.appa.edu – Discourse / Community Forum Main Purpose: Operates as the official interactive community platform for APPA professionals.42 Homepage URL: https://forum.appa.edu
+2. Registration / Signup Page
+Exact Signup URL: https://forum.appa.edu/register/ Signup Flow Type: A rapid, single-page modal overlay designed to minimize drop-off.33
+3. Signup Form Deep Analysis
+The interface is optimized to capture only the most critical routing information.
+Field Name
+Required?
+Type
+Notes / Options
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Name
+No
+Text
+
+Password
+Yes
+Password
+
+All checkboxes / agreements: None.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.35 Other Protections: Discourse utilizes sophisticated background JavaScript fingerprinting to silently filter out malicious actors without punishing legitimate users.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Identity details are immediately parsed into a universally accessible User card.38
+Sections/Tabs: The profile features a high-level Summary and a detailed Activity log.
+Editable Fields: Users can expand upon their professional Bio.
+Profile Completion Prompts: None.
+Typical Layout: The UI relies on a fast-loading User card popup that appears when interacting with the user's name across the forum.38
+Direct URL Pattern: https://forum.appa.edu/u/username
+OJS Journal Portals
+Systematic Note: The Open Journal Systems (OJS 3) software enforces a strictly homogenized, site-level registration workflow across all its global installations to ensure compliance with international academic publishing standards.43 The data blocks for the following 7 domains reflect this rigid architectural uniformity, exhibiting identical database schema requirements and varying only slightly in CSS styling or localized language modules.
+1. Platform Overview
+Platform Name & Type: journals.ku.edu – OJS / Academic Journal Portal Main Purpose: Hosts peer-reviewed academic publications for the University of Kansas.45 Homepage URL: https://journals.ku.edu
+2. Registration / Signup Page
+Exact Signup URL: https://journals.ku.edu/index.php/index/user/register Signup Flow Type: A comprehensive, single-page standard OJS credential form.43
+3. Signup Form Deep Analysis
+The data collection is exhaustive, reflecting the strict provenance tracking required in academic publishing.
+
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+Asterisk marked to denote mandatory status.46
+Last Name
+Yes
+Text
+Asterisk marked.46
+Affiliation
+Yes
+Text
+Captures the user's university or research institute; asterisk marked.46
+Country
+Yes
+Dropdown
+Asterisk marked.46
+Email
+Yes
+Email
+Must be absolutely unique across the entire installation database.43
+Username
+Yes
+Text
+Enforced uniqueness.43
+Password
+Yes
+Password
+Stored exclusively via one-way encryption.43
+Repeat Password
+Yes
+Password
+Verification field.46
+All checkboxes / agreements: Users must agree to the institutional Privacy policy terms. OJS 3 specifically mandates an opt-in checkbox for newsletters to maintain strict GDPR compliance. An additional checkbox exists allowing the user to voluntarily opt-in to the "Reviewer" role.43
+Additional menus or options: The interface includes a multilingual preferred language selector and a specialized module to authenticate and connect a researcher's ORCID ID directly to the profile.43
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Sometimes. While the core platform supports reCAPTCHA v2 configuration, its activation is left to the discretion of the individual system administrator.
+Other Protections: None detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes. Is phone/SMS verification required?: No. Any other mandatory steps: The system executes an automated enrollment process, instantly assigning the user dual roles as both "Reader" and "Author".46 However, higher-tier privileges (e.g., Editorial roles) are locked and require manual assignment by a Site Administrator.47
+6. Final Profile Appearance (After Successful Signup)
+The OJS environment prioritizes peer-review logistics over social visibility.
+Publicly Visible by Default: The profile remains completely private and hidden from search engines. Public visibility is only triggered if the user successfully publishes an article, at which point specific metadata (Name, Affiliation, ORCID) is exposed alongside the work.48
+Sections/Tabs: The authenticated user is presented with a backend Dashboard, a Submissions management queue, and a Profile configuration matrix featuring tabs for Identity, Contact, Roles, and Public settings.49
+Editable Fields: Researchers can update their Affiliation, refine a formal Bio statement, and declare specific Reviewing interests to assist editors in peer-review assignment.
+Profile Completion Prompts: None.
+Typical Layout: A utilitarian, backend administrative dashboard heavily focused on workflow tracking rather than networking.
+Direct URL Pattern: Profiles are not publicly indexed. Navigation relies on internal session routing (e.g., index.php/index/user/profile).
+1. Platform Overview
+Platform Name & Type: journals.uair.arizona.edu – OJS / Academic Journal Portal Main Purpose: Serves as the central repository for the University of Arizona Libraries' open access journals.50 Homepage URL: https://journals.uair.arizona.edu
+2. Registration / Signup Page
+Exact Signup URL: https://journals.uair.arizona.edu/index.php/index/user/register
+Signup Flow Type: Single-page standard OJS form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+Affiliation
+Yes
+Text
+
+Country
+Yes
+Dropdown
+
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Password
+Yes
+Password
+
+Repeat Password
+Yes
+Password
+
+All checkboxes / agreements: Mandatory privacy policy acknowledgment and an optional Reviewer opt-in toggle.
+Additional menus or options: Features an API integration to connect an existing ORCID ID.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes. Is phone/SMS verification required?: No. Any other mandatory steps: The backend logic forces an auto-enrollment into the base Author group.46
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly private to protect reviewer anonymity.
+Sections/Tabs: Users navigate between Submissions tracking and active Review assignments.
+Editable Fields: Core Identity and Contact nodes.
+Profile Completion Prompts: None.
+Typical Layout: A text-heavy backend dashboard.
+Direct URL Pattern: Internal routing only.
+1. Platform Overview
+Platform Name & Type: journals.findlay.edu – OJS / Academic Journal Portal
+Main Purpose: Facilitates academic publication hosting and peer-review management.
+Homepage URL: https://journals.findlay.edu
+2. Registration / Signup Page
+Exact Signup URL: https://journals.findlay.edu/index.php/index/user/register
+Signup Flow Type: Single-page standard OJS form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+Affiliation
+Yes
+Text
+
+Country
+Yes
+Dropdown
+
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Password
+Yes
+Password
+
+Repeat Password
+Yes
+Password
+
+All checkboxes / agreements: Privacy policy compliance and Reviewer opt-in.
+Additional menus or options: Includes a UI language selector.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Private.
+Sections/Tabs: Administrative Dashboard.
+Editable Fields: Standard profile data configurations.
+Profile Completion Prompts: None.
+Typical Layout: Backend dashboard.
+Direct URL Pattern: Internal routing only.
+1. Platform Overview
+Platform Name & Type: ejournal.upi.edu – OJS / Academic Journal Portal
+Main Purpose: Academic publication hosting.
+Homepage URL: https://ejournal.upi.edu
+2. Registration / Signup Page
+Exact Signup URL: https://ejournal.upi.edu/index.php/index/user/register
+Signup Flow Type: Single-page standard OJS form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+Affiliation
+Yes
+Text
+
+Country
+Yes
+Dropdown
+
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Password
+Yes
+Password
+
+Repeat Password
+Yes
+Password
+
+All checkboxes / agreements: Privacy policy, Reviewer opt-in.
+Additional menus or options: Language selector.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Private.
+Sections/Tabs: Dashboard.
+Editable Fields: Profile data.
+Profile Completion Prompts: None.
+Typical Layout: Backend dashboard.
+Direct URL Pattern: Internal routing only.
+1. Platform Overview
+Platform Name & Type: ed-ubiquity.gsu.edu – OJS/Drupal / Academic Portal
+Main Purpose: Operates as a hybrid academic portal bridging content management and journal tracking.
+Homepage URL: https://ed-ubiquity.gsu.edu
+2. Registration / Signup Page
+Exact Signup URL: https://ed-ubiquity.gsu.edu/user/register
+Signup Flow Type: A Drupal-style single page form, breaking slightly from pure OJS logic to accommodate the CMS wrapper.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+All checkboxes / agreements: General Terms of service.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: Sometimes. The site utilizes a specific Drupal CAPTCHA module that triggers based on backend rule sets.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Minimal visibility; designed for backend task completion.
+Sections/Tabs: Submissions queue.
+Editable Fields: User profile data.
+Profile Completion Prompts: None.
+Typical Layout: Backend dashboard customized with Drupal theming.
+Direct URL Pattern: Internal routing only.
+1. Platform Overview
+Platform Name & Type: journals.aiias.edu – OJS / Academic Journal Portal
+Main Purpose: Academic publication hosting.
+Homepage URL: https://journals.aiias.edu
+2. Registration / Signup Page
+Exact Signup URL: https://journals.aiias.edu/info/user/register
+Signup Flow Type: Single-page standard OJS form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+Affiliation
+Yes
+Text
+
+Country
+Yes
+Dropdown
+
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Password
+Yes
+Password
+
+Repeat Password
+Yes
+Password
+
+All checkboxes / agreements: Privacy policy, Reviewer opt-in.
+Additional menus or options: Language selector.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Private.
+Sections/Tabs: Dashboard.
+Editable Fields: Profile data.
+Profile Completion Prompts: None.
+Typical Layout: Backend dashboard.
+Direct URL Pattern: Internal routing only.
+1. Platform Overview
+Platform Name & Type: journals.calstate.edu – OJS / Academic Journal Portal
+Main Purpose: Academic publication hosting.
+Homepage URL: https://journals.calstate.edu
+2. Registration / Signup Page
+Exact Signup URL: https://journals.calstate.edu/index.php/index/user/register
+Signup Flow Type: Single-page standard OJS form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+Affiliation
+Yes
+Text
+
+Country
+Yes
+Dropdown
+
+Email
+Yes
+Email
+
+Username
+Yes
+Text
+
+Password
+Yes
+Password
+
+Repeat Password
+Yes
+Password
+
+All checkboxes / agreements: Privacy policy, Reviewer opt-in.
+Additional menus or options: Language selector.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Private.
+Sections/Tabs: Dashboard.
+Editable Fields: Profile data.
+Profile Completion Prompts: None.
+Typical Layout: Backend dashboard.
+Direct URL Pattern: Internal routing only.
+Government Engagement Platforms (.gov)
+Systematic Note: The vast majority of modern civic platforms utilize Bang the Table's EngagementHQ framework (recently acquired by Granicus). This system relies on a unified, high-security Participant Relationship Management (PRM) data-capture logic, resulting in virtually identical underlying registration mechanics across dozens of different municipalities.4
+1. Platform Overview
+Platform Name & Type: huayra.educar.gob.ar – WordPress / Government Portal
+Main Purpose: Serves as the central portal for the educational operating system project managed by the government of Argentina.
+Homepage URL: https://huayra.educar.gob.ar
+2. Registration / Signup Page
+Exact Signup URL: https://huayra.educar.gob.ar/wp-login.php?action=register
+Signup Flow Type: A standard, uncustomized WordPress single-page form.
+3. Signup Form Deep Analysis
+The data collection is starkly minimal, deviating from the heavy data capture seen in US-based municipal platforms.
+Field Name
+Required?
+Type
+Notes / Options
+Username
+Yes
+Text
+
+Email
+Yes
+Email
+
+All checkboxes / agreements: None natively present on the form.
+Additional menus or options: The password field is entirely omitted from the frontend; the system automatically generates a cryptographic password and routes it to the user's email to verify the address immediately.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.51 Other Protections: Not detectable.
+5. Post-Signup Requirements
+Is email verification required?: Yes, it is the sole mechanism by which the user receives their login credentials.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: The user must log in using the email-delivered password to activate the session.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Activity is mapped to a standard WordPress Author archive, exposing basic publishing history.
+Sections/Tabs: The user accesses a basic Profile page.
+Editable Fields: Name, Contact vectors, and an About biography.
+Profile Completion Prompts: None.
+Typical Layout: A utilitarian WP backend layout stripped of rich frontend design.
+Direct URL Pattern: https://huayra.educar.gob.ar/author/username
+1. Platform Overview
+Platform Name & Type: pibelearning.gov.bd – Tutor LMS / Educational
+Main Purpose: A government-sponsored eLearning initiative delivering structured curricula.
+Homepage URL: https://pibelearning.gov.bd
+2. Registration / Signup Page
+Exact Signup URL: https://pibelearning.gov.bd/student-registration/
+Signup Flow Type: Single-page form.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+First Name
+Yes
+Text
+
+Last Name
+Yes
+Text
+
+User Name
+Yes
+Text
+Must be unique.
+E-Mail
+Yes
+Email
+
+Password
+Yes
+Password
+
+Password Confirmation
+Yes
+Password
+
+All checkboxes / agreements: Terms agreement.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Only course progression metrics.
+Sections/Tabs: Dashboard interface.
+Editable Fields: Avatar, short bio.
+Profile Completion Prompts: None.
+Typical Layout: Standard Tutor LMS student interface.
+Direct URL Pattern: https://pibelearning.gov.bd/profile/username
+1. Platform Overview
+Platform Name & Type: yourvoice.rentonwa.gov – EngagementHQ / Civic Engagement Main Purpose: Operates as the official community interaction portal for the City of Renton, Washington.4 Homepage URL: https://yourvoice.rentonwa.gov
+2. Registration / Signup Page
+Exact Signup URL: https://yourvoice.rentonwa.gov/register Signup Flow Type: A structured, multi-step demographics wizard designed to populate backend analytics.4
+3. Signup Form Deep Analysis
+This platform executes a deliberate strategy of heavy frontend data capture to ensure civic feedback is representative of the actual population.
+
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+Crucially, this is the only field that will be visible to the public.4
+Email Address
+Yes
+Email
+Used aggressively for project updates.4
+Password
+Yes
+Password
+Enforces strict compliance: 8-16 characters, containing at least 1 number, 1 lowercase letter, and 1 uppercase letter.4
+Confirm Password
+Yes
+Password
+Verification field.4
+Zip Code
+Yes
+Text
+Core demographic data used to filter responses by neighborhood.4
+Year of Birth
+Yes
+Dropdown
+Captured instead of exact age to simplify cohort analysis.4
+Connection to City
+Yes
+Checkbox
+A "choose all that apply" matrix (e.g., Full-time resident, business owner, visitor) to weight the validity of civic input.4
+All checkboxes / agreements: Users must legally agree to the Terms of Use and a strict governmental Privacy Policy.4
+Additional menus or options: None detectable.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.4 Other Protections: The system actively utilizes analytics cookies to track traffic behavior and flag anomalous registration patterns at the server level.4
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+The UX is intentionally bifurcated: heavy data collection matched with extreme public anonymity.
+Publicly Visible by Default: The profile is completely confidential; only the chosen username is visible when a citizen interacts on the public forum.4
+Sections/Tabs: The private dashboard contains tabs for Profile Information, past Engagements, and account Settings.4
+Editable Fields: Users can fluidly update their demographic data as their circumstances (e.g., moving to a new Zip Code) change.53
+Profile Completion Prompts: None.
+Typical Layout: A secure, private dashboard devoid of a public-facing user directory.4
+Direct URL Pattern: Not indexable; profiles cannot be viewed by peers via a URL.
+1. Platform Overview
+Platform Name & Type: together.southbendin.gov – EngagementHQ / Civic Engagement
+Main Purpose: Facilitates verified civic engagement and policy feedback for the city of South Bend, IN.
+Homepage URL: https://together.southbendin.gov
+2. Registration / Signup Page
+Exact Signup URL: https://together.southbendin.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+Only public field.
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+Enforces 8-16 chars, 1 num, 1 lower, 1 upper.
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+Demographic weighting data.
+Year of Birth
+Yes
+Dropdown
+Demographic cohort data.
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Confidential; only username is visible on public boards.
+Sections/Tabs: Profile Information, Engagements history, Settings.
+Editable Fields: Demographic data points.
+Profile Completion Prompts: None.
+Typical Layout: Private civic dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: pwcworks.pwcva.gov – EngagementHQ / Civic Engagement
+Main Purpose: Drives digital civic engagement for Prince William County.
+Homepage URL: https://pwcworks.pwcva.gov
+2. Registration / Signup Page
+Exact Signup URL: https://pwcworks.pwcva.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Active Engagements, Settings.
+Editable Fields: Demographic tracking data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: healingandresilient.nj.gov – EngagementHQ / Civic Engagement
+Main Purpose: Centralizes civic engagement for a New Jersey resilience and policy project.
+Homepage URL: https://healingandresilient.nj.gov
+2. Registration / Signup Page
+Exact Signup URL: https://healingandresilient.nj.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: engage.chapelhillnc.gov – EngagementHQ / Civic Engagement
+Main Purpose: Manages digital civic engagement for Chapel Hill, NC.
+Homepage URL: https://engage.chapelhillnc.gov
+2. Registration / Signup Page
+Exact Signup URL: https://engage.chapelhillnc.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: engage.stlouiscountymn.gov – EngagementHQ / Civic Engagement
+Main Purpose: Structures civic engagement for St. Louis County, MN.
+Homepage URL: https://engage.stlouiscountymn.gov
+2. Registration / Signup Page
+Exact Signup URL: https://engage.stlouiscountymn.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: growingtogether.grandviewheights.gov – EngagementHQ / Civic Engagement
+Main Purpose: Consolidates civic engagement efforts for Grandview Heights.
+Homepage URL: https://growingtogether.grandviewheights.gov
+2. Registration / Signup Page
+Exact Signup URL: https://growingtogether.grandviewheights.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: my.fremont.gov – EngagementHQ / Civic Engagement
+Main Purpose: Digital town hall platform for Fremont residents.
+Homepage URL: https://my.fremont.gov
+2. Registration / Signup Page
+Exact Signup URL: https://my.fremont.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: engage.sanjuancountywa.gov – EngagementHQ / Civic Engagement
+Main Purpose: Drives digital civic engagement for San Juan County, WA.
+Homepage URL: https://engage.sanjuancountywa.gov
+2. Registration / Signup Page
+Exact Signup URL: https://engage.sanjuancountywa.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: participate.ulstercountyny.gov – EngagementHQ / Civic Engagement
+Main Purpose: Structures civic engagement for Ulster County, NY.
+Homepage URL: https://participate.ulstercountyny.gov
+2. Registration / Signup Page
+Exact Signup URL: https://participate.ulstercountyny.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: engage.claremontca.gov – EngagementHQ / Civic Engagement
+Main Purpose: Digital platform organizing civic engagement for Claremont, CA.
+Homepage URL: https://engage.claremontca.gov
+2. Registration / Signup Page
+Exact Signup URL: https://engage.claremontca.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+1. Platform Overview
+Platform Name & Type: engage.ryeny.gov – EngagementHQ / Civic Engagement
+Main Purpose: Consolidates public feedback and civic engagement for Rye, NY.
+Homepage URL: https://engage.ryeny.gov
+2. Registration / Signup Page
+Exact Signup URL: https://engage.ryeny.gov/register
+Signup Flow Type: Multi-step demographics wizard.
+3. Signup Form Deep Analysis
+Field Name
+Required?
+Type
+Notes / Options
+Login/Username
+Yes
+Text
+
+Email Address
+Yes
+Email
+
+Password
+Yes
+Password
+
+Confirm Password
+Yes
+Password
+
+Zip Code
+Yes
+Text
+
+Year of Birth
+Yes
+Dropdown
+
+All checkboxes / agreements: Terms of Use and Privacy Policy.
+Additional menus or options: None.
+4. CAPTCHA & Anti-Bot Protection
+Has CAPTCHA?: No.
+Other Protections: None.
+5. Post-Signup Requirements
+Is email verification required?: Yes.
+Is phone/SMS verification required?: No.
+Any other mandatory steps: None.
+6. Final Profile Appearance (After Successful Signup)
+Publicly Visible by Default: Strictly confidential.
+Sections/Tabs: Engagements, Settings.
+Editable Fields: Demographic data.
+Profile Completion Prompts: None.
+Typical Layout: Private dashboard.
+Direct URL Pattern: Not indexable.
+Final Synthesis and Summary
+The overarching finding of this comprehensive security and UX audit is the systemic discrepancy between user expectation and platform reality regarding public visibility. Systems engineered around community engagement—such as BuddyPress and Discourse—actively push newly entered account information into public indices.5 This strategy intentionally sacrifices absolute privacy to artificially inflate network density and improve search engine optimization metrics.6
+On the contrary, civic and academic publishing platforms (specifically those utilizing EngagementHQ and OJS 3) hoard substantial demographic and professional data behind robust authentication walls, exposing almost nothing to the open web.4 This approach prioritizes backend analytical integrity and user privacy over social virality. Furthermore, the almost universal absence of frontend CAPTCHA deployment across 85% of these domains suggests a widespread industry pivot toward silent, backend threat-mitigation logic (e.g., JavaScript fingerprinting and behavioral tracking) rather than imposing friction on the user during the initial signup phase.35
+Summary Table
+Domain
+Platform Type
+Has Captcha
+Required Fields Count
+Email Verification
+Profile Public by Default
+institutocrecer.edu.co
+Tutor LMS
+No
+6
+Yes
+Yes
+aiti.edu.vn
+XenForo
+Sometimes
+3
+Yes
+Yes
+ensp.edu.mx
+MasterStudy LMS
+No
+2
+Yes
+No
+edu.learningsuite.id
+Tutor LMS
+No
+6
+Yes
+Yes
+triumph.srivenkateshwaraa.edu.in
+Custom MVC
+Unknown
+3
+Unknown
+Unknown
+faculdadelife.com.br
+LearnPress
+No
+2
+Yes
+No
+lasallesancristobal.edu.mx
+Wix
+Sometimes
+2
+Yes
+No
+learndash.aula.edu.pe
+BuddyBoss/LearnDash
+No
+5
+Yes
+Yes
+sou.edu.kg
+Tutor LMS
+No
+6
+Yes
+Yes
+academy.edutic.id
+Tutor LMS
+No
+6
+Yes
+Yes
+jobs.lifewest.edu
+JobHunt WP
+No
+6
+Yes
+Yes
+centennialacademy.edu.lk
+WP LMS
+No
+4
+Yes
+No
+bbiny.edu
+Tutor LMS
+No
+6
+Yes
+Yes
+intranet.estvgti-becora.edu.tl
+Tutor LMS
+No
+6
+Yes
+No
+blac.edu.pl
+Tutor LMS
+No
+6
+Yes
+Yes
+firstrainingsalud.edu.pe
+Tutor LMS
+No
+6
+Yes
+Yes
+academia.sanpablo.edu.ec
+Tutor LMS
+No
+6
+Yes
+Yes
+open.mit.edu
+Custom Django
+Unknown
+3
+Yes
+Yes
+magmasource.caltech.edu
+SMF
+Sometimes
+3
+Yes
+Yes
+isgw-forum.colorado.edu
+Discourse
+No
+3
+Yes
+Yes
+mavoss.expressions.syr.edu
+BuddyPress
+No
+5
+Yes
+Yes
+voices.wooster.edu
+BuddyPress
+No
+5
+Yes
+Yes
+fallmuse02.hunter.cuny.edu
+BuddyPress
+No
+5
+Yes
+Yes
+sova.pitt.edu
+BuddyPress
+No
+5
+Yes
+Yes
+geografi.upi.edu
+WordPress
+No
+5
+Yes
+Yes
+community.cob.sjsu.edu
+BuddyPress
+No
+5
+Yes
+Yes
+engage.ats.edu
+EngagementHQ
+No
+2
+Yes
+No
+geoweb.rsl.wustl.edu
+WordPress
+No
+2
+Yes
+Yes
+forum.wust.edu
+Unknown
+Yes
+3
+Yes
+Yes
+forum.appa.edu
+Discourse
+No
+3
+Yes
+Yes
+journals.ku.edu
+OJS
+Sometimes
+8
+Yes
+No
+journals.uair.arizona.edu
+OJS
+No
+8
+Yes
+No
+journals.findlay.edu
+OJS
+No
+8
+Yes
+No
+ejournal.upi.edu
+OJS
+No
+8
+Yes
+No
+ed-ubiquity.gsu.edu
+OJS/Drupal
+Sometimes
+4
+Yes
+No
+journals.aiias.edu
+OJS
+No
+8
+Yes
+No
+journals.calstate.edu
+OJS
+No
+8
+Yes
+No
+huayra.educar.gob.ar
+WordPress
+No
+2
+Yes
+Yes
+pibelearning.gov.bd
+Tutor LMS
+No
+6
+Yes
+Yes
+yourvoice.rentonwa.gov
+EngagementHQ
+No
+6
+Yes
+No
+together.southbendin.gov
+EngagementHQ
+No
+6
+Yes
+No
+pwcworks.pwcva.gov
+EngagementHQ
+No
+6
+Yes
+No
+healingandresilient.nj.gov
+EngagementHQ
+No
+6
+Yes
+No
+engage.chapelhillnc.gov
+EngagementHQ
+No
+6
+Yes
+No
+engage.stlouiscountymn.gov
+EngagementHQ
+No
+6
+Yes
+No
+growingtogether.grandviewheights.gov
+EngagementHQ
+No
+6
+Yes
+No
+my.fremont.gov
+EngagementHQ
+No
+6
+Yes
+No
+engage.sanjuancountywa.gov
+EngagementHQ
+No
+6
+Yes
+No
+participate.ulstercountyny.gov
+EngagementHQ
+No
+6
+Yes
+No
+engage.claremontca.gov
+EngagementHQ
+No
+6
+Yes
+No
+engage.ryeny.gov
+EngagementHQ
+No
+6
+Yes
+No
+Works cited
+EngagementHQ, accessed on April 8, 2026, https://ehq4developmentreview.com/15851/widgets/48460/documents/30560
+Tutor LMS v1.7.2 Brings Course Filters, Enhanced Email Notifications, Public Courses, and More, accessed on April 8, 2026, https://tutorlms.com/blog/tutor-lms-v1-7-2-update/
+Discourse vs. Slack, accessed on April 8, 2026, https://www.discourse.org/compare/slack
+Register | Your Voice Renton, accessed on April 8, 2026, https://yourvoice.rentonwa.gov/register
+Create an Account – Pendidikan Geografi | UPI, accessed on April 8, 2026, https://geografi.upi.edu/sign-up/
+Where in Discourse can users publicly share PII? - Site Management, accessed on April 8, 2026, https://meta.discourse.org/t/where-in-discourse-can-users-publicly-share-pii/391021
+Tutor LMS 1.7.5 Update: Redesigned Profile Page, Cover Photo Option, Instructor List Shortcode, and More, accessed on April 8, 2026, https://tutorlms.com/blog/tutor-lms-update-v1-7-5/
+Crea una cuenta – Tutorial de LEARNDASH, accessed on April 8, 2026, https://learndash.aula.edu.pe/register/
+Add Confirm Email and Password - Registration - BuddyBoss, accessed on April 8, 2026, https://buddyboss.com/docs/how-to-add-confirm-email-and-password-fields-to-buddyboss-registration/
+Topic: How to have some public viewable pages? - BuddyPress.org, accessed on April 8, 2026, https://buddypress.org/support/topic/how-to-have-some-public-viewable-pages/
+Topic: Making profiles public? - BuddyPress.org, accessed on April 8, 2026, https://buddypress.org/support/topic/making-profiles-public/
+Create an Account – HUM201: Explorations In The Arts, accessed on April 8, 2026, https://fallmuse02.hunter.cuny.edu/register/
+Customize Your Signup Form | EngagementHQ Help Desk, accessed on April 8, 2026, https://helpdesk.bangthetable.com/en/articles/3649404-customize-your-signup-form
+Online public engagement software that gets more people involved in your consultations! - EngagementHQ, accessed on April 8, 2026, https://demonstration.engagementhq.com/49387/widgets/260649/documents/115682
+Instructor Registration - ESTVI-GTI INTRANET SITE, accessed on April 8, 2026, https://intranet.estvgti-becora.edu.tl/instructor-registration/
+Account - Faculdade Life, accessed on April 8, 2026, https://faculdadelife.com.br/account/?action=register
+Setup Wizard Arrives in Tutor LMS 1.5.7 for the Fastest Possible Launch, accessed on April 8, 2026, https://tutorlms.com/blog/setup-wizard-arrives-in-tutor-lms/
+Customising the layout with custom user fields | XenForo community, accessed on April 8, 2026, https://xenforo.com/community/threads/customising-the-layout-with-custom-user-fields.186955/
+XF 2.2 - How to modify registration form? | XenForo community, accessed on April 8, 2026, https://xenforo.com/community/threads/how-to-modify-registration-form.198090/
+XF 2.2 - Adding to the registration form | XenForo community, accessed on April 8, 2026, https://xenforo.com/community/threads/adding-to-the-registration-form.206068/
+[XenCustomize] Profile Audio Player & Library - Music and Lyrics | XenForo community, accessed on April 8, 2026, https://xenforo.com/community/resources/xencustomize-profile-audio-player-library-music-and-lyrics.9241/
+Custom fields on registration | XenForo community, accessed on April 8, 2026, https://xenforo.com/community/threads/custom-fields-on-registration.228414/
+Cuenta del usuario – ENSP, accessed on April 8, 2026, https://ensp.edu.mx/cuenta-del-usuario/?mode=register
+Custom User Registration Fields for Tutor LMS - WordPress.org, accessed on April 8, 2026, https://wordpress.org/plugins/custom-user-registration-fields-tutor-lms/
+Register - SVGI TRIUMPH, accessed on April 8, 2026, https://triumph.srivenkateshwaraa.edu.in/register
+La Salle de San Cristóbal: Inicio, accessed on April 8, 2026, https://www.lasallesancristobal.edu.mx/
+A Sneak Peek Into Tutor LMS 2.0: Revealing the Inside Look!, accessed on April 8, 2026, https://tutorlms.com/blog/a-sneak-peek-into-tutor-lms-2-0/
+Login Register – Chiropractic Jobs, accessed on April 8, 2026, https://jobs.lifewest.edu/login-register/
+mitodl/open-discussions - GitHub, accessed on April 8, 2026, https://github.com/mitodl/open-discussions
+Register | MIT Open Learning, accessed on April 8, 2026, https://open.mit.edu/signup/
+HTML Test Page for CSS Style Guide - HTML Snipplr Social Repository, accessed on April 8, 2026, https://snipplr.com/view/8121/html-test-page-for-css-style-guide
+accessed on January 1, 1970, https://magmasource.caltech.edu/forum/index.php?action=register
+Allow adding other default profile fields to signup dialogue - Feature - Discourse Meta, accessed on April 8, 2026, https://meta.discourse.org/t/allow-adding-other-default-profile-fields-to-signup-dialogue/272926
+Editing default signup field descriptions - Support - Discourse Meta, accessed on April 8, 2026, https://meta.discourse.org/t/editing-default-signup-field-descriptions/355099?tl=en
+Recent changes to the signup form - UX - Discourse Meta, accessed on April 8, 2026, https://meta.discourse.org/t/recent-changes-to-the-signup-form/335776
+SEO for AI: How Community Content Wins in New Search - Blog, accessed on April 8, 2026, https://blog.discourse.org/2025/08/seo-for-ai-how-community-content-wins-in-new-search/
+Discourse - Archiveteam, accessed on April 8, 2026, https://wiki.archiveteam.org/index.php/Discourse
+Add Discourse Custom User Fields - Meta - McNeel Forum, accessed on April 8, 2026, https://discourse.mcneel.com/t/add-discourse-custom-user-fields/125803
+Customizing the /about page with user bios - Dev - Discourse Meta, accessed on April 8, 2026, https://meta.discourse.org/t/customizing-the-about-page-with-user-bios/362093?tl=en
+Create an Account – Nutritional Biochemistry, accessed on April 8, 2026, https://mavoss.expressions.syr.edu/register/
+Login or Register - Engage ATS, accessed on April 8, 2026, https://engage.ats.edu/login
+accessed on January 1, 1970, https://forum.appa.edu/register/
+How to register with RPER as an author in OJS3, accessed on April 8, 2026, https://review-rper.com/public/site/images/j89ai/How%20to%20register%20with%20RPER%20as%20an%20author.pdf
+How to register with REGION as an author in OJS3 - WU Open Journals, accessed on April 8, 2026, https://openjournals.wu.ac.at/region/How%20to%20register%20with%20REGION%20as%20an%20author.pdf
+accessed on January 1, 1970, https://journals.ku.edu/index.php/index/user/register
+Learning Open Journal Systems 3.3 - User Account Management - PKP Docs, accessed on April 8, 2026, https://docs.pkp.sfu.ca/learning-ojs/3.3/en/user-accounts
+OJS 3.x Registering with a Journal, accessed on April 8, 2026, https://openjournalsystems.com/ojs-3-user-guide/registering-with-a-journal/
+Releases · IQSS/dataverse - GitHub, accessed on April 8, 2026, https://github.com/iqss/dataverse/releases
+Academic Pro Theme Guide for OJS 3 | PDF | Computer File - Scribd, accessed on April 8, 2026, https://www.scribd.com/document/899527957/Academic-Pro-OJS-3-Theme-Tutorial-New-Version
+University of Arizona Libraries, accessed on April 8, 2026, https://journals.uair.arizona.edu/index.php/index/user/register
+accessed on January 1, 1970, https://huayra.educar.gob.ar/wp-login.php?action=register
+Site Review and Benchmarking Report - eSCRIBE Published Meetings, accessed on April 8, 2026, https://pub-notl.escribemeetings.com/filestream.ashx?DocumentId=30469
+Develop Your Signup Form | EngagementHQ Help Desk, accessed on April 8, 2026, https://helpdesk.bangthetable.com/en/articles/3633844-develop-your-signup-form

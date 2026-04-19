@@ -1,0 +1,10 @@
+import sqlite3, os
+db = sqlite3.connect(os.path.join(os.environ['LOCALAPPDATA'],'ProfileSubmissionAssistant','data.db'))
+c = db.cursor()
+c.execute("SELECT t.Id as TaskId, t.SiteId, s.SiteName, t.Status FROM SiteTasks t JOIN Sites s ON s.Id=t.SiteId WHERE s.SiteName LIKE '%Crecer%' OR s.SiteName LIKE '%AITI%'")
+for r in c.fetchall(): print(r)
+print()
+print("--- Dataset sites (IDs 1-20) ---")
+c.execute("SELECT t.Id as TaskId, t.SiteId, s.SiteName, t.Status FROM SiteTasks t JOIN Sites s ON s.Id=t.SiteId WHERE s.Id <= 20 ORDER BY s.Id")
+for r in c.fetchall(): print(r)
+db.close()

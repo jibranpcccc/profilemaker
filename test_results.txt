@@ -1,0 +1,63 @@
+SITE: 559 | STATUS: Failed
+NOTES:
+[INFO] Username generated: marcus_ellington_174
+[INFO] **FRESH** Email created: marcus116955728@geezek.com
+[AI] Page analyzed: 1 forms, 3 buttons, none captcha
+[AI] DeepSeek couldn't analyze page. Passing to fallback adapter.
+[AI] Platform fallback check: WordPress
+[DISCOVERY] Platform matched natively: WordPress
+[FIELDS] Sourced from Native Adapter: {"username":["input[name=\u0027user_login\u0027]","input[name=\u0027username\u0027]","input[name=\u0027user_name\u0027]","input[name=\u0027signup_username\u0027]","input[name=\u0027log\u0027]","input[id=\u0027user_login\u0027]","input[name=\u0027field_1\u0027]","input[id=\u0027username\u0027]","input[name=\u0027login\u0027]"],"email":["input[name=\u0027user_email\u0027]","input[name=\u0027email\u0027]","input[name=\u0027signup_email\u0027]","input[type=\u0027email\u0027]","input[id=\u0027user_email\u0027]","input[id=\u0027email\u0027]","input[name=\u0027email_address\u0027]"],"password":["input[name=\u0027signup_password\u0027]","input[name=\u0027pass1\u0027]","input[name=\u0027password\u0027]","input[name=\u0027pwd\u0027]","input[id=\u0027pass1\u0027]","input[type=\u0027password\u0027]"],"password_confirm":["input[name=\u0027signup_password_confirm\u0027]","input[name=\u0027pass2\u0027]","input[name=\u0027password_confirm\u0027]","input[name=\u0027confirm_password\u0027]","input[id=\u0027pass2\u0027]"],"first_name":["input[name=\u0027field_1\u0027]","input[name=\u0027first_name\u0027]","input[name=\u0027firstname\u0027]","input[id=\u0027first_name\u0027]"],"last_name":["input[name=\u0027field_4\u0027]","input[name=\u0027last_name\u0027]","input[name=\u0027lastname\u0027]","input[id=\u0027last_name\u0027]"],"display_name":["input[name=\u0027display_name\u0027]","input[name=\u0027field_1\u0027]","input[name=\u0027nickname\u0027]"]}
+[SUBMIT] Form submitted. Polling for AJAX or HTTP redirects...
+[ERROR] Global 180s timeout exceeded. Force closing thread.
+[ERROR] Automation skipped or failed for Instituto Crecer
+[DEBUG] Dumped forensic HTML to C:\Users\jibra\AppData\Local\ProfileSubmissionAssistant\CrashLogs\InstitutoCrecer_180S_TIMEOUT_170221.html
+[INFO] Browser closed
+[INFO] Moving to next target
+
+=================
+SITE: 560 | STATUS: Failed
+NOTES:
+[INFO] Username generated: marcus_ellington_770
+[INFO] **FRESH** Email created: marcus974127973@geezek.com
+[AI] Page analyzed: 2 forms, 1 buttons, recaptcha captcha
+[AI] DeepSeek mapped registration page. Fields: username, first_name, email, password, confirm_password
+[AI] Submit button: input#SubmitButton
+[AI] CAPTCHA: recaptcha
+[FIELDS] Sourced from DeepSeek AI
+[FIELDS] Mapping: {"username":"input[name=\u0027username\u0027]","first_name":"input[name=\u0027f0fef6cb0ec44c08983271f9f60f592e\u0027]","email":"input[name=\u00277718bbd768bd56f0d024e86bf86be7b5\u0027]","password":"input[name=\u002720e9aced781bf84a4cf11a2ee89c5963\u0027]","confirm_password":"input[name=\u00270a997ae3baccab05028217fad5900029\u0027]"}
+[CAPTCHA] Expected: recaptcha
+[FIELDS] AI selectors failed local DOM validation. Passing to fallback adapter.
+[AI] Platform fallback check: XenForo
+[DISCOVERY] Platform matched natively: XenForo
+[FIELDS] Sourced from Native Adapter: {"username":["input[name=\u0027username\u0027]","input[name=\u0027reg_username\u0027]"],"email":["input[name=\u0027email\u0027]","input[name=\u0027reg_email\u0027]"],"password":["input[name=\u0027password\u0027]","input[name=\u0027reg_password\u0027]"],"password_confirm":["input[name=\u0027signup_password_confirm\u0027]","input[name=\u0027pass2\u0027]","input[name=\u0027password_confirm\u0027]","input[name=\u0027confirm_password\u0027]","input[id=\u0027pass2\u0027]"],"first_name":["input[name=\u0027field_1\u0027]","input[name=\u0027first_name\u0027]","input[name=\u0027firstname\u0027]","input[id=\u0027first_name\u0027]"],"last_name":["input[name=\u0027field_4\u0027]","input[name=\u0027last_name\u0027]","input[name=\u0027lastname\u0027]","input[id=\u0027last_name\u0027]"],"display_name":["input[name=\u0027display_name\u0027]","input[name=\u0027field_1\u0027]","input[name=\u0027nickname\u0027]"]}
+[CAPTCHA] CAPTCHA element detected in DOM. Bootstrapping 2Captcha Extraction...
+[CAPTCHA] sitekey detected from iframe src
+sitekey = 6LfPNUIUAAAAAEHkGD8RFhB5-Sc5jWjAWehZYMO9
+[CAPTCHA] 2Captcha request sent
+[CAPTCHA] token received: 0cAFcWeA5s...
+[CAPTCHA] token fallback wait finished without explicit DOM confirmation
+[SUBMIT] Form submitted. Polling for AJAX or HTTP redirects...
+[ERROR] Global 180s timeout exceeded. Force closing thread.
+[ERROR] Automation skipped or failed for AITI Vietnam
+[DEBUG] Dumped forensic HTML to C:\Users\jibra\AppData\Local\ProfileSubmissionAssistant\CrashLogs\AITIVietnam_180S_TIMEOUT_170221.html
+[INFO] Browser closed
+[INFO] Moving to next target
+
+=================
+SITE: 561 | STATUS: Failed
+NOTES:
+[INFO] Username generated: sadas_marcus_490
+[INFO] **FRESH** Email created: marcus618031378@geezek.com
+[AI] Page analyzed: 2 forms, 2 buttons, none captcha
+[AI] DeepSeek couldn't analyze page. Passing to fallback adapter.
+[AI] Platform fallback check: WordPress
+[DISCOVERY] Platform matched natively: WordPress
+[FIELDS] Sourced from Native Adapter: {"username":["input[name=\u0027user_login\u0027]","input[name=\u0027username\u0027]","input[name=\u0027user_name\u0027]","input[name=\u0027signup_username\u0027]","input[name=\u0027log\u0027]","input[id=\u0027user_login\u0027]","input[name=\u0027field_1\u0027]","input[id=\u0027username\u0027]","input[name=\u0027login\u0027]"],"email":["input[name=\u0027user_email\u0027]","input[name=\u0027email\u0027]","input[name=\u0027signup_email\u0027]","input[type=\u0027email\u0027]","input[id=\u0027user_email\u0027]","input[id=\u0027email\u0027]","input[name=\u0027email_address\u0027]"],"password":["input[name=\u0027signup_password\u0027]","input[name=\u0027pass1\u0027]","input[name=\u0027password\u0027]","input[name=\u0027pwd\u0027]","input[id=\u0027pass1\u0027]","input[type=\u0027password\u0027]"],"password_confirm":["input[name=\u0027signup_password_confirm\u0027]","input[name=\u0027pass2\u0027]","input[name=\u0027password_confirm\u0027]","input[name=\u0027confirm_password\u0027]","input[id=\u0027pass2\u0027]"],"first_name":["input[name=\u0027field_1\u0027]","input[name=\u0027first_name\u0027]","input[name=\u0027firstname\u0027]","input[id=\u0027first_name\u0027]"],"last_name":["input[name=\u0027field_4\u0027]","input[name=\u0027last_name\u0027]","input[name=\u0027lastname\u0027]","input[id=\u0027last_name\u0027]"],"display_name":["input[name=\u0027display_name\u0027]","input[name=\u0027field_1\u0027]","input[name=\u0027nickname\u0027]"]}
+[SUBMIT] Form submitted. Polling for AJAX or HTTP redirects...
+[ERROR] Global 180s timeout exceeded. Force closing thread.
+[ERROR] Automation skipped or failed for ENSP Mexico
+[DEBUG] Dumped forensic HTML to C:\Users\jibra\AppData\Local\ProfileSubmissionAssistant\CrashLogs\ENSPMexico_180S_TIMEOUT_170221.html
+[INFO] Browser closed
+[INFO] Moving to next target
+
+=================

@@ -1,0 +1,11 @@
+async function clickSelector(page: Page, selector: string, siteName: string): Promise<boolean> {
+  const selectors = selector.split(',').map(s => s.trim()).filter(Boolean);
+  for (const sel of selectors) {
+    try {
+      await page.click(sel, { timeout: 5000, force: true });
+      return true;
+    } catch {}
+  }
+  log(siteName, `[WARN] Click failed for: ${selector.substring(0, 80)}`);
+  return false;
+}
