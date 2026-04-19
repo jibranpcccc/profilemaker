@@ -841,7 +841,7 @@ async function pollInboxForActivation(page: Page, email: string, password: strin
               // Also check inside iframes (some webmail clients use iframes)
               try {
                 const iframes = document.querySelectorAll('iframe');
-                for (const iframe of iframes) {
+                for (const iframe of Array.from(iframes)) {
                   const iframeDoc = iframe.contentDocument;
                   if (iframeDoc) {
                     const iframeLinks = Array.from(iframeDoc.querySelectorAll('a[href]')) as HTMLAnchorElement[];
