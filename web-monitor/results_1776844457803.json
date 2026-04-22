@@ -1,0 +1,43 @@
+[
+  {
+    "domain": "iviet.edu.vn",
+    "status": "SUCCESS",
+    "profileUrl": "https://iviet.edu.vn/profile/user335785862/",
+    "firstName": "James",
+    "lastName": "Davis",
+    "username": "user335785862",
+    "email": "user335785862@gmail.com",
+    "password": "Tz335785@Kw862!",
+    "website": "https://seolinkmasters.com/education",
+    "bio": "Passionate educator and lifelong learner with expertise in digital skills."
+  },
+  {
+    "domain": "mooc.esil.edu.kz",
+    "status": "SUCCESS",
+    "profileUrl": "https://mooc.esil.edu.kz/profile/user369333873/",
+    "firstName": "Alex",
+    "lastName": "Johnson",
+    "username": "user369333873",
+    "email": "user369333873@gmail.com",
+    "password": "Tz369333@Kw873!",
+    "website": "https://seolinkmasters.com/education",
+    "bio": "Passionate educator and lifelong learner with expertise in digital skills."
+  },
+  {
+    "domain": "academy.edutic.id",
+    "status": "SUCCESS",
+    "profileUrl": "https://academy.edutic.id/profile/user414365931/",
+    "firstName": "David",
+    "lastName": "Taylor",
+    "username": "user414365931",
+    "email": "user414365931@gmail.com",
+    "password": "Tz414365@Kw931!",
+    "website": "https://seolinkmasters.com/education",
+    "bio": "Passionate educator and lifelong learner with expertise in digital skills."
+  },
+  {
+    "domain": "lms.gkce.edu.in",
+    "status": "FAILED",
+    "error": "page.click: Element is not visible\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"submit\"], button[type=\"submit\"]')\u001b[22m\n\u001b[2m    - locator resolved to 2 elements. Proceeding with the first one: <button type=\"submit\" data-button=\"icon\" class=\"wp-element-button\" aria-label=\"Search button\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n"
+  }
+]

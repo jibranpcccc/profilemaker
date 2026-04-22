@@ -9,8 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "2captcha": "^3.0.5-2",
     "better-sqlite3": "^12.9.0",
+    "imap": "^0.8.19",
     "lucide-react": "^1.8.0",
+    "mailparser": "^3.9.8",
     "next": "16.2.4",
     "playwright-core": "^1.59.1",
     "playwright-extra": "^4.3.6",

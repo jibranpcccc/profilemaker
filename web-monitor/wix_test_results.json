@@ -1,0 +1,12 @@
+[
+  {
+    "domain": "cu.edu.lr",
+    "email": "laura.garcia7898@geezek.com",
+    "password": "WixTest!7898#$",
+    "targetUrl": "https://premium-dental-care-ny.com",
+    "anchor": "Premium Dental Care",
+    "status": "FAILED",
+    "publicProfileUrl": null,
+    "error": "Wix auth iframe never appeared"
+  }
+]
