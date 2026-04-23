@@ -9,7 +9,7 @@
       "button:has-text('Sign up')",
       "button:has-text('Join')",
       "a:has-text('Sign up')",
-      "button:has-text('Iniciar sesión')",
+      "button:has-text('Iniciar sesi\u00c3\u00b3n')",
       "button:has-text('Entrar')"
     ],
     "bioSelector": "#bio, textarea, [contenteditable='true'], [data-testid*='bio'], .bio-textarea, textarea[placeholder*='bio']",
@@ -1130,5 +1130,973 @@
     "bioSelector": "textarea, [contenteditable='true']",
     "websiteSelector": "input[type='url'], input[name*='url'], input[name*='website']",
     "saveButton": "button:has-text('Save'), button[type='submit']"
+  },
+  {
+    "domain": "csdlcntmgialai.gov.vn",
+    "platform_type": "ckan",
+    "signup_url": "http://csdlcntmgialai.gov.vn/user/register",
+    "profile_edit_url": "http://csdlcntmgialai.gov.vn/user/edit",
+    "profile_pattern": "http://csdlcntmgialai.gov.vn/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "admin.opendatani.gov.uk",
+    "platform_type": "ckan",
+    "signup_url": "https://admin.opendatani.gov.uk/user/register",
+    "profile_edit_url": "https://admin.opendatani.gov.uk/user/edit",
+    "profile_pattern": "https://admin.opendatani.gov.uk/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "catalogue.hakai.org",
+    "platform_type": "ckan",
+    "signup_url": "https://catalogue.hakai.org/user/register",
+    "profile_edit_url": "https://catalogue.hakai.org/user/edit",
+    "profile_pattern": "https://catalogue.hakai.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "cordap.uel.ac.uk",
+    "platform_type": "ckan",
+    "signup_url": "https://cordap.uel.ac.uk/user/register",
+    "profile_edit_url": "https://cordap.uel.ac.uk/user/edit",
+    "profile_pattern": "https://cordap.uel.ac.uk/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.antt.gov.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.antt.gov.br/ptPT/user/register",
+    "profile_edit_url": "https://dados.antt.gov.br/user/edit",
+    "profile_pattern": "https://dados.antt.gov.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.iff.edu.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.iff.edu.br/user/register",
+    "profile_edit_url": "https://dados.iff.edu.br/user/edit",
+    "profile_pattern": "https://dados.iff.edu.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.justica.gov.pt",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.justica.gov.pt/user/register",
+    "profile_edit_url": "https://dados.justica.gov.pt/user/edit",
+    "profile_pattern": "https://dados.justica.gov.pt/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.mj.gov.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.mj.gov.br/user/register",
+    "profile_edit_url": "https://dados.mj.gov.br/user/edit",
+    "profile_pattern": "https://dados.mj.gov.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.pb.gov.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.pb.gov.br/user/register",
+    "profile_edit_url": "https://dados.pb.gov.br/user/edit",
+    "profile_pattern": "https://dados.pb.gov.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.ufc.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.ufc.br/user/register",
+    "profile_edit_url": "https://dados.ufc.br/user/edit",
+    "profile_pattern": "https://dados.ufc.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dados.ufrn.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dados.ufrn.br/user/register",
+    "profile_edit_url": "https://dados.ufrn.br/user/edit",
+    "profile_pattern": "https://dados.ufrn.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dadosabertos.ifc.edu.br",
+    "platform_type": "ckan",
+    "signup_url": "https://dadosabertos.ifc.edu.br/user/register",
+    "profile_edit_url": "https://dadosabertos.ifc.edu.br/user/edit",
+    "profile_pattern": "https://dadosabertos.ifc.edu.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data-catalogue.operandum-project.eu",
+    "platform_type": "ckan",
+    "signup_url": "https://data-catalogue.operandum-project.eu/user/register",
+    "profile_edit_url": "https://data-catalogue.operandum-project.eu/user/edit",
+    "profile_pattern": "https://data-catalogue.operandum-project.eu/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data-portal.hpc.swin.edu.au",
+    "platform_type": "ckan",
+    "signup_url": "https://data-portal.hpc.swin.edu.au/user/register",
+    "profile_edit_url": "https://data-portal.hpc.swin.edu.au/user/edit",
+    "profile_pattern": "https://data-portal.hpc.swin.edu.au/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.aurora.linkeddata.es",
+    "platform_type": "ckan",
+    "signup_url": "https://data.aurora.linkeddata.es/user/register",
+    "profile_edit_url": "https://data.aurora.linkeddata.es/user/edit",
+    "profile_pattern": "https://data.aurora.linkeddata.es/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.gov.gh",
+    "platform_type": "ckan",
+    "signup_url": "https://data.gov.gh/user/register",
+    "profile_edit_url": "https://data.gov.gh/user/edit",
+    "profile_pattern": "https://data.gov.gh/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.gov.in",
+    "platform_type": "ckan",
+    "signup_url": "https://data.gov.in/user/register",
+    "profile_edit_url": "https://data.gov.in/user/edit",
+    "profile_pattern": "https://data.gov.in/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.gov.kgen",
+    "platform_type": "ckan",
+    "signup_url": "https://data.gov.kgen/user/register",
+    "profile_edit_url": "https://data.gov.kgen/user/edit",
+    "profile_pattern": "https://data.gov.kgen/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.gov.uaen",
+    "platform_type": "ckan",
+    "signup_url": "https://data.gov.uaen/user/register",
+    "profile_edit_url": "https://data.gov.uaen/user/edit",
+    "profile_pattern": "https://data.gov.uaen/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "ckan.publishing.service.gov.uk",
+    "platform_type": "ckan",
+    "signup_url": "https://ckan.publishing.service.gov.uk/user/register",
+    "profile_edit_url": "https://ckan.publishing.service.gov.uk/user/edit",
+    "profile_pattern": "https://ckan.publishing.service.gov.uk/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.kyivcity.gov.ua",
+    "platform_type": "ckan",
+    "signup_url": "https://data.kyivcity.gov.ua/user/register",
+    "profile_edit_url": "https://data.kyivcity.gov.ua/user/edit",
+    "profile_pattern": "https://data.kyivcity.gov.ua/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.lutskrada.gov.ua",
+    "platform_type": "ckan",
+    "signup_url": "https://data.lutskrada.gov.ua/user/register",
+    "profile_edit_url": "https://data.lutskrada.gov.ua/user/edit",
+    "profile_pattern": "https://data.lutskrada.gov.ua/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "data.qld.gov.au",
+    "platform_type": "ckan",
+    "signup_url": "https://data.qld.gov.au/user/register",
+    "profile_edit_url": "https://data.qld.gov.au/user/edit",
+    "profile_pattern": "https://data.qld.gov.au/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dataportal.asia",
+    "platform_type": "ckan",
+    "signup_url": "https://dataportal.asia/user/register",
+    "profile_edit_url": "https://dataportal.asia/user/edit",
+    "profile_pattern": "https://dataportal.asia/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "dataportal.saeri.org",
+    "platform_type": "ckan",
+    "signup_url": "https://dataportal.saeri.org/user/register",
+    "profile_edit_url": "https://dataportal.saeri.org/user/edit",
+    "profile_pattern": "https://dataportal.saeri.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "datos.gob.ar",
+    "platform_type": "ckan",
+    "signup_url": "https://datos.gob.ar/user/register",
+    "profile_edit_url": "https://datos.gob.ar/user/edit",
+    "profile_pattern": "https://datos.gob.ar/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "datos.gob.es",
+    "platform_type": "ckan",
+    "signup_url": "https://datos.gob.es/user/register",
+    "profile_edit_url": "https://datos.gob.es/user/edit",
+    "profile_pattern": "https://datos.gob.es/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "datosabiertos.cuenca.es",
+    "platform_type": "ckan",
+    "signup_url": "https://datosabiertos.cuenca.es/user/register",
+    "profile_edit_url": "https://datosabiertos.cuenca.es/user/edit",
+    "profile_pattern": "https://datosabiertos.cuenca.es/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "library.award.org.za",
+    "platform_type": "ckan",
+    "signup_url": "https://library.award.org.za/user/register",
+    "profile_edit_url": "https://library.award.org.za/user/edit",
+    "profile_pattern": "https://library.award.org.za/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "makerere-university-ai4d-hub.emergentai.ug",
+    "platform_type": "ckan",
+    "signup_url": "https://makerere-university-ai4d-hub.emergentai.ug/user/register",
+    "profile_edit_url": "https://makerere-university-ai4d-hub.emergentai.ug/user/edit",
+    "profile_pattern": "https://makerere-university-ai4d-hub.emergentai.ug/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "nimpa.saeri.org",
+    "platform_type": "ckan",
+    "signup_url": "https://nimpa.saeri.org/user/register",
+    "profile_edit_url": "https://nimpa.saeri.org/user/edit",
+    "profile_pattern": "https://nimpa.saeri.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "opendata.aragon.es",
+    "platform_type": "ckan",
+    "signup_url": "https://opendata.aragon.es/user/register",
+    "profile_edit_url": "https://opendata.aragon.es/user/edit",
+    "profile_pattern": "https://opendata.aragon.es/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "opendata.bonn.de",
+    "platform_type": "ckan",
+    "signup_url": "https://opendata.bonn.de/user/register",
+    "profile_edit_url": "https://opendata.bonn.de/user/edit",
+    "profile_pattern": "https://opendata.bonn.de/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "opendata.dc.gov",
+    "platform_type": "ckan",
+    "signup_url": "https://opendata.dc.gov/user/register",
+    "profile_edit_url": "https://opendata.dc.gov/user/edit",
+    "profile_pattern": "https://opendata.dc.gov/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "opendata.klaten.go.id",
+    "platform_type": "ckan",
+    "signup_url": "https://opendata.klaten.go.id/user/register",
+    "profile_edit_url": "https://opendata.klaten.go.id/user/edit",
+    "profile_pattern": "https://opendata.klaten.go.id/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "opendata.ternopilcity.gov.ua",
+    "platform_type": "ckan",
+    "signup_url": "https://opendata.ternopilcity.gov.ua/user/register",
+    "profile_edit_url": "https://opendata.ternopilcity.gov.ua/user/edit",
+    "profile_pattern": "https://opendata.ternopilcity.gov.ua/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "pacificdata.org",
+    "platform_type": "ckan",
+    "signup_url": "https://pacificdata.org/user/register",
+    "profile_edit_url": "https://pacificdata.org/user/edit",
+    "profile_pattern": "https://pacificdata.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "repository.duchennedatafoundation.org",
+    "platform_type": "ckan",
+    "signup_url": "https://repository.duchennedatafoundation.org/user/register",
+    "profile_edit_url": "https://repository.duchennedatafoundation.org/user/edit",
+    "profile_pattern": "https://repository.duchennedatafoundation.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "ridl.unhcr.org",
+    "platform_type": "ckan",
+    "signup_url": "https://ridl.unhcr.org/user/register",
+    "profile_edit_url": "https://ridl.unhcr.org/user/edit",
+    "profile_pattern": "https://ridl.unhcr.org/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "slaveryinwarfare.kdl.kcl.ac.uk",
+    "platform_type": "ckan",
+    "signup_url": "https://slaveryinwarfare.kdl.kcl.ac.uk/user/register",
+    "profile_edit_url": "https://slaveryinwarfare.kdl.kcl.ac.uk/user/edit",
+    "profile_pattern": "https://slaveryinwarfare.kdl.kcl.ac.uk/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "transportdata.be",
+    "platform_type": "ckan",
+    "signup_url": "https://transportdata.be/user/register",
+    "profile_edit_url": "https://transportdata.be/user/edit",
+    "profile_pattern": "https://transportdata.be/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "urbandata.sofia.bg",
+    "platform_type": "ckan",
+    "signup_url": "https://urbandata.sofia.bg/user/register",
+    "profile_edit_url": "https://urbandata.sofia.bg/user/edit",
+    "profile_pattern": "https://urbandata.sofia.bg/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "wrcwro01.arc.agric.za",
+    "platform_type": "ckan",
+    "signup_url": "https://wrcwro01.arc.agric.za/user/register",
+    "profile_edit_url": "https://wrcwro01.arc.agric.za/user/edit",
+    "profile_pattern": "https://wrcwro01.arc.agric.za/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
+  },
+  {
+    "domain": "www.dados.df.gov.br",
+    "platform_type": "ckan",
+    "signup_url": "https://www.dados.df.gov.br/user/register",
+    "profile_edit_url": "https://www.dados.df.gov.br/user/edit",
+    "profile_pattern": "https://www.dados.df.gov.br/user/{username}",
+    "bioSelector": "#field-about, textarea[name*='about'], .about, textarea[placeholder*='about']",
+    "websiteSelector": "input[name*='url'], input#url, input[name*='website']",
+    "saveButton": "button[type='submit'][name='save'], button:has-text('Save'), input[type='submit']",
+    "fields": {
+      "username": "input#field-username",
+      "fullname": "input#field-fullname",
+      "email": "input#field-email",
+      "password": "input#field-password1",
+      "passwordconfirm": "input#field-password2"
+    },
+    "captcha": {
+      "type": "recaptcha_v2"
+    },
+    "status": "working",
+    "verified_http": 200
   }
 ]
