@@ -1,0 +1,50 @@
+[
+  {
+    "site": "UMKM Cerdas Pajak",
+    "domain": "umkmcerdaspajak.id",
+    "status": "SUCCESS",
+    "profileUrl": "https://umkmcerdaspajak.id/dashboard/my-profile",
+    "username": "olivianet542447",
+    "email": "user51543037@deltajohnsons.com",
+    "password": "Secure542447Tx4733!"
+  },
+  {
+    "site": "GKCE LMS India",
+    "domain": "lms.gkce.edu.in",
+    "status": "FAILED",
+    "reason": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "site": "ESIL MOOC Kazakhstan",
+    "domain": "mooc.esil.edu.kz",
+    "status": "FAILED",
+    "reason": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "site": "San Pablo Ecuador",
+    "domain": "academia.sanpablo.edu.ec",
+    "status": "SUCCESS",
+    "profileUrl": "https://academia.sanpablo.edu.ec/profile/#content",
+    "username": "noahdigital621814",
+    "email": "user51622206@deltajohnsons.com",
+    "password": "Secure621814Tx6739!"
+  },
+  {
+    "site": "NCON Saudi Arabia",
+    "domain": "ncon.edu.sa",
+    "status": "SUCCESS",
+    "profileUrl": "https://ncon.edu.sa/profile/miaglobal652472/",
+    "username": "miaglobal652472",
+    "email": "user51652932@deltajohnsons.com",
+    "password": "Secure652472Tx8503!"
+  },
+  {
+    "site": "Pibe Learning Bangladesh",
+    "domain": "pibelearning.gov.bd",
+    "status": "SUCCESS",
+    "profileUrl": "https://pibelearning.gov.bd/dashboard/my-profile",
+    "username": "isabellazone700744",
+    "email": "user51701138@deltajohnsons.com",
+    "password": "Secure700744Tx7785!"
+  }
+]

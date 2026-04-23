@@ -1,0 +1,8 @@
+Site,Domain,Platform,Status,ProfileURL,Username,Email,Password,Reason
+"Instituto Crecer Colombia","institutocrecer.edu.co","tutorlms","FAILED","","","","","Settings page not found"
+"SOU Kyrgyzstan","sou.edu.kg","tutorlms","FAILED","","","","","No registration form"
+"BBINY Education","bbiny.edu","tutorlms","FAILED","","","","","Settings page not found"
+"AIOU Pakistan","lms.aiou.edu.pk","tutorlms","FAILED","","","","","page.goto: net::ERR_CONNECTION_TIMED_OUT at https://lms.aiou.edu.pk/student-registration/
+Call log:
+[2m  - navigating to ""https://lms.aiou.edu.pk/student-registration/"", waiting until ""domcontentloaded""[22m
+"

@@ -1,0 +1,167 @@
+[
+  {
+    "domain": "dados.unifei.edu.br",
+    "platform": "CKAN",
+    "email": "sarah.mitchell.74518200@gmail.com",
+    "username": "sarah74518200",
+    "password": "Hair@74518200!",
+    "verdict": "ERROR",
+    "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://da"
+  },
+  {
+    "domain": "opendata.ternopilcity.gov.ua",
+    "platform": "CKAN",
+    "email": "emma.clarke.76656001@gmail.com",
+    "username": "emma76656001",
+    "password": "Hair@76656001!",
+    "verdict": "SUBMITTED",
+    "url": "https://opendata.ternopilcity.gov.ua/user/register",
+    "profileUrl": "https://opendata.ternopilcity.gov.ua/user/emma76656001",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "dados.justica.gov.pt",
+    "platform": "CKAN",
+    "email": "laura.bennett.78480502@gmail.com",
+    "username": "laura78480502",
+    "password": "Hair@78480502!",
+    "verdict": "SUBMITTED",
+    "url": "https://dados.justica.gov.pt/dataset?q=",
+    "profileUrl": "https://dados.justica.gov.pt/user/laura78480502",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "data.lutskrada.gov.ua",
+    "platform": "CKAN",
+    "email": "olivia.harper.82477503@gmail.com",
+    "username": "olivia82477503",
+    "password": "Hair@82477503!",
+    "verdict": "ERROR",
+    "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://da"
+  },
+  {
+    "domain": "opendata.klaten.go.id",
+    "platform": "CKAN",
+    "email": "grace.turner.84608204@gmail.com",
+    "username": "grace84608204",
+    "password": "Hair@84608204!",
+    "verdict": "ERROR",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://opendata.klaten.go.id/user/regi"
+  },
+  {
+    "domain": "data.dniprorada.gov.ua",
+    "platform": "CKAN",
+    "email": "sophia.reed.84763205@gmail.com",
+    "username": "sophia84763205",
+    "password": "Hair@84763205!",
+    "verdict": "ERROR",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://data.dniprorada.gov.ua/user/reg"
+  },
+  {
+    "domain": "data.aurora.linkeddata.es",
+    "platform": "CKAN",
+    "email": "mia.foster.84902206@gmail.com",
+    "username": "mia84902206",
+    "password": "Hair@84902206!",
+    "verdict": "SUBMITTED",
+    "url": "https://data.aurora.linkeddata.es/dataset?q=",
+    "profileUrl": "https://data.aurora.linkeddata.es/user/mia84902206",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "datos.estadisticas.pr",
+    "platform": "CKAN",
+    "email": "chloe.morgan.86186107@gmail.com",
+    "username": "chloe86186107",
+    "password": "Hair@86186107!",
+    "verdict": "SUBMITTED",
+    "url": "https://datos.estadisticas.pr/dataset?q=",
+    "profileUrl": "https://datos.estadisticas.pr/user/chloe86186107",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "homologa.cge.mg.gov.br",
+    "platform": "CKAN",
+    "email": "ava.sullivan.87752308@gmail.com",
+    "username": "ava87752308",
+    "password": "Hair@87752308!",
+    "verdict": "ERROR",
+    "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://homologa.cge.mg.gov.br/user/reg"
+  },
+  {
+    "domain": "rciims.mona.uwi.edu",
+    "platform": "CKAN",
+    "email": "lily.webb.87981909@gmail.com",
+    "username": "lily87981909",
+    "password": "Hair@87981909!",
+    "verdict": "SUBMITTED",
+    "url": "https://rciims.mona.uwi.edu/dashboard/",
+    "profileUrl": "https://rciims.mona.uwi.edu/user/lily87981909",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "csdlcntmgialai.gov.vn",
+    "platform": "CKAN",
+    "email": "hannah.price.90000910@gmail.com",
+    "username": "hannah90000910",
+    "password": "Hair@90000910!",
+    "verdict": "SUBMITTED",
+    "url": "http://csdlcntmgialai.gov.vn/dashboard",
+    "profileUrl": "https://csdlcntmgialai.gov.vn/user/hannah90000910",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "data-catalogue.operandum-project.eu",
+    "platform": "CKAN",
+    "email": "zoe.coleman.92589411@gmail.com",
+    "username": "zoe92589411",
+    "password": "Hair@92589411!",
+    "verdict": "SUBMITTED",
+    "url": "https://data-catalogue.operandum-project.eu/user/register",
+    "profileUrl": "https://data-catalogue.operandum-project.eu/user/zoe92589411",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "mooc.esil.edu.kz",
+    "platform": "Moodle",
+    "email": "isabella.grant.98176912@gmail.com",
+    "username": "isabella98176912",
+    "password": "Hair@98176912!",
+    "verdict": "SUBMITTED",
+    "url": "https://mooc.esil.edu.kz/student-registration/",
+    "profileUrl": "https://mooc.esil.edu.kz/profile/isabella98176912",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "esapa.edu.ar",
+    "platform": "Moodle",
+    "email": "natalie.hughes.99875513@gmail.com",
+    "username": "natalie99875513",
+    "password": "Hair@99875513!",
+    "verdict": "SUBMITTED",
+    "url": "https://esapa.edu.ar/student-registration/",
+    "profileUrl": "https://esapa.edu.ar/profile/natalie99875513",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "ncon.edu.sa",
+    "platform": "Moodle",
+    "email": "madison.perry.04940014@gmail.com",
+    "username": "madison04940014",
+    "password": "Hair@04940014!",
+    "verdict": "SUBMITTED",
+    "url": "https://ncon.edu.sa/student-registration/",
+    "profileUrl": "https://ncon.edu.sa/profile/madison04940014",
+    "profileLive": false,
+    "linkPresent": false
+  }
+]

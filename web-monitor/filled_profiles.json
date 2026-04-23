@@ -9,7 +9,12 @@
     "url": "https://opendata.ternopilcity.gov.ua/user/register",
     "profileUrl": "https://opendata.ternopilcity.gov.ua/user/emma76656001",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://opendata.ternopilcity.gov.ua/profile/emma76656001/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "datos.estadisticas.pr",
@@ -21,7 +26,12 @@
     "url": "https://datos.estadisticas.pr/dataset?q=",
     "profileUrl": "https://datos.estadisticas.pr/user/chloe86186107",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": true,
+    "editUrl": "https://datos.estadisticas.pr/profile/chloe86186107/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "rciims.mona.uwi.edu",
@@ -33,7 +43,9 @@
     "url": "https://rciims.mona.uwi.edu/dashboard/",
     "profileUrl": "https://rciims.mona.uwi.edu/user/lily87981909",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "fillStatus": "ERROR",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \""
   },
   {
     "domain": "mooc.esil.edu.kz",
@@ -45,7 +57,12 @@
     "url": "https://mooc.esil.edu.kz/student-registration/",
     "profileUrl": "https://mooc.esil.edu.kz/profile/isabella98176912",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://mooc.esil.edu.kz/profile/isabella98176912/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "esapa.edu.ar",
@@ -57,7 +74,12 @@
     "url": "https://esapa.edu.ar/student-registration/",
     "profileUrl": "https://esapa.edu.ar/profile/natalie99875513",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": true,
+    "editUrl": "https://esapa.edu.ar/profile/natalie99875513/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "academia.sanpablo.edu.ec",
@@ -69,7 +91,12 @@
     "url": "https://academia.sanpablo.edu.ec/student-registration/",
     "profileUrl": "https://academia.sanpablo.edu.ec/profile/olivia35697303",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://academia.sanpablo.edu.ec/profile/olivia35697303/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "edu.learningsuite.id",
@@ -81,7 +108,12 @@
     "url": "https://edu.learningsuite.id/dashboard/",
     "profileUrl": "https://edu.learningsuite.id/profile/mia40767606",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://edu.learningsuite.id/profile/mia40767606/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "iviet.edu.vn",
@@ -93,7 +125,12 @@
     "url": "https://iviet.edu.vn/thong-tin-tai-khoan/",
     "profileUrl": "https://iviet.edu.vn/profile/chloe42120407",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://iviet.edu.vn/profile/chloe42120407/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "learndash.aula.edu.pe",
@@ -105,7 +142,12 @@
     "url": "https://learndash.aula.edu.pe/register/",
     "profileUrl": "https://learndash.aula.edu.pe/profile/zoe45316511",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://learndash.aula.edu.pe/profile/zoe45316511/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "pibelearning.gov.bd",
@@ -117,7 +159,12 @@
     "url": "https://pibelearning.gov.bd/wp-login.php?checkemail=registered",
     "profileUrl": "https://pibelearning.gov.bd/author/isabella49787012",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://pibelearning.gov.bd/profile/isabella49787012/edit",
+    "fillStatus": "FAILED"
   },
   {
     "domain": "dlsjbc.edu.ph",
@@ -129,6 +176,11 @@
     "url": "https://www.dlsjbc.edu.ph/",
     "profileUrl": "https://dlsjbc.edu.ph/profile/madison54431314",
     "profileLive": true,
-    "linkPresent": false
+    "linkPresent": false,
+    "bioFilled": false,
+    "webFilled": false,
+    "saved": false,
+    "editUrl": "https://dlsjbc.edu.ph/profile/madison54431314/edit",
+    "fillStatus": "FAILED"
   }
 ]

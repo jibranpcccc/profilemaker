@@ -1,0 +1,102 @@
+[
+  {
+    "domain": "hoc.salomon.edu.vn",
+    "platform": "tutor",
+    "verdict": "NO_FORM",
+    "url": "https://hoc.salomon.edu.vn/student-registration/"
+  },
+  {
+    "domain": "haphong.edu.vn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.haphong.edu.vn/",
+    "debugBtns": [
+      "Chuyển đến nội dung chính"
+    ]
+  },
+  {
+    "domain": "holycrossconvent.edu.na",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://holycrossconvent.edu.na/",
+    "debugBtns": [
+      "Skip to Main Content"
+    ]
+  },
+  {
+    "domain": "rosewood.edu.na",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.rosewood.edu.na/",
+    "debugBtns": [
+      "Skip to Main Content",
+      "Submit",
+      "Cookie Settings",
+      "Accept"
+    ]
+  },
+  {
+    "domain": "woorips.vic.edu.au",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.woorips.vic.edu.au/",
+    "debugBtns": [
+      "Skip to Main Content"
+    ]
+  },
+  {
+    "domain": "orkhonschool.edu.mn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.orkhonschool.edu.mn/",
+    "debugBtns": [
+      "Skip to Main Content",
+      "EN",
+      "MN"
+    ]
+  },
+  {
+    "domain": "lasallesancristobal.edu.mx",
+    "platform": "wix",
+    "verdict": "NO_FIELDS",
+    "url": "https://www.lasallesancristobal.edu.mx/"
+  },
+  {
+    "domain": "nazaret.edu.ec",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.nazaret.edu.ec/",
+    "debugBtns": [
+      "Enviar"
+    ]
+  },
+  {
+    "domain": "ictae.edu.mx",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.ictae.edu.mx/",
+    "debugBtns": [
+      "Ir al contenido principal",
+      "Suscríbete"
+    ]
+  },
+  {
+    "domain": "divinagracia.edu.ec",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.divinagracia.edu.ec/",
+    "debugBtns": [
+      "Ir al contenido principal"
+    ]
+  },
+  {
+    "domain": "discoveryschool.edu.hn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.discoveryschool.edu.hn/",
+    "debugBtns": [
+      "Skip to Main Content",
+      "Load More"
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "domain": "edu.learningsuite.id",
+    "platform": "tutor",
+    "verdict": "SUBMITTED",
+    "url": "https://edu.learningsuite.id/dashboard/"
+  },
+  {
+    "domain": "hoc.salomon.edu.vn",
+    "platform": "tutor",
+    "verdict": "ERROR",
+    "error": "page.$: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "domain": "iviet.edu.vn",
+    "platform": "tutor",
+    "verdict": "SUBMITTED",
+    "url": "https://iviet.edu.vn/thong-tin-tai-khoan/"
+  },
+  {
+    "domain": "ontrip.80gigs.com",
+    "platform": "tutor",
+    "verdict": "SUBMITTED",
+    "url": "https://ontrip.80gigs.com/dashboard/"
+  },
+  {
+    "domain": "umkmcerdaspajak.id",
+    "platform": "tutor",
+    "verdict": "SUBMITTED",
+    "url": "https://umkmcerdaspajak.id/dashboard/"
+  },
+  {
+    "domain": "academy.edutic.id",
+    "platform": "tutor",
+    "verdict": "SUBMITTED",
+    "url": "https://academy.edutic.id/student-registration-2-2/"
+  },
+  {
+    "domain": "learndash.aula.edu.pe",
+    "platform": "learndash",
+    "verdict": "SUBMITTED",
+    "url": "https://learndash.aula.edu.pe/register/"
+  },
+  {
+    "domain": "haphong.edu.vn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.haphong.edu.vn/"
+  },
+  {
+    "domain": "holycrossconvent.edu.na",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://holycrossconvent.edu.na/"
+  },
+  {
+    "domain": "rosewood.edu.na",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.rosewood.edu.na/"
+  },
+  {
+    "domain": "woorips.vic.edu.au",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.woorips.vic.edu.au/"
+  },
+  {
+    "domain": "orkhonschool.edu.mn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.orkhonschool.edu.mn/"
+  },
+  {
+    "domain": "lasallesancristobal.edu.mx",
+    "platform": "wix",
+    "verdict": "NO_FIELDS",
+    "url": "https://www.lasallesancristobal.edu.mx/"
+  },
+  {
+    "domain": "nazaret.edu.ec",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.nazaret.edu.ec/"
+  },
+  {
+    "domain": "ictae.edu.mx",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.ictae.edu.mx/"
+  },
+  {
+    "domain": "divinagracia.edu.ec",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.divinagracia.edu.ec/"
+  },
+  {
+    "domain": "discoveryschool.edu.hn",
+    "platform": "wix",
+    "verdict": "NO_SIGNUP_BTN",
+    "url": "https://www.discoveryschool.edu.hn/"
+  }
+]

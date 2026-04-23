@@ -1,0 +1,38 @@
+[
+  {
+    "site": "UMKM Cerdas Pajak",
+    "domain": "umkmcerdaspajak.id",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  },
+  {
+    "site": "GKCE LMS India",
+    "domain": "lms.gkce.edu.in",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  },
+  {
+    "site": "ESIL MOOC Kazakhstan",
+    "domain": "mooc.esil.edu.kz",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  },
+  {
+    "site": "San Pablo Ecuador",
+    "domain": "academia.sanpablo.edu.ec",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  },
+  {
+    "site": "NCON Saudi Arabia",
+    "domain": "ncon.edu.sa",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  },
+  {
+    "site": "Pibe Learning Bangladesh",
+    "domain": "pibelearning.gov.bd",
+    "status": "FAILED",
+    "reason": "Geezek: domain fetch missing hydra:member. Full response: [{\"id\":\"69d3bd9d6ebaa58a0b42fdf9\",\"domain\":\"deltajohnsons.com\",\"isActive\":true,\"isPrivate\":false,\"createdAt\":\"2026-04-06T00:00:00+00:00\",\"updatedAt\":\"2026-04-06T00:00:00+00:00\"}]"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "site": "Instituto Crecer Colombia",
+    "domain": "institutocrecer.edu.co",
+    "platform": "tutorlms",
+    "status": "FAILED",
+    "reason": "Settings page not found"
+  },
+  {
+    "site": "SOU Kyrgyzstan",
+    "domain": "sou.edu.kg",
+    "platform": "tutorlms",
+    "status": "FAILED",
+    "reason": "No registration form"
+  },
+  {
+    "site": "BBINY Education",
+    "domain": "bbiny.edu",
+    "platform": "tutorlms",
+    "status": "FAILED",
+    "reason": "Settings page not found"
+  },
+  {
+    "site": "AIOU Pakistan",
+    "domain": "lms.aiou.edu.pk",
+    "platform": "tutorlms",
+    "status": "FAILED",
+    "reason": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://lms.aiou.edu.pk/student-registration/\nCall log:\n\u001b[2m  - navigating to \"https://lms.aiou.edu.pk/student-registration/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]

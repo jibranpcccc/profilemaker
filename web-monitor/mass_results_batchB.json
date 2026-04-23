@@ -1,0 +1,167 @@
+[
+  {
+    "domain": "portal.stem.edu.gr",
+    "platform": "Moodle",
+    "email": "sarah.mitchell.24803200@gmail.com",
+    "username": "sarah24803200",
+    "password": "Hair@24803200!",
+    "verdict": "SUBMITTED",
+    "url": "https://portal.stem.edu.gr/404-page/",
+    "profileUrl": "https://portal.stem.edu.gr/profile/sarah24803200",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "edu.openu.in",
+    "platform": "Moodle",
+    "email": "emma.clarke.29819201@gmail.com",
+    "username": "emma29819201",
+    "password": "Hair@29819201!",
+    "verdict": "SUBMITTED",
+    "url": "https://edu.openu.in/student-registration/",
+    "profileUrl": "https://edu.openu.in/profile/emma29819201",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "lms.gkce.edu.in",
+    "platform": "Moodle",
+    "email": "laura.bennett.31159002@gmail.com",
+    "username": "laura31159002",
+    "password": "Hair@31159002!",
+    "verdict": "SUBMITTED",
+    "url": "https://lms.gkce.edu.in/student-registration-page/",
+    "profileUrl": "https://lms.gkce.edu.in/profile/laura31159002",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "academia.sanpablo.edu.ec",
+    "platform": "Moodle",
+    "email": "olivia.harper.35697303@gmail.com",
+    "username": "olivia35697303",
+    "password": "Hair@35697303!",
+    "verdict": "SUBMITTED",
+    "url": "https://academia.sanpablo.edu.ec/student-registration/",
+    "profileUrl": "https://academia.sanpablo.edu.ec/profile/olivia35697303",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "hoc.salomon.edu.vn",
+    "platform": "Moodle",
+    "email": "grace.turner.38413904@gmail.com",
+    "username": "grace38413904",
+    "password": "Hair@38413904!",
+    "verdict": "NO_FORM",
+    "url": "https://hoc.salomon.edu.vn/student-registration/"
+  },
+  {
+    "domain": "academy.edutic.id",
+    "platform": "Moodle",
+    "email": "sophia.reed.38834305@gmail.com",
+    "username": "sophia38834305",
+    "password": "Hair@38834305!",
+    "verdict": "SUBMITTED",
+    "url": "https://academy.edutic.id/student-registration-2-2/",
+    "profileUrl": "https://academy.edutic.id/profile/sophia38834305",
+    "profileLive": false,
+    "linkPresent": false
+  },
+  {
+    "domain": "edu.learningsuite.id",
+    "platform": "TutorLMS",
+    "email": "mia.foster.40767606@gmail.com",
+    "username": "mia40767606",
+    "password": "Hair@40767606!",
+    "verdict": "SUBMITTED",
+    "url": "https://edu.learningsuite.id/dashboard/",
+    "profileUrl": "https://edu.learningsuite.id/profile/mia40767606",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "iviet.edu.vn",
+    "platform": "TutorLMS",
+    "email": "chloe.morgan.42120407@gmail.com",
+    "username": "chloe42120407",
+    "password": "Hair@42120407!",
+    "verdict": "SUBMITTED",
+    "url": "https://iviet.edu.vn/thong-tin-tai-khoan/",
+    "profileUrl": "https://iviet.edu.vn/profile/chloe42120407",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "ontrip.80gigs.com",
+    "platform": "TutorLMS",
+    "email": "ava.sullivan.44428808@gmail.com",
+    "username": "ava44428808",
+    "password": "Hair@44428808!",
+    "verdict": "ERROR",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://ontrip.80gigs.com/student-regis"
+  },
+  {
+    "domain": "umkmcerdaspajak.id",
+    "platform": "TutorLMS",
+    "email": "lily.webb.44625009@gmail.com",
+    "username": "lily44625009",
+    "password": "Hair@44625009!",
+    "verdict": "ERROR",
+    "error": "page.goto: net::ERR_CONNECTION_RESET at https://umkmcerdaspajak.id/student-regis"
+  },
+  {
+    "domain": "dados.ifac.edu.br",
+    "platform": "CKAN",
+    "email": "hannah.price.44803910@gmail.com",
+    "username": "hannah44803910",
+    "password": "Hair@44803910!",
+    "verdict": "NO_FORM",
+    "url": "https://dados.ifac.edu.br/user/register"
+  },
+  {
+    "domain": "learndash.aula.edu.pe",
+    "platform": "Moodle",
+    "email": "zoe.coleman.45316511@gmail.com",
+    "username": "zoe45316511",
+    "password": "Hair@45316511!",
+    "verdict": "SUBMITTED",
+    "url": "https://learndash.aula.edu.pe/register/",
+    "profileUrl": "https://learndash.aula.edu.pe/profile/zoe45316511",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "pibelearning.gov.bd",
+    "platform": "WordPress",
+    "email": "isabella.grant.49787012@gmail.com",
+    "username": "isabella49787012",
+    "password": "Hair@49787012!",
+    "verdict": "SUBMITTED",
+    "url": "https://pibelearning.gov.bd/wp-login.php?checkemail=registered",
+    "profileUrl": "https://pibelearning.gov.bd/author/isabella49787012",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "sarkariresult.education",
+    "platform": "Wix",
+    "email": "natalie.hughes.51297913@gmail.com",
+    "username": "natalie51297913",
+    "password": "Hair@51297913!",
+    "verdict": "ERROR",
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://ww"
+  },
+  {
+    "domain": "dlsjbc.edu.ph",
+    "platform": "Wix",
+    "email": "madison.perry.54431314@gmail.com",
+    "username": "madison54431314",
+    "password": "Hair@54431314!",
+    "verdict": "SUBMITTED",
+    "url": "https://www.dlsjbc.edu.ph/",
+    "profileUrl": "https://dlsjbc.edu.ph/profile/madison54431314",
+    "profileLive": true,
+    "linkPresent": false
+  }
+]

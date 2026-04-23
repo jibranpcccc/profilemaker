@@ -1,0 +1,38 @@
+[
+  {
+    "site": "UMKM Cerdas Pajak",
+    "domain": "umkmcerdaspajak.id",
+    "status": "FAILED",
+    "reason": "page.waitForNavigation: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================"
+  },
+  {
+    "site": "GKCE LMS India",
+    "domain": "lms.gkce.edu.in",
+    "status": "FAILED",
+    "reason": "page.waitForNavigation: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================"
+  },
+  {
+    "site": "ESIL MOOC Kazakhstan",
+    "domain": "mooc.esil.edu.kz",
+    "status": "FAILED",
+    "reason": "Geezek: account creation failed: 429 "
+  },
+  {
+    "site": "San Pablo Ecuador",
+    "domain": "academia.sanpablo.edu.ec",
+    "status": "FAILED",
+    "reason": "page.waitForNavigation: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================"
+  },
+  {
+    "site": "NCON Saudi Arabia",
+    "domain": "ncon.edu.sa",
+    "status": "FAILED",
+    "reason": "page.waitForNavigation: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================"
+  },
+  {
+    "site": "Pibe Learning Bangladesh",
+    "domain": "pibelearning.gov.bd",
+    "status": "FAILED",
+    "reason": "page.waitForNavigation: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================"
+  }
+]
