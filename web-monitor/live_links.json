@@ -1,0 +1,62 @@
+[
+  {
+    "domain": "opendata.ternopilcity.gov.ua",
+    "platform": "CKAN",
+    "email": "emma.clarke.76656001@gmail.com",
+    "username": "emma76656001",
+    "password": "Hair@76656001!",
+    "verdict": "SUBMITTED",
+    "url": "https://opendata.ternopilcity.gov.ua/user/register",
+    "profileUrl": "https://opendata.ternopilcity.gov.ua/user/emma76656001",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "datos.estadisticas.pr",
+    "platform": "CKAN",
+    "email": "chloe.morgan.86186107@gmail.com",
+    "username": "chloe86186107",
+    "password": "Hair@86186107!",
+    "verdict": "SUBMITTED",
+    "url": "https://datos.estadisticas.pr/dataset?q=",
+    "profileUrl": "https://datos.estadisticas.pr/user/chloe86186107",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "rciims.mona.uwi.edu",
+    "platform": "CKAN",
+    "email": "lily.webb.87981909@gmail.com",
+    "username": "lily87981909",
+    "password": "Hair@87981909!",
+    "verdict": "SUBMITTED",
+    "url": "https://rciims.mona.uwi.edu/dashboard/",
+    "profileUrl": "https://rciims.mona.uwi.edu/user/lily87981909",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "mooc.esil.edu.kz",
+    "platform": "Moodle",
+    "email": "isabella.grant.98176912@gmail.com",
+    "username": "isabella98176912",
+    "password": "Hair@98176912!",
+    "verdict": "SUBMITTED",
+    "url": "https://mooc.esil.edu.kz/student-registration/",
+    "profileUrl": "https://mooc.esil.edu.kz/profile/isabella98176912",
+    "profileLive": true,
+    "linkPresent": false
+  },
+  {
+    "domain": "esapa.edu.ar",
+    "platform": "Moodle",
+    "email": "natalie.hughes.99875513@gmail.com",
+    "username": "natalie99875513",
+    "password": "Hair@99875513!",
+    "verdict": "SUBMITTED",
+    "url": "https://esapa.edu.ar/student-registration/",
+    "profileUrl": "https://esapa.edu.ar/profile/natalie99875513",
+    "profileLive": true,
+    "linkPresent": false
+  }
+]
